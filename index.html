@@ -4,11 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ChargeCast — Plug in. Stream on. Stay charged.</title>
-<meta name="description" content="Plug in. Stream on. Stay charged. Mirror Android to Windows over USB with a 3-channel audio mixer, built-in streaming presets, and a 7-day free trial on the Microsoft Store.">
+<meta name="description" content="Mirror Android to Windows over USB with a 3-channel audio mixer, built-in streaming presets, and a 7-day free trial on the Microsoft Store.">
 <meta property="og:title" content="ChargeCast — Plug in. Stream on. Stay charged.">
-<meta property="og:description" content="Mirror Android to Windows over USB, with audio + mic passthrough and OBS-ready presets.">
+<meta property="og:description" content="Mirror Android to Windows over USB with a 3-channel audio mixer, built-in streaming presets, and a 7-day free trial on the Microsoft Store.">
 <meta property="og:image" content="assets/Thumbnail.png">
 <meta property="og:type" content="website">
+<link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/ChargeCast-notes/">
+<link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/ChargeCast-notes/ja/">
+<link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/ChargeCast-notes/">
 <style>
 :root{
   --bg:#ffffff;
@@ -34,189 +37,80 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;
-  background:var(--bg);
-  color:var(--fg);
-  line-height:1.75;
-  -webkit-font-smoothing:antialiased;
-}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP","Noto Sans Arabic","Noto Sans Thai","Noto Sans Devanagari",sans-serif;background:var(--bg);color:var(--fg);line-height:1.75;-webkit-font-smoothing:antialiased}
 .wrap{max-width:960px;margin:0 auto;padding:2rem 1.25rem 4rem}
 header.hero{text-align:center;padding:3rem 0 2rem}
-header.hero h1{
-  font-size:clamp(1.8rem,4.5vw,2.8rem);
-  line-height:1.3;
-  margin:0 0 .75rem;
-  letter-spacing:-.01em;
-}
-header.hero .tagline{
-  font-size:1.15rem;
-  color:var(--fg-soft);
-  margin:0 0 1.5rem;
-}
+header.hero h1{font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.3;margin:0 0 .75rem;letter-spacing:-.01em}
+header.hero .tagline{font-size:1.15rem;color:var(--fg-soft);margin:0 0 1.5rem}
 header.hero .tagline strong{color:var(--accent)}
 .hero-media{margin:2rem 0;border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
 .hero-media img,.hero-media video{display:block;width:100%;height:auto}
-.cta{
-  display:inline-block;
-  background:var(--accent);
-  color:#fff;
-  padding:.9rem 1.75rem;
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:600;
-  font-size:1.05rem;
-  margin:.5rem .25rem;
-  transition:transform .15s ease,box-shadow .15s ease;
-  box-shadow:0 4px 12px rgba(255,71,87,.25);
-}
+.cta{display:inline-block;background:var(--accent);color:#fff;padding:.9rem 1.75rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:1.05rem;margin:.5rem .25rem;transition:transform .15s ease,box-shadow .15s ease;box-shadow:0 4px 12px rgba(255,71,87,.25)}
 .cta:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(255,71,87,.35)}
-.cta.secondary{
-  background:transparent;
-  color:var(--accent);
-  border:2px solid var(--accent);
-  box-shadow:none;
-}
 .trial-note{display:block;margin-top:.75rem;color:var(--fg-soft);font-size:.95rem}
-h2{
-  font-size:1.6rem;
-  margin:3.5rem 0 1rem;
-  letter-spacing:-.005em;
-  position:relative;
-  padding-left:1rem;
-}
-h2::before{
-  content:"";
-  position:absolute;
-  left:0;top:.3em;bottom:.3em;
-  width:4px;border-radius:2px;
-  background:var(--accent);
-}
+h2{font-size:1.6rem;margin:3.5rem 0 1rem;letter-spacing:-.005em;position:relative;padding-left:1rem}
+h2::before{content:"";position:absolute;left:0;top:.3em;bottom:.3em;width:4px;border-radius:2px;background:var(--accent)}
+[dir="rtl"] h2{padding-left:0;padding-right:1rem}
+[dir="rtl"] h2::before{left:auto;right:0}
 h3{font-size:1.2rem;margin:2rem 0 .75rem}
 p{margin:.75rem 0}
 a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
 a:hover{border-bottom-color:var(--accent)}
 ul{padding-left:1.25rem}
+[dir="rtl"] ul{padding-left:0;padding-right:1.25rem}
 li{margin:.4rem 0}
-.step{
-  background:var(--card);
-  border-radius:14px;
-  padding:1.5rem;
-  margin:1.25rem 0;
-  border:1px solid var(--border);
-}
+.step{background:var(--card);border-radius:14px;padding:1.5rem;margin:1.25rem 0;border:1px solid var(--border)}
 .step h3{margin-top:0;display:flex;align-items:center;gap:.6rem}
-.step .num{
-  display:inline-flex;
-  align-items:center;justify-content:center;
-  width:2rem;height:2rem;
-  background:var(--accent);
-  color:#fff;
-  border-radius:50%;
-  font-weight:700;
-  font-size:1rem;
-  flex-shrink:0;
-}
+.step .num{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;background:var(--accent);color:#fff;border-radius:50%;font-weight:700;font-size:1rem;flex-shrink:0}
 .step img{width:100%;border-radius:10px;margin:1rem 0;box-shadow:var(--shadow)}
-.feature-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:1rem;
-  margin:1.5rem 0;
-}
-.feature{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:12px;
-  padding:1.25rem;
-}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1.5rem 0}
+.feature{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem}
 .feature .icon{font-size:1.75rem;margin-bottom:.5rem;display:block}
 .feature strong{display:block;margin-bottom:.3rem}
 .feature p{margin:0;color:var(--fg-soft);font-size:.95rem}
-.pain-points{
-  background:var(--accent-soft);
-  border-radius:14px;
-  padding:1.25rem 1.5rem;
-  margin:1.5rem 0;
-}
-.pain-points ul{margin:.5rem 0;padding-left:1.25rem}
+.pain-points{background:var(--accent-soft);border-radius:14px;padding:1.25rem 1.5rem;margin:1.5rem 0}
+.pain-points ul{margin:.5rem 0}
 .pain-points li{margin:.5rem 0}
 .showcase{margin:1.5rem 0}
 .showcase img{width:100%;border-radius:14px;box-shadow:var(--shadow);display:block}
 .showcase figcaption{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:.75rem}
-.pricing{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:1rem;
-  margin:1.5rem 0;
-}
-.price{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:1.5rem;
-  text-align:center;
-}
+.pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1.5rem 0}
+.price{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;text-align:center}
 .price.highlight{border-color:var(--accent);border-width:2px}
 .price .label{font-weight:600;font-size:1.1rem;margin-bottom:.25rem}
 .price .amount{font-size:2rem;font-weight:700;color:var(--accent);margin:.5rem 0}
 .price .note{color:var(--fg-soft);font-size:.9rem}
-.fit{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:1rem;
-  margin:1.5rem 0;
-}
-.fit>div{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:12px;
-  padding:1.25rem;
-}
+.fit{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1.5rem 0}
+.fit>div{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem}
 .fit h3{margin-top:0}
-.fit ul{margin:0;padding-left:1.25rem}
-details{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:10px;
-  padding:.75rem 1rem;
-  margin:.5rem 0;
-}
+.fit ul{margin:0}
+details{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.75rem 1rem;margin:.5rem 0}
 details summary{cursor:pointer;font-weight:600;list-style:none}
 details summary::before{content:"＋ ";color:var(--accent)}
 details[open] summary::before{content:"− "}
 details p{margin:.5rem 0 0;color:var(--fg-soft)}
-.changelog{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:12px;
-  padding:1rem 1.5rem;
-  margin:1.5rem 0;
-}
+.changelog{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.5rem;margin:1.5rem 0}
 .changelog ul{list-style:none;padding:0;margin:0}
 .changelog li{padding:.5rem 0;border-bottom:1px dashed var(--border)}
 .changelog li:last-child{border-bottom:none}
 .changelog code{background:var(--accent-soft);color:var(--accent);padding:.1rem .5rem;border-radius:4px;font-weight:600}
 hr{border:none;border-top:1px solid var(--border);margin:3rem 0}
 footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
-.lang-switcher{text-align:center;margin:1rem 0;color:var(--fg-soft);font-size:.9rem}
-.lang-switcher a{margin:0 .4rem}
+.lang-switcher{text-align:center;margin:1rem 0;color:var(--fg-soft);font-size:.9rem;line-height:2}
+.lang-switcher a{margin:0 .35rem;white-space:nowrap}
+.lang-switcher a[aria-current="page"]{color:var(--fg);font-weight:700}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<nav class="lang-switcher">
-  🌐 <a href="#" aria-current="page"><strong>English</strong></a> ・ <a href="ja/">日本語</a>
-  <span style="opacity:.5">・ 中文・한국어 and more (translations in progress)</span>
-</nav>
+<nav class="lang-switcher" aria-label="Language">🌐 <a href="" aria-current="page"><strong>English</strong></a> · <a href="ja/" hreflang="ja">日本語</a></nav>
 
 <header class="hero">
   <h1>Plug in. Stream on.<br>Stay charged.</h1>
   <p class="tagline"><strong>One USB cable.</strong><br>Mirror your Android screen, game audio, and mic to Windows — charged the whole time.</p>
   <div class="hero-media">
-    <img src="assets/Thumbnail.png" alt="ChargeCast's three pillars: Mirror Android to PC / Charge while streaming / Audio + Mic passthrough">
+    <img src="assets/Thumbnail.png" alt="ChargeCast: Mirror Android / Charge while streaming / Audio + Mic passthrough">
   </div>
   <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Get it on Microsoft Store</a>
   <span class="trial-note">7-day free trial included</span>
@@ -265,7 +159,7 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
     <li><strong>Output</strong> — your PC audio (stream BGM, Discord, browser)</li>
     <li><strong>Mic</strong> — your own voice</li>
   </ul>
-  <p>Mix everything inside ChargeCast and hand OBS one clean source. <strong>No more fighting the mixer mid-stream</strong> — you'll stop touching the sliders within a minute.</p>
+  <p>Mix everything inside ChargeCast and hand OBS one clean source. <strong>No more fighting the mixer mid-stream.</strong></p>
 </div>
 
 <p style="text-align:center;font-size:1.1rem;margin:2rem 0">That's roughly <strong>3 minutes</strong> from cold start. After that, just hit "Start Streaming" in OBS.</p>
@@ -342,7 +236,7 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
   <li>Video, device audio, and mic are already mixed on ChargeCast's side, so your OBS scene stays minimal</li>
   <li>XSplit, Streamlabs, Discord screen share — <strong>anything with a Window Capture source works the same way</strong></li>
 </ul>
-<p>Once the OBS scene is set up, the session starts with a single motion: <strong>plug in the cable, hit Start Capture</strong>. That reduction is the whole point of ChargeCast.</p>
+<p>Once the OBS scene is set up, the session starts with a single motion: <strong>plug in the cable, hit Start Capture</strong>.</p>
 
 <h2>Changelog</h2>
 <div class="changelog">
@@ -351,7 +245,7 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
   <li><code>v1.6.0</code> Custom preset polish, scrcpy window management, switched to Microsoft Store 7-day trial</li>
   <li><code>v1.5.0</code> Custom resolution preset, remembered scrcpy window position</li>
   <li><code>v1.4.0</code> Device Volume slider and 3-channel audio mixer</li>
-  <li><code>v1.3.x and earlier</code> Initial release — basic mirroring and audio passthrough</li>
+  <li><code>v1.3.x</code> and earlier — Initial release, basic mirroring and audio passthrough</li>
 </ul>
 </div>
 
