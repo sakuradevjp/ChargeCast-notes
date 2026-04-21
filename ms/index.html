@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ChargeCast — Pasang. Stream. Kekal dicas.</title>
+<meta name="description" content="Cerminkan Android ke Windows melalui USB dengan pengadun audio 3 saluran, pratetap penstriman terbina dalam, dan percubaan percuma 7 hari di Microsoft Store.">
+<meta property="og:title" content="ChargeCast — Pasang. Stream. Kekal dicas.">
+<meta property="og:description" content="Cerminkan Android ke Windows melalui USB dengan pengadun audio 3 saluran, pratetap penstriman terbina dalam, dan percubaan percuma 7 hari di Microsoft Store.">
+<meta property="og:image" content="../assets/Thumbnail.png">
+<meta property="og:type" content="website">
+<link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/ChargeCast-notes/">
+<link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/ChargeCast-notes/ja/">
+<link rel="alternate" hreflang="zh-Hans" href="https://sakuradevjp.github.io/ChargeCast-notes/zh-Hans/">
+<link rel="alternate" hreflang="zh-Hant" href="https://sakuradevjp.github.io/ChargeCast-notes/zh-Hant/">
+<link rel="alternate" hreflang="ko" href="https://sakuradevjp.github.io/ChargeCast-notes/ko/">
+<link rel="alternate" hreflang="es" href="https://sakuradevjp.github.io/ChargeCast-notes/es/">
+<link rel="alternate" hreflang="fr" href="https://sakuradevjp.github.io/ChargeCast-notes/fr/">
+<link rel="alternate" hreflang="de" href="https://sakuradevjp.github.io/ChargeCast-notes/de/">
+<link rel="alternate" hreflang="it" href="https://sakuradevjp.github.io/ChargeCast-notes/it/">
+<link rel="alternate" hreflang="pt" href="https://sakuradevjp.github.io/ChargeCast-notes/pt/">
+<link rel="alternate" hreflang="nl" href="https://sakuradevjp.github.io/ChargeCast-notes/nl/">
+<link rel="alternate" hreflang="pl" href="https://sakuradevjp.github.io/ChargeCast-notes/pl/">
+<link rel="alternate" hreflang="sv" href="https://sakuradevjp.github.io/ChargeCast-notes/sv/">
+<link rel="alternate" hreflang="ru" href="https://sakuradevjp.github.io/ChargeCast-notes/ru/">
+<link rel="alternate" hreflang="uk" href="https://sakuradevjp.github.io/ChargeCast-notes/uk/">
+<link rel="alternate" hreflang="tr" href="https://sakuradevjp.github.io/ChargeCast-notes/tr/">
+<link rel="alternate" hreflang="ar" href="https://sakuradevjp.github.io/ChargeCast-notes/ar/">
+<link rel="alternate" hreflang="hi" href="https://sakuradevjp.github.io/ChargeCast-notes/hi/">
+<link rel="alternate" hreflang="th" href="https://sakuradevjp.github.io/ChargeCast-notes/th/">
+<link rel="alternate" hreflang="vi" href="https://sakuradevjp.github.io/ChargeCast-notes/vi/">
+<link rel="alternate" hreflang="id" href="https://sakuradevjp.github.io/ChargeCast-notes/id/">
+<link rel="alternate" hreflang="ms" href="https://sakuradevjp.github.io/ChargeCast-notes/ms/">
+<link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/ChargeCast-notes/">
+<style>
+:root{
+  --bg:#ffffff;
+  --fg:#1a1a2e;
+  --fg-soft:#4a4a5e;
+  --accent:#ff4757;
+  --accent-soft:#ffe8ea;
+  --card:#f7f7fb;
+  --border:#e6e6ee;
+  --shadow:0 8px 24px rgba(26,26,46,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14141c;
+    --fg:#f2f2f5;
+    --fg-soft:#b0b0c0;
+    --accent:#ff6b7a;
+    --accent-soft:#3a1d22;
+    --card:#1d1d28;
+    --border:#2a2a38;
+    --shadow:0 8px 24px rgba(0,0,0,.4);
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP","Noto Sans Arabic","Noto Sans Thai","Noto Sans Devanagari",sans-serif;background:var(--bg);color:var(--fg);line-height:1.75;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:2rem 1.25rem 4rem}
+header.hero{text-align:center;padding:3rem 0 2rem}
+header.hero h1{font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.3;margin:0 0 .75rem;letter-spacing:-.01em}
+header.hero .tagline{font-size:1.15rem;color:var(--fg-soft);margin:0 0 1.5rem}
+header.hero .tagline strong{color:var(--accent)}
+.hero-media{margin:2rem 0;border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+.hero-media img,.hero-media video{display:block;width:100%;height:auto}
+.cta{display:inline-block;background:var(--accent);color:#fff;padding:.9rem 1.75rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:1.05rem;margin:.5rem .25rem;transition:transform .15s ease,box-shadow .15s ease;box-shadow:0 4px 12px rgba(255,71,87,.25)}
+.cta:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(255,71,87,.35)}
+.trial-note{display:block;margin-top:.75rem;color:var(--fg-soft);font-size:.95rem}
+h2{font-size:1.6rem;margin:3.5rem 0 1rem;letter-spacing:-.005em;position:relative;padding-left:1rem}
+h2::before{content:"";position:absolute;left:0;top:.3em;bottom:.3em;width:4px;border-radius:2px;background:var(--accent)}
+[dir="rtl"] h2{padding-left:0;padding-right:1rem}
+[dir="rtl"] h2::before{left:auto;right:0}
+h3{font-size:1.2rem;margin:2rem 0 .75rem}
+p{margin:.75rem 0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
+a:hover{border-bottom-color:var(--accent)}
+ul{padding-left:1.25rem}
+[dir="rtl"] ul{padding-left:0;padding-right:1.25rem}
+li{margin:.4rem 0}
+.step{background:var(--card);border-radius:14px;padding:1.5rem;margin:1.25rem 0;border:1px solid var(--border)}
+.step h3{margin-top:0;display:flex;align-items:center;gap:.6rem}
+.step .num{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;background:var(--accent);color:#fff;border-radius:50%;font-weight:700;font-size:1rem;flex-shrink:0}
+.step img{width:100%;border-radius:10px;margin:1rem 0;box-shadow:var(--shadow)}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1.5rem 0}
+.feature{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem}
+.feature .icon{font-size:1.75rem;margin-bottom:.5rem;display:block}
+.feature strong{display:block;margin-bottom:.3rem}
+.feature p{margin:0;color:var(--fg-soft);font-size:.95rem}
+.pain-points{background:var(--accent-soft);border-radius:14px;padding:1.25rem 1.5rem;margin:1.5rem 0}
+.pain-points ul{margin:.5rem 0}
+.pain-points li{margin:.5rem 0}
+.showcase{margin:1.5rem 0}
+.showcase img{width:100%;border-radius:14px;box-shadow:var(--shadow);display:block}
+.showcase figcaption{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:.75rem}
+.pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1.5rem 0}
+.price{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;text-align:center}
+.price.highlight{border-color:var(--accent);border-width:2px}
+.price .label{font-weight:600;font-size:1.1rem;margin-bottom:.25rem}
+.price .amount{font-size:2rem;font-weight:700;color:var(--accent);margin:.5rem 0}
+.price .note{color:var(--fg-soft);font-size:.9rem}
+.fit{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1.5rem 0}
+.fit>div{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem}
+.fit h3{margin-top:0}
+.fit ul{margin:0}
+details{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.75rem 1rem;margin:.5rem 0}
+details summary{cursor:pointer;font-weight:600;list-style:none}
+details summary::before{content:"＋ ";color:var(--accent)}
+details[open] summary::before{content:"− "}
+details p{margin:.5rem 0 0;color:var(--fg-soft)}
+.changelog{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.5rem;margin:1.5rem 0}
+.changelog ul{list-style:none;padding:0;margin:0}
+.changelog li{padding:.5rem 0;border-bottom:1px dashed var(--border)}
+.changelog li:last-child{border-bottom:none}
+.changelog code{background:var(--accent-soft);color:var(--accent);padding:.1rem .5rem;border-radius:4px;font-weight:600}
+hr{border:none;border-top:1px solid var(--border);margin:3rem 0}
+footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+.lang-switcher{text-align:center;margin:1rem 0;color:var(--fg-soft);font-size:.9rem;line-height:2}
+.lang-switcher a{margin:0 .35rem;white-space:nowrap}
+.lang-switcher a[aria-current="page"]{color:var(--fg);font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lang-switcher" aria-label="Language">🌐 <a href="../" hreflang="en">English</a> · <a href="../ja/" hreflang="ja">日本語</a> · <a href="../zh-Hans/" hreflang="zh-Hans">简体中文</a> · <a href="../zh-Hant/" hreflang="zh-Hant">繁體中文</a> · <a href="../ko/" hreflang="ko">한국어</a> · <a href="../es/" hreflang="es">Español</a> · <a href="../fr/" hreflang="fr">Français</a> · <a href="../de/" hreflang="de">Deutsch</a> · <a href="../it/" hreflang="it">Italiano</a> · <a href="../pt/" hreflang="pt">Português</a> · <a href="../nl/" hreflang="nl">Nederlands</a> · <a href="../pl/" hreflang="pl">Polski</a> · <a href="../sv/" hreflang="sv">Svenska</a> · <a href="../ru/" hreflang="ru">Русский</a> · <a href="../uk/" hreflang="uk">Українська</a> · <a href="../tr/" hreflang="tr">Türkçe</a> · <a href="../ar/" hreflang="ar">العربية</a> · <a href="../hi/" hreflang="hi">हिन्दी</a> · <a href="../th/" hreflang="th">ไทย</a> · <a href="../vi/" hreflang="vi">Tiếng Việt</a> · <a href="../id/" hreflang="id">Bahasa Indonesia</a> · <a href="../ms/" aria-current="page"><strong>Bahasa Melayu</strong></a></nav>
+
+<header class="hero">
+  <h1>Pasang. Stream.<br>Kekal dicas.</h1>
+  <p class="tagline"><strong>Satu kabel USB sahaja.</strong><br>Cerminkan skrin Android, audio permainan, dan mik anda ke Windows — dicas sepanjang masa.</p>
+  <div class="hero-media">
+    <img src="../assets/Thumbnail.png" alt="ChargeCast: Cermin Android / Mengecas semasa menstrim / Audio + Mik passthrough">
+  </div>
+  <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Dapatkan di Microsoft Store</a>
+  <span class="trial-note">Termasuk percubaan percuma 7 hari</span>
+</header>
+
+<h2>Bunyinya biasa didengar?</h2>
+<div class="pain-points">
+<ul>
+  <li>Anda nak menstrim permainan Android di OBS, tetapi <strong>tangkapan skrin, audio permainan, dan mik anda sendiri</strong> tak pernah betul-betul padan.</li>
+  <li>Cerminan Wi-Fi satu dunia penderitaan: <strong>kelewatan</strong> melonjak dan <strong>bateri</strong> cepat susut.</li>
+  <li>Walaupun menggunakan <code>scrcpy</code> di CLI, upacaranya membosankan — <strong>setiap kali sesi</strong>.</li>
+  <li>Di tengah strim, telefon tinggal 12% dan mula panas. <strong>Peluh sejuk.</strong></li>
+</ul>
+<p style="margin:1rem 0 0">ChargeCast menyelesaikan keempat-empatnya dengan <strong>satu kabel USB dan GUI yang mesra</strong>. Khusus Windows, fokus penstriman.</p>
+</div>
+
+<h2>Siaran langsung dalam 3 minit — demo pantas</h2>
+<p>Laluan terpendek dari "mungkin saya boleh menstrim" ke "saya sedang live."</p>
+
+<div class="step">
+  <h3><span class="num">1</span>Pasangkan kabel USB</h3>
+  <p>Hidupkan USB debugging pada telefon Android anda, kemudian pasangkan ke PC. <br><strong>Kabel pengecas biasa pun cukup.</strong> Ya — telefon terus dicas semasa anda menstrim.</p>
+  <details style="margin-top:.75rem;background:var(--bg)">
+    <summary>Kali pertama? Aktifkan USB debugging (2 minit)</summary>
+    <ol>
+      <li>Buka Android <strong>Tetapan → Tentang telefon</strong></li>
+      <li>Ketik <strong>Nombor binaan</strong> 7 kali sehingga muncul "Anda kini seorang pembangun"</li>
+      <li>Pergi ke <strong>Tetapan → Sistem → Pilihan pembangun</strong> dan hidupkan <strong>Penyahpepijatan USB</strong></li>
+      <li>Apabila kabel dipasang, ketik <strong>Benarkan</strong> pada gesaan kebenaran</li>
+    </ol>
+    <p style="color:var(--fg-soft);font-size:.9rem;margin-top:.5rem">Laluan menu mungkin sedikit berbeza mengikut pembuat telefon (Samsung: Tetapan → Tentang telefon → Maklumat perisian → ketik Nombor binaan).</p>
+  </details>
+</div>
+
+<div class="step">
+  <h3><span class="num">2</span>Pilih pratetap, tekan Start Capture</h3>
+  <img src="../assets/screenshot-1.png" alt="Pemilih pratetap ChargeCast">
+  <p>Pilih <strong>720p / 1080p / 1440p / Custom</strong> dengan satu klik. Satu tetingkap scrcpy akan terbuka dengan skrin Android anda sudah ada di dalamnya. Halakan Window Capture OBS ke situ — selesai.</p>
+</div>
+
+<div class="step">
+  <h3><span class="num">3</span>Adun dengan tiga peluncur</h3>
+  <img src="../assets/screenshot-3.png" alt="Pengadun audio tiga saluran">
+  <ul>
+    <li><strong>Device</strong> — audio permainan dari telefon Android anda</li>
+    <li><strong>Output</strong> — audio PC anda (BGM strim, Discord, pelayar)</li>
+    <li><strong>Mic</strong> — suara anda sendiri</li>
+  </ul>
+  <p>Adun semuanya dalam ChargeCast dan serahkan OBS satu sumber yang bersih. <strong>Tak perlu lagi bergelut dengan pengadun di tengah strim.</strong></p>
+</div>
+
+<p style="text-align:center;font-size:1.1rem;margin:2rem 0">Lebih kurang <strong>3 minit</strong> dari mula. Selepas itu, cuma tekan "Start Streaming" dalam OBS.</p>
+
+<h2>Apa yang ia buat, sepintas lalu</h2>
+<div class="feature-grid">
+  <div class="feature"><span class="icon">📱</span><strong>Cermin Android ke PC</strong><p>Telefon anda dalam tetingkap Windows, terus melalui USB</p></div>
+  <div class="feature"><span class="icon">🔋</span><strong>Mengecas semasa menstrim</strong><p>Kabel yang sama memberi kuasa kepada telefon — tiada thermal throttling, tiada panik bateri</p></div>
+  <div class="feature"><span class="icon">🎙</span><strong>Audio + Mik passthrough</strong><p>Pengadun tiga saluran untuk audio peranti, audio PC, dan mik anda</p></div>
+  <div class="feature"><span class="icon">🎮</span><strong>Pratetap penstriman terbina dalam</strong><p>720p / 1080p / 1440p 60fps, ditala untuk Twitch dan YouTube</p></div>
+  <div class="feature"><span class="icon">🪟</span><strong>Mengingati kedudukan tetingkap</strong><p>Susun atur scene OBS anda kekal sama antara sesi</p></div>
+  <div class="feature"><span class="icon">🌐</span><strong>22 bahasa</strong><p>English, 日本語, 中文, 한국어, Bahasa Melayu, dan lain-lain</p></div>
+</div>
+
+<h2>Rupanya dalam OBS</h2>
+<figure class="showcase">
+  <img src="../assets/screenshot-2.png" alt="Susun atur penstriman OBS yang menggunakan ChargeCast">
+  <figcaption>Tambahkan tetingkap ChargeCast ke sumber OBS Window Capture — webcam, skrin permainan, dan audio semua tersusun kemas dalam satu scene.</figcaption>
+</figure>
+
+<h2>Harga</h2>
+<div class="pricing">
+  <div class="price highlight">
+    <div class="label">Percubaan percuma</div>
+    <div class="amount">7 hari</div>
+    <div class="note">Ciri penuh, tiada had</div>
+  </div>
+  <div class="price">
+    <div class="label">Bulanan</div>
+    <div class="amount">$4.99<span style="font-size:1rem;color:var(--fg-soft)">/bln</span></div>
+    <div class="note">Batal bila-bila masa</div>
+  </div>
+  <div class="price">
+    <div class="label">Tahunan</div>
+    <div class="amount">$49.99<span style="font-size:1rem;color:var(--fg-soft)">/thn</span></div>
+    <div class="note">Jimat ~2 bulan</div>
+  </div>
+</div>
+<p style="text-align:center;color:var(--fg-soft)">Semua pengebilan dan pembatalan berlaku melalui akaun Microsoft anda. ChargeCast tidak pernah melihat butiran kad anda.</p>
+<p style="text-align:center"><a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Mulakan percubaan 7 hari</a></p>
+
+<h2>Untuk siapa ini</h2>
+<div class="fit">
+  <div>
+    <h3>✅ Padan sangat</h3>
+    <ul>
+      <li>Menstrim permainan Android, ulasan aplikasi, atau tutorial ke OBS</li>
+      <li>Sesiapa yang lebih suka kestabilan berwayar daripada Wi-Fi yang goyang</li>
+      <li>Pencipta yang mahu satu aplikasi mengendalikan semua audio</li>
+      <li>Pengstrim sesi panjang yang risaukan haba dan bateri</li>
+    </ul>
+  </div>
+  <div>
+    <h3>⏭ Mungkin bukan untuk anda</h3>
+    <ul>
+      <li>Pengguna Mac atau Linux (ini khusus Windows)</li>
+      <li>Sesiapa yang mahu laluan 100% percuma (<code>scrcpy</code> biasa di CLI sudah memadai)</li>
+      <li>Sesiapa yang perlukan cerminan Wi-Fi tanpa wayar (ChargeCast utamakan USB)</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Soalan Lazim</h2>
+<details><summary>Perlukah saya root atau persekitaran pembangunan khas?</summary><p>Tidak. Cuma hidupkan "Penyahpepijatan USB" dalam Pilihan pembangun Android.</p></details>
+<details><summary>Boleh saya dengar audio permainan dan suara sendiri serentak?</summary><p>Boleh. Setiap tiga saluran mempunyai peluncurnya sendiri.</p></details>
+<details><summary>Perisian penstriman mana yang patut saya guna?</summary><p>OBS Studio ialah persediaan rujukan (gunakan sumber Window Capture). XSplit dan alat serupa berfungsi dengan cara yang sama.</p></details>
+<details><summary>Bagaimana dengan permainan orientasi portrait?</summary><p>Orientasi boleh dikunci kepada Portrait, Landscape, atau Auto supaya susun atur OBS anda kekal stabil.</p></details>
+<details><summary>Adakah ia menghantar data keluar?</summary><p>Semua tangkapan adalah tempatan melalui ADB. ChargeCast sendiri tidak menghantar maklumat peranti ke mana-mana.</p></details>
+
+<h2>Nota tentang integrasi OBS</h2>
+<p>ChargeCast <strong>bukan aplikasi penstriman dengan sendirinya</strong>. Anggap ia sebagai pentas yang menyerahkan rakaman bersih kepada OBS.</p>
+<ul>
+  <li>Halakan sebuah <strong>OBS Studio Window Capture</strong> ke tetingkap ChargeCast — itulah keseluruhan integrasinya</li>
+  <li>Video, audio peranti, dan mik sudah diadun di sebelah ChargeCast, jadi scene OBS anda kekal minimum</li>
+  <li>XSplit, Streamlabs, perkongsian skrin Discord — <strong>apa-apa yang mempunyai sumber Window Capture berfungsi dengan cara yang sama</strong></li>
+</ul>
+<p>Sebaik sahaja scene OBS disediakan, sesi bermula dengan satu gerakan: <strong>pasang kabel, tekan Start Capture</strong>.</p>
+
+<h2>Log Perubahan</h2>
+<div class="changelog">
+<ul>
+  <li><code>v1.6.1</code> Keluaran kestabilan</li>
+  <li><code>v1.6.0</code> Pemurnian pratetap Custom, pengurusan tetingkap scrcpy, bertukar ke percubaan 7 hari Microsoft Store</li>
+  <li><code>v1.5.0</code> Pratetap resolusi Custom, mengingati kedudukan tetingkap scrcpy</li>
+  <li><code>v1.4.0</code> Peluncur Device Volume dan pengadun audio 3 saluran</li>
+  <li><code>v1.3.x</code> dan lebih awal — keluaran awal, cerminan asas dan audio passthrough</li>
+</ul>
+</div>
+
+<hr>
+
+<p style="text-align:center;font-size:1.15rem;margin:2rem 0">
+  <strong>Pasang kabel. Siaran langsung.</strong><br>
+  Satu kabel USB, tujuh hari percuma, semua ciri dibuka.
+</p>
+<p style="text-align:center">
+  <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Dapatkan ChargeCast di Microsoft Store</a>
+</p>
+
+<footer>
+  <p>ChargeCast ialah aplikasi Windows oleh <a href="https://github.com/sakuradevjp">sakura.dev.jp</a>. Product ID: <code>sakura.dev.jp.ChargeCast</code></p>
+</footer>
+
+</div>
+</body>
+</html>

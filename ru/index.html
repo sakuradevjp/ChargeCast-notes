@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ChargeCast — Подключил. Стримь. Заряжен.</title>
+<meta name="description" content="Транслируйте экран Android на Windows по USB с 3-канальным аудиомикшером, встроенными стриминговыми пресетами и 7-дневной бесплатной пробной версией в Microsoft Store.">
+<meta property="og:title" content="ChargeCast — Подключил. Стримь. Заряжен.">
+<meta property="og:description" content="Транслируйте экран Android на Windows по USB с 3-канальным аудиомикшером, встроенными стриминговыми пресетами и 7-дневной бесплатной пробной версией в Microsoft Store.">
+<meta property="og:image" content="../assets/Thumbnail.png">
+<meta property="og:type" content="website">
+<link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/ChargeCast-notes/">
+<link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/ChargeCast-notes/ja/">
+<link rel="alternate" hreflang="zh-Hans" href="https://sakuradevjp.github.io/ChargeCast-notes/zh-Hans/">
+<link rel="alternate" hreflang="zh-Hant" href="https://sakuradevjp.github.io/ChargeCast-notes/zh-Hant/">
+<link rel="alternate" hreflang="ko" href="https://sakuradevjp.github.io/ChargeCast-notes/ko/">
+<link rel="alternate" hreflang="es" href="https://sakuradevjp.github.io/ChargeCast-notes/es/">
+<link rel="alternate" hreflang="fr" href="https://sakuradevjp.github.io/ChargeCast-notes/fr/">
+<link rel="alternate" hreflang="de" href="https://sakuradevjp.github.io/ChargeCast-notes/de/">
+<link rel="alternate" hreflang="it" href="https://sakuradevjp.github.io/ChargeCast-notes/it/">
+<link rel="alternate" hreflang="pt" href="https://sakuradevjp.github.io/ChargeCast-notes/pt/">
+<link rel="alternate" hreflang="nl" href="https://sakuradevjp.github.io/ChargeCast-notes/nl/">
+<link rel="alternate" hreflang="pl" href="https://sakuradevjp.github.io/ChargeCast-notes/pl/">
+<link rel="alternate" hreflang="sv" href="https://sakuradevjp.github.io/ChargeCast-notes/sv/">
+<link rel="alternate" hreflang="ru" href="https://sakuradevjp.github.io/ChargeCast-notes/ru/">
+<link rel="alternate" hreflang="uk" href="https://sakuradevjp.github.io/ChargeCast-notes/uk/">
+<link rel="alternate" hreflang="tr" href="https://sakuradevjp.github.io/ChargeCast-notes/tr/">
+<link rel="alternate" hreflang="ar" href="https://sakuradevjp.github.io/ChargeCast-notes/ar/">
+<link rel="alternate" hreflang="hi" href="https://sakuradevjp.github.io/ChargeCast-notes/hi/">
+<link rel="alternate" hreflang="th" href="https://sakuradevjp.github.io/ChargeCast-notes/th/">
+<link rel="alternate" hreflang="vi" href="https://sakuradevjp.github.io/ChargeCast-notes/vi/">
+<link rel="alternate" hreflang="id" href="https://sakuradevjp.github.io/ChargeCast-notes/id/">
+<link rel="alternate" hreflang="ms" href="https://sakuradevjp.github.io/ChargeCast-notes/ms/">
+<link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/ChargeCast-notes/">
+<style>
+:root{
+  --bg:#ffffff;
+  --fg:#1a1a2e;
+  --fg-soft:#4a4a5e;
+  --accent:#ff4757;
+  --accent-soft:#ffe8ea;
+  --card:#f7f7fb;
+  --border:#e6e6ee;
+  --shadow:0 8px 24px rgba(26,26,46,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14141c;
+    --fg:#f2f2f5;
+    --fg-soft:#b0b0c0;
+    --accent:#ff6b7a;
+    --accent-soft:#3a1d22;
+    --card:#1d1d28;
+    --border:#2a2a38;
+    --shadow:0 8px 24px rgba(0,0,0,.4);
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP","Noto Sans Arabic","Noto Sans Thai","Noto Sans Devanagari",sans-serif;background:var(--bg);color:var(--fg);line-height:1.75;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:2rem 1.25rem 4rem}
+header.hero{text-align:center;padding:3rem 0 2rem}
+header.hero h1{font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.3;margin:0 0 .75rem;letter-spacing:-.01em}
+header.hero .tagline{font-size:1.15rem;color:var(--fg-soft);margin:0 0 1.5rem}
+header.hero .tagline strong{color:var(--accent)}
+.hero-media{margin:2rem 0;border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+.hero-media img,.hero-media video{display:block;width:100%;height:auto}
+.cta{display:inline-block;background:var(--accent);color:#fff;padding:.9rem 1.75rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:1.05rem;margin:.5rem .25rem;transition:transform .15s ease,box-shadow .15s ease;box-shadow:0 4px 12px rgba(255,71,87,.25)}
+.cta:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(255,71,87,.35)}
+.trial-note{display:block;margin-top:.75rem;color:var(--fg-soft);font-size:.95rem}
+h2{font-size:1.6rem;margin:3.5rem 0 1rem;letter-spacing:-.005em;position:relative;padding-left:1rem}
+h2::before{content:"";position:absolute;left:0;top:.3em;bottom:.3em;width:4px;border-radius:2px;background:var(--accent)}
+[dir="rtl"] h2{padding-left:0;padding-right:1rem}
+[dir="rtl"] h2::before{left:auto;right:0}
+h3{font-size:1.2rem;margin:2rem 0 .75rem}
+p{margin:.75rem 0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
+a:hover{border-bottom-color:var(--accent)}
+ul{padding-left:1.25rem}
+[dir="rtl"] ul{padding-left:0;padding-right:1.25rem}
+li{margin:.4rem 0}
+.step{background:var(--card);border-radius:14px;padding:1.5rem;margin:1.25rem 0;border:1px solid var(--border)}
+.step h3{margin-top:0;display:flex;align-items:center;gap:.6rem}
+.step .num{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;background:var(--accent);color:#fff;border-radius:50%;font-weight:700;font-size:1rem;flex-shrink:0}
+.step img{width:100%;border-radius:10px;margin:1rem 0;box-shadow:var(--shadow)}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1.5rem 0}
+.feature{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem}
+.feature .icon{font-size:1.75rem;margin-bottom:.5rem;display:block}
+.feature strong{display:block;margin-bottom:.3rem}
+.feature p{margin:0;color:var(--fg-soft);font-size:.95rem}
+.pain-points{background:var(--accent-soft);border-radius:14px;padding:1.25rem 1.5rem;margin:1.5rem 0}
+.pain-points ul{margin:.5rem 0}
+.pain-points li{margin:.5rem 0}
+.showcase{margin:1.5rem 0}
+.showcase img{width:100%;border-radius:14px;box-shadow:var(--shadow);display:block}
+.showcase figcaption{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:.75rem}
+.pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1.5rem 0}
+.price{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;text-align:center}
+.price.highlight{border-color:var(--accent);border-width:2px}
+.price .label{font-weight:600;font-size:1.1rem;margin-bottom:.25rem}
+.price .amount{font-size:2rem;font-weight:700;color:var(--accent);margin:.5rem 0}
+.price .note{color:var(--fg-soft);font-size:.9rem}
+.fit{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1.5rem 0}
+.fit>div{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem}
+.fit h3{margin-top:0}
+.fit ul{margin:0}
+details{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.75rem 1rem;margin:.5rem 0}
+details summary{cursor:pointer;font-weight:600;list-style:none}
+details summary::before{content:"＋ ";color:var(--accent)}
+details[open] summary::before{content:"− "}
+details p{margin:.5rem 0 0;color:var(--fg-soft)}
+.changelog{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.5rem;margin:1.5rem 0}
+.changelog ul{list-style:none;padding:0;margin:0}
+.changelog li{padding:.5rem 0;border-bottom:1px dashed var(--border)}
+.changelog li:last-child{border-bottom:none}
+.changelog code{background:var(--accent-soft);color:var(--accent);padding:.1rem .5rem;border-radius:4px;font-weight:600}
+hr{border:none;border-top:1px solid var(--border);margin:3rem 0}
+footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+.lang-switcher{text-align:center;margin:1rem 0;color:var(--fg-soft);font-size:.9rem;line-height:2}
+.lang-switcher a{margin:0 .35rem;white-space:nowrap}
+.lang-switcher a[aria-current="page"]{color:var(--fg);font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lang-switcher" aria-label="Language">🌐 <a href="../" hreflang="en">English</a> · <a href="../ja/" hreflang="ja">日本語</a> · <a href="../zh-Hans/" hreflang="zh-Hans">简体中文</a> · <a href="../zh-Hant/" hreflang="zh-Hant">繁體中文</a> · <a href="../ko/" hreflang="ko">한국어</a> · <a href="../es/" hreflang="es">Español</a> · <a href="../fr/" hreflang="fr">Français</a> · <a href="../de/" hreflang="de">Deutsch</a> · <a href="../it/" hreflang="it">Italiano</a> · <a href="../pt/" hreflang="pt">Português</a> · <a href="../nl/" hreflang="nl">Nederlands</a> · <a href="../pl/" hreflang="pl">Polski</a> · <a href="../sv/" hreflang="sv">Svenska</a> · <a href="../ru/" aria-current="page"><strong>Русский</strong></a> · <a href="../uk/" hreflang="uk">Українська</a> · <a href="../tr/" hreflang="tr">Türkçe</a> · <a href="../ar/" hreflang="ar">العربية</a> · <a href="../hi/" hreflang="hi">हिन्दी</a> · <a href="../th/" hreflang="th">ไทย</a> · <a href="../vi/" hreflang="vi">Tiếng Việt</a> · <a href="../id/" hreflang="id">Bahasa Indonesia</a> · <a href="../ms/" hreflang="ms">Bahasa Melayu</a></nav>
+
+<header class="hero">
+  <h1>Подключил. Стримь.<br>Заряжен.</h1>
+  <p class="tagline"><strong>Один USB-кабель.</strong><br>Экран Android, звук игры и микрофон — всё сразу в Windows, и телефон заряжается всё это время.</p>
+  <div class="hero-media">
+    <img src="../assets/Thumbnail.png" alt="ChargeCast: трансляция Android / зарядка во время стрима / прокидывание звука и микрофона">
+  </div>
+  <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Скачать в Microsoft Store</a>
+  <span class="trial-note">7-дневная бесплатная пробная версия в комплекте</span>
+</header>
+
+<h2>Знакомая история?</h2>
+<div class="pain-points">
+<ul>
+  <li>Хочется стримить Android-игры в OBS, но <strong>захват экрана, звук игры и собственный микрофон</strong> никак толком не складываются вместе.</li>
+  <li>Трансляция по Wi-Fi — это боль: скачки <strong>задержки</strong> и <strong>улетающая батарея</strong>.</li>
+  <li>Даже с <code>scrcpy</code> в командной строке ритуал надоедает — <strong>каждый раз перед стримом</strong>.</li>
+  <li>В разгар эфира на телефоне 12 %, и он греется. <strong>Холодный пот.</strong></li>
+</ul>
+<p style="margin:1rem 0 0">ChargeCast закрывает все четыре проблемы <strong>одним USB-кабелем и дружелюбным GUI</strong>. Только Windows, заточено под стрим.</p>
+</div>
+
+<h2>В эфире за 3 минуты — быстрое демо</h2>
+<p>Кратчайший путь от «может, попробовать стримить» до «я в эфире».</p>
+
+<div class="step">
+  <h3><span class="num">1</span>Подключите USB-кабель</h3>
+  <p>Включите отладку по USB на Android-телефоне и подключите его к ПК. <br><strong>Обычный кабель для зарядки подойдёт.</strong> Да — телефон заряжается прямо во время стрима.</p>
+  <details style="margin-top:.75rem;background:var(--bg)">
+    <summary>В первый раз? Включаем отладку по USB (2 минуты)</summary>
+    <ol>
+      <li>Откройте Android <strong>Настройки → О телефоне</strong></li>
+      <li>Нажмите на <strong>Номер сборки</strong> 7 раз, пока не появится надпись «Вы стали разработчиком»</li>
+      <li>Зайдите в <strong>Настройки → Система → Для разработчиков</strong> и включите <strong>Отладку по USB</strong></li>
+      <li>Когда подключите кабель, нажмите <strong>Разрешить</strong> в окне запроса прав</li>
+    </ol>
+    <p style="color:var(--fg-soft);font-size:.9rem;margin-top:.5rem">Пути в меню немного отличаются у разных производителей (Samsung: Настройки → О телефоне → Сведения о ПО → нажмите на Номер сборки).</p>
+  </details>
+</div>
+
+<div class="step">
+  <h3><span class="num">2</span>Выберите пресет, нажмите Start Capture</h3>
+  <img src="../assets/screenshot-1.png" alt="Выбор пресета в ChargeCast">
+  <p>Выберите <strong>720p / 1080p / 1440p / Custom</strong> одним кликом. Откроется окно scrcpy с уже видимым экраном Android. Наведите на него OBS Window Capture — готово.</p>
+</div>
+
+<div class="step">
+  <h3><span class="num">3</span>Смешайте тремя ползунками</h3>
+  <img src="../assets/screenshot-3.png" alt="Трёхканальный аудиомикшер">
+  <ul>
+    <li><strong>Device</strong> — звук игры с вашего Android-телефона</li>
+    <li><strong>Output</strong> — звук ПК (фоновая музыка стрима, Discord, браузер)</li>
+    <li><strong>Mic</strong> — ваш собственный голос</li>
+  </ul>
+  <p>Сведите всё внутри ChargeCast и отдайте OBS один чистый источник. <strong>Больше не нужно воевать с микшером посреди эфира.</strong></p>
+</div>
+
+<p style="text-align:center;font-size:1.1rem;margin:2rem 0">Примерно <strong>3 минуты</strong> с холодного старта. Дальше — просто жмёте «Начать трансляцию» в OBS.</p>
+
+<h2>Что умеет, кратко</h2>
+<div class="feature-grid">
+  <div class="feature"><span class="icon">📱</span><strong>Mirror Android to PC</strong><p>Ваш телефон в окне Windows, напрямую через USB</p></div>
+  <div class="feature"><span class="icon">🔋</span><strong>Charge while streaming</strong><p>Тот же кабель питает телефон — никакого тротлинга от нагрева, никакой паники из-за батареи</p></div>
+  <div class="feature"><span class="icon">🎙</span><strong>Audio + Mic passthrough</strong><p>Трёхканальный микшер для звука устройства, звука ПК и вашего микрофона</p></div>
+  <div class="feature"><span class="icon">🎮</span><strong>Встроенные стриминговые пресеты</strong><p>720p / 1080p / 1440p 60fps, настроено под Twitch и YouTube</p></div>
+  <div class="feature"><span class="icon">🪟</span><strong>Запоминает положение окна</strong><p>Ваш макет сцены OBS остаётся нетронутым между сессиями</p></div>
+  <div class="feature"><span class="icon">🌐</span><strong>22 языка</strong><p>English, 日本語, 中文, 한국어 и другие</p></div>
+</div>
+
+<h2>Как это выглядит внутри OBS</h2>
+<figure class="showcase">
+  <img src="../assets/screenshot-2.png" alt="Стриминговый макет OBS с использованием ChargeCast">
+  <figcaption>Добавьте окно ChargeCast в источник OBS Window Capture — вебкамера, экран игры и звук аккуратно соберутся в одну сцену.</figcaption>
+</figure>
+
+<h2>Цены</h2>
+<div class="pricing">
+  <div class="price highlight">
+    <div class="label">Пробная версия</div>
+    <div class="amount">7 дней</div>
+    <div class="note">Все функции без ограничений</div>
+  </div>
+  <div class="price">
+    <div class="label">Ежемесячно</div>
+    <div class="amount">$4.99<span style="font-size:1rem;color:var(--fg-soft)">/мес</span></div>
+    <div class="note">Отмена в любой момент</div>
+  </div>
+  <div class="price">
+    <div class="label">Ежегодно</div>
+    <div class="amount">$49.99<span style="font-size:1rem;color:var(--fg-soft)">/год</span></div>
+    <div class="note">Экономия ~2 месяцев</div>
+  </div>
+</div>
+<p style="text-align:center;color:var(--fg-soft)">Все платежи и отмены происходят через ваш аккаунт Microsoft. ChargeCast никогда не видит данные вашей карты.</p>
+<p style="text-align:center"><a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Запустить 7-дневную пробную версию</a></p>
+
+<h2>Для кого это</h2>
+<div class="fit">
+  <div>
+    <h3>✅ Отличный выбор</h3>
+    <ul>
+      <li>Стримите геймплей Android, обзоры приложений или обучалки в OBS</li>
+      <li>Всем, кто предпочитает стабильность провода дрожанию Wi-Fi</li>
+      <li>Создателям, которым нужно одно приложение для всего звука</li>
+      <li>Долгим стримерам, переживающим за нагрев и батарею</li>
+    </ul>
+  </div>
+  <div>
+    <h3>⏭ Возможно, не для вас</h3>
+    <ul>
+      <li>Пользователям Mac или Linux (это только Windows)</li>
+      <li>Тем, кто хочет полностью бесплатный путь (хватит и <code>scrcpy</code> в командной строке)</li>
+      <li>Тем, кому нужна беспроводная трансляция по Wi-Fi (ChargeCast — про USB)</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Частые вопросы</h2>
+<details><summary>Нужен ли root или специальное окружение разработчика?</summary><p>Нет. Достаточно включить «Отладку по USB» в разделе «Для разработчиков» на Android.</p></details>
+<details><summary>Могу ли я слышать звук игры и свой голос одновременно?</summary><p>Да. У каждого из трёх каналов свой ползунок.</p></details>
+<details><summary>Какое ПО для стриминга выбрать?</summary><p>Эталонная связка — OBS Studio (используйте источник Window Capture). XSplit и похожие программы работают так же.</p></details>
+<details><summary>А что с играми в портретной ориентации?</summary><p>Ориентацию можно зафиксировать в Portrait, Landscape или Auto, чтобы ваш макет OBS оставался стабильным.</p></details>
+<details><summary>Не лезет ли программа в сеть?</summary><p>Весь захват идёт локально через ADB. Сам ChargeCast не отправляет информацию об устройстве никуда.</p></details>
+
+<h2>Пара слов об интеграции с OBS</h2>
+<p>ChargeCast <strong>не является самостоятельным стриминговым приложением</strong>. Считайте его сценой, которая отдаёт OBS уже чистый кадр.</p>
+<ul>
+  <li>Наведите <strong>OBS Studio Window Capture</strong> на окно ChargeCast — это и есть вся интеграция</li>
+  <li>Видео, звук устройства и микрофон уже сведены на стороне ChargeCast, так что сцена в OBS остаётся минимальной</li>
+  <li>XSplit, Streamlabs, демонстрация экрана в Discord — <strong>всё, что умеет Window Capture, работает по той же схеме</strong></li>
+</ul>
+<p>Когда сцена в OBS настроена, сессия запускается одним движением: <strong>вставил кабель, нажал Start Capture</strong>.</p>
+
+<h2>История изменений</h2>
+<div class="changelog">
+<ul>
+  <li><code>v1.6.1</code> Релиз стабильности</li>
+  <li><code>v1.6.0</code> Доводка пользовательского пресета, управление окном scrcpy, переход на 7-дневную пробную версию Microsoft Store</li>
+  <li><code>v1.5.0</code> Пользовательский пресет разрешения, запоминание положения окна scrcpy</li>
+  <li><code>v1.4.0</code> Ползунок громкости устройства и 3-канальный аудиомикшер</li>
+  <li><code>v1.3.x</code> и ранее — Первый релиз, базовая трансляция и прокидывание звука</li>
+</ul>
+</div>
+
+<hr>
+
+<p style="text-align:center;font-size:1.15rem;margin:2rem 0">
+  <strong>Вставьте кабель. Выходите в эфир.</strong><br>
+  Один USB-кабель, семь бесплатных дней, все функции открыты.
+</p>
+<p style="text-align:center">
+  <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Скачать ChargeCast в Microsoft Store</a>
+</p>
+
+<footer>
+  <p>ChargeCast — это Windows-приложение от <a href="https://github.com/sakuradevjp">sakura.dev.jp</a>. ID продукта: <code>sakura.dev.jp.ChargeCast</code></p>
+</footer>
+
+</div>
+</body>
+</html>
