@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ChargeCast — 插上就播，边播边充。</title>
+<meta name="description" content="通过 USB 将 Android 画面镜像到 Windows，内置 3 通道音频混音器和推流预设，Microsoft Store 提供 7 天免费试用。">
+<meta property="og:title" content="ChargeCast — 插上就播，边播边充。">
+<meta property="og:description" content="通过 USB 将 Android 画面镜像到 Windows，内置 3 通道音频混音器和推流预设，Microsoft Store 提供 7 天免费试用。">
+<meta property="og:image" content="../assets/Thumbnail.png">
+<meta property="og:type" content="website">
+<link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/ChargeCast-notes/">
+<link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/ChargeCast-notes/ja/">
+<link rel="alternate" hreflang="zh-Hans" href="https://sakuradevjp.github.io/ChargeCast-notes/zh-Hans/">
+<link rel="alternate" hreflang="zh-Hant" href="https://sakuradevjp.github.io/ChargeCast-notes/zh-Hant/">
+<link rel="alternate" hreflang="ko" href="https://sakuradevjp.github.io/ChargeCast-notes/ko/">
+<link rel="alternate" hreflang="es" href="https://sakuradevjp.github.io/ChargeCast-notes/es/">
+<link rel="alternate" hreflang="fr" href="https://sakuradevjp.github.io/ChargeCast-notes/fr/">
+<link rel="alternate" hreflang="de" href="https://sakuradevjp.github.io/ChargeCast-notes/de/">
+<link rel="alternate" hreflang="it" href="https://sakuradevjp.github.io/ChargeCast-notes/it/">
+<link rel="alternate" hreflang="pt" href="https://sakuradevjp.github.io/ChargeCast-notes/pt/">
+<link rel="alternate" hreflang="nl" href="https://sakuradevjp.github.io/ChargeCast-notes/nl/">
+<link rel="alternate" hreflang="pl" href="https://sakuradevjp.github.io/ChargeCast-notes/pl/">
+<link rel="alternate" hreflang="sv" href="https://sakuradevjp.github.io/ChargeCast-notes/sv/">
+<link rel="alternate" hreflang="ru" href="https://sakuradevjp.github.io/ChargeCast-notes/ru/">
+<link rel="alternate" hreflang="uk" href="https://sakuradevjp.github.io/ChargeCast-notes/uk/">
+<link rel="alternate" hreflang="tr" href="https://sakuradevjp.github.io/ChargeCast-notes/tr/">
+<link rel="alternate" hreflang="ar" href="https://sakuradevjp.github.io/ChargeCast-notes/ar/">
+<link rel="alternate" hreflang="hi" href="https://sakuradevjp.github.io/ChargeCast-notes/hi/">
+<link rel="alternate" hreflang="th" href="https://sakuradevjp.github.io/ChargeCast-notes/th/">
+<link rel="alternate" hreflang="vi" href="https://sakuradevjp.github.io/ChargeCast-notes/vi/">
+<link rel="alternate" hreflang="id" href="https://sakuradevjp.github.io/ChargeCast-notes/id/">
+<link rel="alternate" hreflang="ms" href="https://sakuradevjp.github.io/ChargeCast-notes/ms/">
+<link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/ChargeCast-notes/">
+<style>
+:root{
+  --bg:#ffffff;
+  --fg:#1a1a2e;
+  --fg-soft:#4a4a5e;
+  --accent:#ff4757;
+  --accent-soft:#ffe8ea;
+  --card:#f7f7fb;
+  --border:#e6e6ee;
+  --shadow:0 8px 24px rgba(26,26,46,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14141c;
+    --fg:#f2f2f5;
+    --fg-soft:#b0b0c0;
+    --accent:#ff6b7a;
+    --accent-soft:#3a1d22;
+    --card:#1d1d28;
+    --border:#2a2a38;
+    --shadow:0 8px 24px rgba(0,0,0,.4);
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP","Noto Sans Arabic","Noto Sans Thai","Noto Sans Devanagari",sans-serif;background:var(--bg);color:var(--fg);line-height:1.75;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:2rem 1.25rem 4rem}
+header.hero{text-align:center;padding:3rem 0 2rem}
+header.hero h1{font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.3;margin:0 0 .75rem;letter-spacing:-.01em}
+header.hero .tagline{font-size:1.15rem;color:var(--fg-soft);margin:0 0 1.5rem}
+header.hero .tagline strong{color:var(--accent)}
+.hero-media{margin:2rem 0;border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+.hero-media img,.hero-media video{display:block;width:100%;height:auto}
+.cta{display:inline-block;background:var(--accent);color:#fff;padding:.9rem 1.75rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:1.05rem;margin:.5rem .25rem;transition:transform .15s ease,box-shadow .15s ease;box-shadow:0 4px 12px rgba(255,71,87,.25)}
+.cta:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(255,71,87,.35)}
+.trial-note{display:block;margin-top:.75rem;color:var(--fg-soft);font-size:.95rem}
+h2{font-size:1.6rem;margin:3.5rem 0 1rem;letter-spacing:-.005em;position:relative;padding-left:1rem}
+h2::before{content:"";position:absolute;left:0;top:.3em;bottom:.3em;width:4px;border-radius:2px;background:var(--accent)}
+[dir="rtl"] h2{padding-left:0;padding-right:1rem}
+[dir="rtl"] h2::before{left:auto;right:0}
+h3{font-size:1.2rem;margin:2rem 0 .75rem}
+p{margin:.75rem 0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
+a:hover{border-bottom-color:var(--accent)}
+ul{padding-left:1.25rem}
+[dir="rtl"] ul{padding-left:0;padding-right:1.25rem}
+li{margin:.4rem 0}
+.step{background:var(--card);border-radius:14px;padding:1.5rem;margin:1.25rem 0;border:1px solid var(--border)}
+.step h3{margin-top:0;display:flex;align-items:center;gap:.6rem}
+.step .num{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;background:var(--accent);color:#fff;border-radius:50%;font-weight:700;font-size:1rem;flex-shrink:0}
+.step img{width:100%;border-radius:10px;margin:1rem 0;box-shadow:var(--shadow)}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1.5rem 0}
+.feature{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem}
+.feature .icon{font-size:1.75rem;margin-bottom:.5rem;display:block}
+.feature strong{display:block;margin-bottom:.3rem}
+.feature p{margin:0;color:var(--fg-soft);font-size:.95rem}
+.pain-points{background:var(--accent-soft);border-radius:14px;padding:1.25rem 1.5rem;margin:1.5rem 0}
+.pain-points ul{margin:.5rem 0}
+.pain-points li{margin:.5rem 0}
+.showcase{margin:1.5rem 0}
+.showcase img{width:100%;border-radius:14px;box-shadow:var(--shadow);display:block}
+.showcase figcaption{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:.75rem}
+.pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1.5rem 0}
+.price{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;text-align:center}
+.price.highlight{border-color:var(--accent);border-width:2px}
+.price .label{font-weight:600;font-size:1.1rem;margin-bottom:.25rem}
+.price .amount{font-size:2rem;font-weight:700;color:var(--accent);margin:.5rem 0}
+.price .note{color:var(--fg-soft);font-size:.9rem}
+.fit{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1.5rem 0}
+.fit>div{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem}
+.fit h3{margin-top:0}
+.fit ul{margin:0}
+details{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.75rem 1rem;margin:.5rem 0}
+details summary{cursor:pointer;font-weight:600;list-style:none}
+details summary::before{content:"＋ ";color:var(--accent)}
+details[open] summary::before{content:"− "}
+details p{margin:.5rem 0 0;color:var(--fg-soft)}
+.changelog{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.5rem;margin:1.5rem 0}
+.changelog ul{list-style:none;padding:0;margin:0}
+.changelog li{padding:.5rem 0;border-bottom:1px dashed var(--border)}
+.changelog li:last-child{border-bottom:none}
+.changelog code{background:var(--accent-soft);color:var(--accent);padding:.1rem .5rem;border-radius:4px;font-weight:600}
+hr{border:none;border-top:1px solid var(--border);margin:3rem 0}
+footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+.lang-switcher{text-align:center;margin:1rem 0;color:var(--fg-soft);font-size:.9rem;line-height:2}
+.lang-switcher a{margin:0 .35rem;white-space:nowrap}
+.lang-switcher a[aria-current="page"]{color:var(--fg);font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="lang-switcher" aria-label="Language">🌐 <a href="../" hreflang="en">English</a> · <a href="../ja/" hreflang="ja">日本語</a> · <a href="../zh-Hans/" aria-current="page"><strong>简体中文</strong></a> · <a href="../zh-Hant/" hreflang="zh-Hant">繁體中文</a> · <a href="../ko/" hreflang="ko">한국어</a> · <a href="../es/" hreflang="es">Español</a> · <a href="../fr/" hreflang="fr">Français</a> · <a href="../de/" hreflang="de">Deutsch</a> · <a href="../it/" hreflang="it">Italiano</a> · <a href="../pt/" hreflang="pt">Português</a> · <a href="../nl/" hreflang="nl">Nederlands</a> · <a href="../pl/" hreflang="pl">Polski</a> · <a href="../sv/" hreflang="sv">Svenska</a> · <a href="../ru/" hreflang="ru">Русский</a> · <a href="../uk/" hreflang="uk">Українська</a> · <a href="../tr/" hreflang="tr">Türkçe</a> · <a href="../ar/" hreflang="ar">العربية</a> · <a href="../hi/" hreflang="hi">हिन्दी</a> · <a href="../th/" hreflang="th">ไทย</a> · <a href="../vi/" hreflang="vi">Tiếng Việt</a> · <a href="../id/" hreflang="id">Bahasa Indonesia</a> · <a href="../ms/" hreflang="ms">Bahasa Melayu</a></nav>
+
+<header class="hero">
+  <h1>插上线，开播。<br>电量一直满。</h1>
+  <p class="tagline"><strong>一根 USB 线。</strong><br>把 Android 的画面、游戏声音和麦克风一次性送进 Windows —— 全程还在充电。</p>
+  <div class="hero-media">
+    <img src="../assets/Thumbnail.png" alt="ChargeCast：Android 镜像 / 边充边播 / 音频 + 麦克风直通">
+  </div>
+  <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ 在 Microsoft Store 获取</a>
+  <span class="trial-note">含 7 天免费试用</span>
+</header>
+
+<h2>这些情况是不是很熟悉？</h2>
+<div class="pain-points">
+<ul>
+  <li>想在 OBS 上直播 Android 游戏，可是 <strong>画面采集、游戏音和自己的麦克风</strong> 每次都凑不到一块儿。</li>
+  <li>Wi-Fi 镜像简直是噩梦：<strong>延迟</strong> 飙高，<strong>电池</strong> 哗哗掉。</li>
+  <li>就算在命令行里用 <code>scrcpy</code>，那套流程 <strong>每次开播</strong> 都要走一遍，真的烦。</li>
+  <li>直播到一半，手机只剩 12%，还烫得慌。<strong>冷汗直冒。</strong></li>
+</ul>
+<p style="margin:1rem 0 0">ChargeCast 用 <strong>一根 USB 线 + 一个顺手的 GUI</strong> 把这四件事一次解决。仅限 Windows，专为直播打造。</p>
+</div>
+
+<h2>3 分钟开播 —— 快速演示</h2>
+<p>从「也许我也能直播」到「我已经在直播了」的最短路径。</p>
+
+<div class="step">
+  <h3><span class="num">1</span>插上 USB 线</h3>
+  <p>在 Android 手机上打开 USB 调试，然后用线连接到电脑。<br><strong>用日常的充电线就行。</strong> 没错 —— 直播全程手机都在充电。</p>
+  <details style="margin-top:.75rem;background:var(--bg)">
+    <summary>第一次用？启用 USB 调试（2 分钟）</summary>
+    <ol>
+      <li>打开 Android <strong>设置 → 关于手机</strong></li>
+      <li>连续点击 <strong>版本号</strong> 7 次，直到出现「您已进入开发者模式」</li>
+      <li>进入 <strong>设置 → 系统 → 开发者选项</strong>，打开 <strong>USB 调试</strong></li>
+      <li>插上线后，在权限提示上点 <strong>允许</strong></li>
+    </ol>
+    <p style="color:var(--fg-soft);font-size:.9rem;margin-top:.5rem">各厂商菜单路径略有不同（三星：设置 → 关于手机 → 软件信息 → 点击版本号）。</p>
+  </details>
+</div>
+
+<div class="step">
+  <h3><span class="num">2</span>挑个预设，点 Start Capture</h3>
+  <img src="../assets/screenshot-1.png" alt="ChargeCast 预设选择器">
+  <p>一键选择 <strong>720p / 1080p / 1440p / Custom</strong>。scrcpy 窗口会打开，Android 画面已经在里面了。用 OBS 的窗口捕获对准它 —— 搞定。</p>
+</div>
+
+<div class="step">
+  <h3><span class="num">3</span>三个滑杆轻松调</h3>
+  <img src="../assets/screenshot-3.png" alt="三通道音频混音器">
+  <ul>
+    <li><strong>Device</strong> — 来自 Android 手机的游戏声</li>
+    <li><strong>Output</strong> — 你的 PC 声音（直播 BGM、Discord、浏览器）</li>
+    <li><strong>Mic</strong> — 你自己的声音</li>
+  </ul>
+  <p>在 ChargeCast 里把所有声音混好，交给 OBS 一路干净的输入。<strong>再也不用直播到一半跟混音器较劲。</strong></p>
+</div>
+
+<p style="text-align:center;font-size:1.1rem;margin:2rem 0">从冷启动到这里大概 <strong>3 分钟</strong>。之后只要按 OBS 的「开始直播」就行。</p>
+
+<h2>一眼看清能做什么</h2>
+<div class="feature-grid">
+  <div class="feature"><span class="icon">📱</span><strong>把 Android 镜像到 PC</strong><p>通过 USB 把手机直接塞进一个 Windows 窗口</p></div>
+  <div class="feature"><span class="icon">🔋</span><strong>边播边充电</strong><p>同一根线给手机供电 —— 不降频、不担心没电</p></div>
+  <div class="feature"><span class="icon">🎙</span><strong>音频 + 麦克风直通</strong><p>三通道混音器：设备音、PC 音、麦克风一把抓</p></div>
+  <div class="feature"><span class="icon">🎮</span><strong>内置推流预设</strong><p>720p / 1080p / 1440p 60fps，为 Twitch 和 YouTube 优化</p></div>
+  <div class="feature"><span class="icon">🪟</span><strong>记住窗口位置</strong><p>OBS 场景布局在下次开播时依然整齐</p></div>
+  <div class="feature"><span class="icon">🌐</span><strong>22 种语言</strong><p>English、日本語、中文、한국어 等多种语言</p></div>
+</div>
+
+<h2>在 OBS 里长什么样</h2>
+<figure class="showcase">
+  <img src="../assets/screenshot-2.png" alt="使用 ChargeCast 的 OBS 直播布局">
+  <figcaption>把 ChargeCast 的窗口添加到 OBS 的窗口捕获源中 —— 摄像头、游戏画面和声音会干净地组合成一个场景。</figcaption>
+</figure>
+
+<h2>价格</h2>
+<div class="pricing">
+  <div class="price highlight">
+    <div class="label">免费试用</div>
+    <div class="amount">7 天</div>
+    <div class="note">全功能，无限制</div>
+  </div>
+  <div class="price">
+    <div class="label">月付</div>
+    <div class="amount">$4.99<span style="font-size:1rem;color:var(--fg-soft)">/月</span></div>
+    <div class="note">随时取消</div>
+  </div>
+  <div class="price">
+    <div class="label">年付</div>
+    <div class="amount">$49.99<span style="font-size:1rem;color:var(--fg-soft)">/年</span></div>
+    <div class="note">省下约 2 个月</div>
+  </div>
+</div>
+<p style="text-align:center;color:var(--fg-soft)">所有付款和取消都通过你的 Microsoft 账户完成。ChargeCast 不会接触你的卡片信息。</p>
+<p style="text-align:center"><a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ 开始 7 天试用</a></p>
+
+<h2>这款应用适合谁</h2>
+<div class="fit">
+  <div>
+    <h3>✅ 正合适</h3>
+    <ul>
+      <li>想用 OBS 直播 Android 游戏实况、应用评测或教程</li>
+      <li>偏爱有线稳定性，不想被 Wi-Fi 波动折磨</li>
+      <li>希望用一个应用搞定所有音频的创作者</li>
+      <li>担心手机发热和电量的长时间直播主</li>
+    </ul>
+  </div>
+  <div>
+    <h3>⏭ 可能不太合适</h3>
+    <ul>
+      <li>Mac 或 Linux 用户（本应用仅限 Windows）</li>
+      <li>想要 100% 免费方案的人（命令行裸 <code>scrcpy</code> 也够用）</li>
+      <li>必须要无线 Wi-Fi 镜像的人（ChargeCast 以 USB 为优先）</li>
+    </ul>
+  </div>
+</div>
+
+<h2>常见问题</h2>
+<details><summary>需要 root 或特殊的开发环境吗？</summary><p>不需要。只要在 Android 的开发者选项里打开「USB 调试」即可。</p></details>
+<details><summary>能同时听到游戏声和自己的声音吗？</summary><p>可以。三个通道各有独立滑杆。</p></details>
+<details><summary>应该搭配哪种直播软件？</summary><p>OBS Studio 是推荐方案（使用「窗口捕获」源）。XSplit 等同类软件同理。</p></details>
+<details><summary>竖屏游戏怎么办？</summary><p>方向可锁定为竖屏、横屏或自动，这样 OBS 布局就能保持稳定。</p></details>
+<details><summary>它会偷偷联网吗？</summary><p>所有采集都通过本地 ADB。ChargeCast 本身不会把设备信息发到任何地方。</p></details>
+
+<h2>关于 OBS 集成的说明</h2>
+<p>ChargeCast <strong>本身不是直播软件</strong>。把它想成一个舞台，把干净的画面交给 OBS。</p>
+<ul>
+  <li>让 <strong>OBS Studio 的窗口捕获</strong> 对准 ChargeCast 窗口 —— 这就是全部集成步骤</li>
+  <li>画面、设备音和麦克风都已在 ChargeCast 端混好，所以 OBS 场景可以保持简洁</li>
+  <li>XSplit、Streamlabs、Discord 屏幕共享 —— <strong>任何支持窗口捕获的工具都是同样用法</strong></li>
+</ul>
+<p>OBS 场景一旦配好，后续开播就一个动作：<strong>插上线，按 Start Capture</strong>。</p>
+
+<h2>更新日志</h2>
+<div class="changelog">
+<ul>
+  <li><code>v1.6.1</code> 稳定性更新</li>
+  <li><code>v1.6.0</code> Custom 预设打磨、scrcpy 窗口管理优化、改用 Microsoft Store 7 天试用</li>
+  <li><code>v1.5.0</code> 新增自定义分辨率预设、记住 scrcpy 窗口位置</li>
+  <li><code>v1.4.0</code> Device Volume 滑杆与 3 通道音频混音器</li>
+  <li><code>v1.3.x</code> 更早版本 —— 初始发布、基础镜像与音频直通</li>
+</ul>
+</div>
+
+<hr>
+
+<p style="text-align:center;font-size:1.15rem;margin:2rem 0">
+  <strong>插上线，开播吧。</strong><br>
+  一根 USB 线，7 天免费，所有功能全开。
+</p>
+<p style="text-align:center">
+  <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ 在 Microsoft Store 获取 ChargeCast</a>
+</p>
+
+<footer>
+  <p>ChargeCast 是 <a href="https://github.com/sakuradevjp">sakura.dev.jp</a> 出品的 Windows 应用。产品 ID：<code>sakura.dev.jp.ChargeCast</code></p>
+</footer>
+
+</div>
+</body>
+</html>
