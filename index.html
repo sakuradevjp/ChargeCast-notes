@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ChargeCast — USBでつなぐだけ、Android 配信がこんなに軽い</title>
-<meta name="description" content="Plug in. Stream on. Stay charged. USBケーブル1本で、Android の画面も音もマイクも Windows にまるごと流し込む。Microsoft Store の7日間無料トライアルつき。">
-<meta property="og:title" content="ChargeCast — USBでつなぐだけ、Android 配信がこんなに軽い">
-<meta property="og:description" content="Plug in. Stream on. Stay charged.">
+<title>ChargeCast — Plug in. Stream on. Stay charged.</title>
+<meta name="description" content="Plug in. Stream on. Stay charged. Mirror Android to Windows over USB with a 3-channel audio mixer, built-in streaming presets, and a 7-day free trial on the Microsoft Store.">
+<meta property="og:title" content="ChargeCast — Plug in. Stream on. Stay charged.">
+<meta property="og:description" content="Mirror Android to Windows over USB, with audio + mic passthrough and OBS-ready presets.">
 <meta property="og:image" content="assets/Thumbnail.png">
 <meta property="og:type" content="website">
 <style>
@@ -208,151 +208,151 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <div class="wrap">
 
 <nav class="lang-switcher">
-  🌐 <a href="#" aria-current="page">日本語</a>
-  <span style="opacity:.5">English・中文・한국어 ほか（翻訳準備中）</span>
+  🌐 <a href="#" aria-current="page"><strong>English</strong></a> ・ <a href="ja/">日本語</a>
+  <span style="opacity:.5">・ 中文・한국어 and more (translations in progress)</span>
 </nav>
 
 <header class="hero">
-  <h1>USBでつなぐだけ、<br>Android 配信がこんなに軽い</h1>
-  <p class="tagline"><strong>Plug in. Stream on. Stay charged.</strong><br>USBケーブル1本で、Android の画面も音もマイクも Windows にまるごと。</p>
+  <h1>Plug in. Stream on.<br>Stay charged.</h1>
+  <p class="tagline"><strong>One USB cable.</strong><br>Mirror your Android screen, game audio, and mic to Windows — charged the whole time.</p>
   <div class="hero-media">
-    <img src="assets/Thumbnail.png" alt="ChargeCast の3大機能: Android ミラー / 充電しながら配信 / 音声 + マイクパススルー">
+    <img src="assets/Thumbnail.png" alt="ChargeCast's three pillars: Mirror Android to PC / Charge while streaming / Audio + Mic passthrough">
   </div>
-  <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Microsoft Store で入手</a>
-  <span class="trial-note">7日間の無料トライアルつき</span>
+  <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Get it on Microsoft Store</a>
+  <span class="trial-note">7-day free trial included</span>
 </header>
 
-<h2>こんなことで詰まっていませんか</h2>
+<h2>Does any of this sound familiar?</h2>
 <div class="pain-points">
 <ul>
-  <li>Android ゲームを OBS で配信したい。でも <strong>画面のキャプチャ・ゲーム音・自分のマイク</strong> を全部きれいに混ぜるのが毎回大仕事</li>
-  <li>Wi-Fi ミラーリングは <strong>遅延</strong> と <strong>バッテリー</strong> がつらい</li>
-  <li><code>scrcpy</code> を CLI で叩くのは慣れても <strong>毎回ちょっと面倒</strong></li>
-  <li>配信中にスマホの電池が切れそうで <strong>冷や汗</strong></li>
+  <li>You want to stream Android gameplay on OBS, but <strong>screen capture, game audio, and your own mic</strong> never quite line up.</li>
+  <li>Wi-Fi mirroring is a world of pain: <strong>latency</strong> spikes and a <strong>draining battery</strong>.</li>
+  <li>Even with <code>scrcpy</code> on the CLI, the ritual gets old — <strong>every single session</strong>.</li>
+  <li>Mid-stream, your phone is at 12% and heating up. <strong>Sweaty.</strong></li>
 </ul>
-<p style="margin:1rem 0 0">ChargeCast は、この4つを <strong>USB1本＋GUI</strong> で丸ごと片付ける Windows アプリです。</p>
+<p style="margin:1rem 0 0">ChargeCast solves all four with <strong>one USB cable and a friendly GUI</strong>. Windows only, streaming-first.</p>
 </div>
 
-<h2>3分で配信できる ― Quick demo</h2>
-<p>「俺でも配信できそう」ってなる、一番短いルート。</p>
+<h2>Go live in 3 minutes — Quick demo</h2>
+<p>The shortest path from "maybe I could stream" to "I'm live."</p>
 
 <div class="step">
-  <h3><span class="num">1</span>USB でつなぐ</h3>
-  <p>Android の USB デバッグを ON にして、PC にケーブルで挿すだけ。<br><strong>ケーブルは充電ケーブルでOK</strong>。そう、配信中ずっと充電されます。</p>
-</div>
-
-<div class="step">
-  <h3><span class="num">2</span>プリセットを選んで Start Capture</h3>
-  <img src="assets/screenshot-1.png" alt="ChargeCast のプリセット選択画面">
-  <p><strong>720p / 1080p / 1440p / Custom</strong> のボタンを選んでクリック1発。scrcpy ウィンドウが立ち上がって、Android の画面がそのまま出てきます。OBS の Window Capture で掴むだけで配信ソース完成。</p>
+  <h3><span class="num">1</span>Plug in the USB cable</h3>
+  <p>Turn on USB debugging on your Android phone, then plug it into your PC. <br><strong>Your regular charging cable is fine.</strong> Yes — the phone charges while you stream.</p>
 </div>
 
 <div class="step">
-  <h3><span class="num">3</span>3つのスライダーでミックス</h3>
-  <img src="assets/screenshot-3.png" alt="3チャンネル・オーディオミキサー">
+  <h3><span class="num">2</span>Pick a preset, hit Start Capture</h3>
+  <img src="assets/screenshot-1.png" alt="ChargeCast preset picker">
+  <p>Choose <strong>720p / 1080p / 1440p / Custom</strong> with one click. A scrcpy window opens with your Android screen already inside it. Point OBS's Window Capture at it — done.</p>
+</div>
+
+<div class="step">
+  <h3><span class="num">3</span>Mix with three sliders</h3>
+  <img src="assets/screenshot-3.png" alt="Three-channel audio mixer">
   <ul>
-    <li><strong>Device</strong> … Android のゲーム音</li>
-    <li><strong>Output</strong> … PC側の BGM や Discord</li>
-    <li><strong>Mic</strong> … 自分の声</li>
+    <li><strong>Device</strong> — game audio from your Android phone</li>
+    <li><strong>Output</strong> — your PC audio (stream BGM, Discord, browser)</li>
+    <li><strong>Mic</strong> — your own voice</li>
   </ul>
-  <p>これを ChargeCast の画面だけで混ぜて、OBS 側には1ソース渡すだけ。<strong>配信中に音量バランスで喧嘩しない</strong> ので、スライダーをいじる回数がぐっと減ります。</p>
+  <p>Mix everything inside ChargeCast and hand OBS one clean source. <strong>No more fighting the mixer mid-stream</strong> — you'll stop touching the sliders within a minute.</p>
 </div>
 
-<p style="text-align:center;font-size:1.1rem;margin:2rem 0">ここまでで、だいたい <strong>3分</strong>。あとは OBS の「配信開始」を押すだけ。</p>
+<p style="text-align:center;font-size:1.1rem;margin:2rem 0">That's roughly <strong>3 minutes</strong> from cold start. After that, just hit "Start Streaming" in OBS.</p>
 
-<h2>できること、ひと目で</h2>
+<h2>What it does, at a glance</h2>
 <div class="feature-grid">
-  <div class="feature"><span class="icon">📱</span><strong>Mirror Android to PC</strong><p>USB 経由で Android をそのまま Windows ウィンドウに</p></div>
-  <div class="feature"><span class="icon">🔋</span><strong>Charge while streaming</strong><p>挿してるケーブルで常時給電。長時間配信でも熱と電池が怖くない</p></div>
-  <div class="feature"><span class="icon">🎙</span><strong>Audio + Mic passthrough</strong><p>デバイス音・PC音・マイクを3チャンネルで一括ミックス</p></div>
-  <div class="feature"><span class="icon">🎮</span><strong>配信プリセット内蔵</strong><p>720p / 1080p / 1440p 60fps、Twitch・YouTube 向けに最適化</p></div>
-  <div class="feature"><span class="icon">🪟</span><strong>ウィンドウ位置を記憶</strong><p>配信レイアウトを組み直さなくていい</p></div>
-  <div class="feature"><span class="icon">🌐</span><strong>22言語対応</strong><p>日本語・英語・中国語・韓国語ほか</p></div>
+  <div class="feature"><span class="icon">📱</span><strong>Mirror Android to PC</strong><p>Your phone in a Windows window, straight over USB</p></div>
+  <div class="feature"><span class="icon">🔋</span><strong>Charge while streaming</strong><p>The same cable powers your phone — no thermal throttling, no battery panic</p></div>
+  <div class="feature"><span class="icon">🎙</span><strong>Audio + Mic passthrough</strong><p>Three-channel mixer for device audio, PC audio, and your mic</p></div>
+  <div class="feature"><span class="icon">🎮</span><strong>Streaming presets built in</strong><p>720p / 1080p / 1440p 60fps, tuned for Twitch and YouTube</p></div>
+  <div class="feature"><span class="icon">🪟</span><strong>Remembers window position</strong><p>Your OBS scene layout stays intact between sessions</p></div>
+  <div class="feature"><span class="icon">🌐</span><strong>22 languages</strong><p>English, 日本語, 中文, 한국어, and more</p></div>
 </div>
 
-<h2>OBS に入れるとこうなる</h2>
+<h2>How it looks inside OBS</h2>
 <figure class="showcase">
-  <img src="assets/screenshot-2.png" alt="OBS の配信レイアウトに ChargeCast を入れた例">
-  <figcaption>ChargeCast のウィンドウを OBS の Window Capture に入れるだけ。Webカメラ・ゲーム画面・音声ソースが綺麗に1シーンに収まります。</figcaption>
+  <img src="assets/screenshot-2.png" alt="An OBS streaming layout using ChargeCast">
+  <figcaption>Add ChargeCast's window to an OBS Window Capture source — webcam, game screen, and audio all compose cleanly into one scene.</figcaption>
 </figure>
 
-<h2>価格</h2>
+<h2>Pricing</h2>
 <div class="pricing">
   <div class="price highlight">
-    <div class="label">無料トライアル</div>
-    <div class="amount">7日間</div>
-    <div class="note">すべての機能を制限なし</div>
+    <div class="label">Free trial</div>
+    <div class="amount">7 days</div>
+    <div class="note">Full features, no limits</div>
   </div>
   <div class="price">
-    <div class="label">月額</div>
-    <div class="amount">$4.99<span style="font-size:1rem;color:var(--fg-soft)">/月</span></div>
-    <div class="note">いつでも解約可</div>
+    <div class="label">Monthly</div>
+    <div class="amount">$4.99<span style="font-size:1rem;color:var(--fg-soft)">/mo</span></div>
+    <div class="note">Cancel anytime</div>
   </div>
   <div class="price">
-    <div class="label">年額</div>
-    <div class="amount">$49.99<span style="font-size:1rem;color:var(--fg-soft)">/年</span></div>
-    <div class="note">約2ヶ月ぶんお得</div>
+    <div class="label">Yearly</div>
+    <div class="amount">$49.99<span style="font-size:1rem;color:var(--fg-soft)">/yr</span></div>
+    <div class="note">Save ~2 months</div>
   </div>
 </div>
-<p style="text-align:center;color:var(--fg-soft)">購入・解約はすべて Microsoft アカウント上で完結。ChargeCast 側でカード情報を預かりません。</p>
-<p style="text-align:center"><a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ 7日間トライアルをはじめる</a></p>
+<p style="text-align:center;color:var(--fg-soft)">All billing and cancellation happen through your Microsoft account. ChargeCast never sees your card details.</p>
+<p style="text-align:center"><a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Start the 7-day trial</a></p>
 
-<h2>こういう人に向いています</h2>
+<h2>Who this is for</h2>
 <div class="fit">
   <div>
-    <h3>✅ ハマる人</h3>
+    <h3>✅ Great fit</h3>
     <ul>
-      <li>OBS で Android ゲーム実況・アプリ紹介・チュートリアルを配信したい</li>
-      <li>有線の安定性がほしい</li>
-      <li>音周りをアプリ1つで終わらせたい</li>
-      <li>長時間配信でスマホの発熱と電池が不安</li>
+      <li>Streaming Android gameplay, app reviews, or tutorials to OBS</li>
+      <li>Anyone who prefers wired stability to Wi-Fi wobble</li>
+      <li>Creators who want one app to handle all the audio</li>
+      <li>Long-session streamers worried about heat and battery</li>
     </ul>
   </div>
   <div>
-    <h3>⏭ 向いていないかも</h3>
+    <h3>⏭ Maybe not for you</h3>
     <ul>
-      <li>Mac / Linux で使いたい（Windows 専用）</li>
-      <li>完全無料がいい（scrcpy を CLI で頑張る道）</li>
-      <li>Wi-Fi ワイヤレスがいい（本アプリは USB 前提）</li>
+      <li>Mac or Linux users (this is Windows-only)</li>
+      <li>Anyone who wants a 100% free path (plain <code>scrcpy</code> on the CLI will do)</li>
+      <li>Anyone who needs wireless Wi-Fi mirroring (ChargeCast is USB-first)</li>
     </ul>
   </div>
 </div>
 
-<h2>よくある質問</h2>
-<details><summary>root 化や特別な開発環境は必要？</summary><p>いりません。Android の「開発者オプション → USB デバッグ」を ON にするだけです。</p></details>
-<details><summary>ゲームの音と自分のマイクが同時に乗りますか？</summary><p>乗ります。3 チャンネルミキサーで個別に音量調整できます。</p></details>
-<details><summary>配信ソフトは何を使えばいい？</summary><p>OBS Studio を想定しています（Window Capture ソースで掴んでください）。XSplit など他のソフトでも同様の仕組みで動きます。</p></details>
-<details><summary>画面が縦向きのゲームでも大丈夫？</summary><p>Orientation を Portrait / Landscape / Auto から選べます。配信レイアウトを崩さず固定できます。</p></details>
-<details><summary>ネットに勝手に繋ぎますか？</summary><p>キャプチャはすべてローカルの ADB 経由です。ChargeCast 自体は端末情報を外部へ送りません。</p></details>
+<h2>FAQ</h2>
+<details><summary>Do I need root or a special dev environment?</summary><p>No. Just turn on "USB debugging" under Android Developer options.</p></details>
+<details><summary>Can I hear game audio and my own voice at the same time?</summary><p>Yes. Each of the three channels has its own slider.</p></details>
+<details><summary>Which streaming software should I use?</summary><p>OBS Studio is the reference setup (use a Window Capture source). XSplit and similar tools work the same way.</p></details>
+<details><summary>What about portrait-orientation games?</summary><p>Orientation can be locked to Portrait, Landscape, or Auto so your OBS layout stays stable.</p></details>
+<details><summary>Does it phone home?</summary><p>All capture is local via ADB. ChargeCast itself does not send device info anywhere.</p></details>
 
-<h2>OBS との連携について</h2>
-<p>ChargeCast は <strong>単体で配信するアプリではありません</strong>。立ち位置としては「OBS にきれいに渡すための前段」です。</p>
+<h2>A note on OBS integration</h2>
+<p>ChargeCast <strong>is not a streaming app on its own</strong>. Think of it as the stage that hands a clean take to OBS.</p>
 <ul>
-  <li>ChargeCast のウィンドウを <strong>OBS Studio の Window Capture</strong> で掴むだけ</li>
-  <li>映像・音声・マイクはすでに ChargeCast 側でミックス済みなので、OBS 側のソースは最小限</li>
-  <li>XSplit ／ Streamlabs ／ Discord の画面共有など、<strong>Window Capture が使える環境なら同じ要領</strong></li>
+  <li>Point an <strong>OBS Studio Window Capture</strong> at the ChargeCast window — that's the entire integration</li>
+  <li>Video, device audio, and mic are already mixed on ChargeCast's side, so your OBS scene stays minimal</li>
+  <li>XSplit, Streamlabs, Discord screen share — <strong>anything with a Window Capture source works the same way</strong></li>
 </ul>
-<p>OBS のシーンを一度組んでしまえば、以降は「USB 挿して Start Capture を押す」だけ。配信開始までの手順が <strong>ケーブル1本</strong> に収束するのが、ChargeCast を使う一番の効用です。</p>
+<p>Once the OBS scene is set up, the session starts with a single motion: <strong>plug in the cable, hit Start Capture</strong>. That reduction is the whole point of ChargeCast.</p>
 
-<h2>変更履歴</h2>
+<h2>Changelog</h2>
 <div class="changelog">
 <ul>
-  <li><code>v1.6.1</code> 安定化リリース</li>
-  <li><code>v1.6.0</code> カスタムプリセットの仕上げ、scrcpy ウィンドウ管理の改善、Microsoft Store の7日間トライアルへ移行</li>
-  <li><code>v1.5.0</code> Custom 解像度プリセット追加、ウィンドウ位置を記憶</li>
-  <li><code>v1.4.0</code> Device Volume スライダーと 3 チャンネル・オーディオミキサー</li>
-  <li><code>v1.3.x 以前</code> 初期リリース、基本ミラーリングと音声転送</li>
+  <li><code>v1.6.1</code> Stability release</li>
+  <li><code>v1.6.0</code> Custom preset polish, scrcpy window management, switched to Microsoft Store 7-day trial</li>
+  <li><code>v1.5.0</code> Custom resolution preset, remembered scrcpy window position</li>
+  <li><code>v1.4.0</code> Device Volume slider and 3-channel audio mixer</li>
+  <li><code>v1.3.x and earlier</code> Initial release — basic mirroring and audio passthrough</li>
 </ul>
 </div>
 
 <hr>
 
 <p style="text-align:center;font-size:1.15rem;margin:2rem 0">
-  <strong>さあ、USB を挿して配信しよう。</strong><br>
-  ケーブル1本で「配信部屋」が完成します。7日間、無料で全部ためせます。
+  <strong>Plug in the cable. Go live.</strong><br>
+  One USB cable, seven free days, every feature unlocked.
 </p>
 <p style="text-align:center">
-  <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Microsoft Store で ChargeCast を入手</a>
+  <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Get ChargeCast on Microsoft Store</a>
 </p>
 
 <footer>
