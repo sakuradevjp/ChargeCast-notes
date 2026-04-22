@@ -1,6 +1,6 @@
 # ChargeCast Notes
 
-Multi-language landing / developer notes site for [ChargeCast](https://apps.microsoft.com/detail/9N87X47V634V).
+Multi-language landing / developer notes site for [ChargeCast](https://sakuradevjp.github.io/ChargeCast-notes/).
 
 Published via GitHub Pages.
 
