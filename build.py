@@ -87,6 +87,11 @@ def build_hreflang_links(current_lang: str) -> str:
     return "\n".join(out)
 
 
+def build_canonical_link(lang: str) -> str:
+    base_url = "https://sakuradevjp.github.io/ChargeCast-notes/"
+    return base_url + path_for(lang)
+
+
 def render(lang: str, strings: dict) -> str:
     ctx = dict(strings)
     ctx["lang"] = lang
@@ -94,6 +99,7 @@ def render(lang: str, strings: dict) -> str:
     ctx["assetsPath"] = relative_to_root(lang) + "assets/"
     ctx["langSwitcher"] = build_switcher(lang)
     ctx["hreflangLinks"] = build_hreflang_links(lang)
+    ctx["canonicalLink"] = build_canonical_link(lang)
 
     def replace(match):
         key = match.group(1)
@@ -103,6 +109,34 @@ def render(lang: str, strings: dict) -> str:
         return ctx[key]
 
     return re.sub(r"\{\{(\w+)\}\}", replace, TEMPLATE)
+
+
+def write_sitemap() -> None:
+    from datetime import date
+    base_url = "https://sakuradevjp.github.io/ChargeCast-notes/"
+    today = date.today().isoformat()
+    lines = ['<?xml version="1.0" encoding="UTF-8"?>']
+    lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">')
+    for i, lang in enumerate(DISPLAY_ORDER):
+        if lang not in LANGS:
+            continue
+        loc = base_url + path_for(lang)
+        priority = "1.0" if lang == "en" else "0.8"
+        lines.append("  <url>")
+        lines.append(f"    <loc>{loc}</loc>")
+        lines.append(f"    <lastmod>{today}</lastmod>")
+        lines.append("    <changefreq>monthly</changefreq>")
+        lines.append(f"    <priority>{priority}</priority>")
+        lines.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{base_url}"/>')
+        for code in DISPLAY_ORDER:
+            if code not in LANGS:
+                continue
+            href = base_url + path_for(code)
+            lines.append(f'    <xhtml:link rel="alternate" hreflang="{code}" href="{href}"/>')
+        lines.append("  </url>")
+    lines.append("</urlset>")
+    (ROOT / "sitemap.xml").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print("wrote sitemap.xml")
 
 
 def main() -> int:
@@ -115,6 +149,7 @@ def main() -> int:
         written += 1
         print(f"wrote {out_path.relative_to(ROOT)}")
     print(f"\ntotal: {written} pages")
+    write_sitemap()
     return 0
 
 
