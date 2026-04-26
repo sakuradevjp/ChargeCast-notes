@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>scrcpy audio not working — what actually works (2026) | ChargeCast</title>
+<meta name="description" content="scrcpy audio forwarding fails silently in many setups. Here is the diagnosis tree: Android version, app DRM flags, audio source flags, and the OBS routing that catches the rest.">
+<meta property="og:title" content="scrcpy audio not working — what actually works (2026)">
+<meta property="og:description" content="A diagnosis tree for the most common scrcpy audio failures in 2026, plus the OBS routing that catches whatever scrcpy can carry.">
+<meta property="og:image" content="../../assets/Thumbnail.png">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/blog/scrcpy-audio-not-working/">
+<link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/ChargeCast-notes/blog/scrcpy-audio-not-working/">
+<link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/ChargeCast-notes/ja/blog/scrcpy-audio-not-working/">
+<link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/ChargeCast-notes/blog/scrcpy-audio-not-working/">
+<style>
+:root{--bg:#ffffff;--fg:#1a1a2e;--fg-soft:#4a4a5e;--accent:#ff4757;--accent-soft:#ffe8ea;--card:#f7f7fb;--border:#e6e6ee;--shadow:0 8px 24px rgba(26,26,46,.06);}
+@media (prefers-color-scheme: dark){:root{--bg:#14141c;--fg:#f2f2f5;--fg-soft:#b0b0c0;--accent:#ff6b7a;--accent-soft:#3a1d22;--card:#1d1d28;--border:#2a2a38;--shadow:0 8px 24px rgba(0,0,0,.4);}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;background:var(--bg);color:var(--fg);line-height:1.75;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:2rem 1.25rem 4rem}
+.crumbs{font-size:.9rem;color:var(--fg-soft);margin-bottom:2rem}
+.crumbs a{color:var(--fg-soft);text-decoration:none;border-bottom:1px solid transparent}
+.crumbs a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+article h1{font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.25;margin:0 0 1rem;letter-spacing:-.01em}
+article .meta{color:var(--fg-soft);font-size:.95rem;margin-bottom:2.5rem}
+article .meta time{margin-right:1rem}
+h2{font-size:1.45rem;margin:3rem 0 1rem;letter-spacing:-.005em;position:relative;padding-left:1rem}
+h2::before{content:"";position:absolute;left:0;top:.3em;bottom:.3em;width:4px;border-radius:2px;background:var(--accent)}
+h3{font-size:1.15rem;margin:2rem 0 .5rem}
+p{margin:.75rem 0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
+a:hover{border-bottom-color:var(--accent)}
+ul,ol{padding-left:1.5rem}
+li{margin:.4rem 0}
+code{background:var(--accent-soft);color:var(--accent);padding:.1rem .4rem;border-radius:4px;font-size:.92em}
+pre{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;overflow-x:auto;font-size:.92rem;line-height:1.6}
+pre code{background:transparent;color:var(--fg);padding:0}
+blockquote{border-left:3px solid var(--accent);background:var(--accent-soft);padding:.75rem 1.25rem;margin:1.5rem 0;border-radius:0 8px 8px 0}
+blockquote p{margin:.25rem 0}
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.95rem}
+th,td{border:1px solid var(--border);padding:.55rem .75rem;text-align:left;vertical-align:top}
+th{background:var(--card);font-weight:600}
+.tldr{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;margin:1.5rem 0}
+.tldr strong{display:block;color:var(--accent);margin-bottom:.5rem;font-size:.95rem;letter-spacing:.05em;text-transform:uppercase}
+.cta-box{background:var(--accent-soft);border-radius:14px;padding:1.5rem;margin:2.5rem 0;text-align:center}
+.cta{display:inline-block;background:var(--accent);color:#fff;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;margin-top:.5rem;box-shadow:0 4px 12px rgba(255,71,87,.25)}
+.cta:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(255,71,87,.35);border-bottom:none}
+hr{border:none;border-top:1px solid var(--border);margin:3rem 0}
+footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+footer a{color:var(--fg-soft)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="crumbs"><a href="../../">ChargeCast</a> · <a href="../">Blog</a> · scrcpy audio not working</nav>
+<p style="text-align:right;font-size:.9rem;color:var(--fg-soft);margin-bottom:1rem"><a href="../../ja/blog/scrcpy-audio-not-working/">🌐 日本語で読む</a></p>
+<article>
+<h1>scrcpy audio not working — what actually works (2026)</h1>
+<p class="meta"><time datetime="2026-04-27">April 27, 2026</time> · ~6 min read</p>
+
+<div class="tldr">
+<strong>TL;DR</strong>
+<p>scrcpy's audio forwarding requires <strong>Android 11+</strong>, only carries non-DRM-flagged streams, and the silent failures all look the same: video works, audio is gone. Walk the diagnosis tree below before rebuilding your setup.</p>
+</div>
+
+<h2>The five reasons scrcpy audio is silent</h2>
+
+<p>If you ran <code>scrcpy</code> and the device window opened but no sound reached OBS, it is almost always one of these. Walk them in order — early ones are cheap to check.</p>
+
+<h3>1. You're on scrcpy 1.x</h3>
+
+<p>Audio forwarding landed in <strong>scrcpy 2.0</strong> (May 2023). Anything older does video only.</p>
+
+<pre><code>scrcpy --version
+# expected: scrcpy 2.x or later
+</code></pre>
+
+<p>If you installed via your Linux distro repository, check the version — Debian stable can lag well behind. <code>winget upgrade Genymobile.scrcpy</code> on Windows or grab the latest <a href="https://github.com/Genymobile/scrcpy/releases">release</a> directly.</p>
+
+<h3>2. The phone is on Android 10 or older</h3>
+
+<p>Android exposed the <code>MediaProjection</code> audio capture API only in <strong>Android 11 (API 30)</strong>. On Android 10 and below, scrcpy logs a warning at startup and skips audio:</p>
+
+<pre><code>WARN: Audio capture is not supported before Android 11
+</code></pre>
+
+<p>If your phone is older, no scrcpy flag will fix this. Update Android, change phone, or route audio over Bluetooth/aux into the PC instead.</p>
+
+<h3>3. You're capturing the wrong audio source</h3>
+
+<p>scrcpy 2.x supports several sources, and the default has changed across releases:</p>
+
+<table>
+<thead><tr><th>Source</th><th>What it captures</th></tr></thead>
+<tbody>
+<tr><td><code>output</code></td><td>Whatever is playing through the device speakers (the default for game streaming)</td></tr>
+<tr><td><code>playback</code></td><td>Alias of <code>output</code> in newer scrcpy</td></tr>
+<tr><td><code>mic</code></td><td>The phone's microphone</td></tr>
+<tr><td><code>voice_call</code> / <code>voice_recognition</code></td><td>Specialized streams, mostly silent for games</td></tr>
+</tbody>
+</table>
+
+<p>If you launched scrcpy with <code>--audio-source=mic</code> by accident, you will hear a slightly muffled version of your room and zero game audio. Force the right source explicitly:</p>
+
+<pre><code>scrcpy --audio-source=output
+</code></pre>
+
+<h3>4. The app marks its audio as protected</h3>
+
+<p>Android lets apps flag their audio output as DRM-protected via <code>FLAG_AUDIO_PLAYBACK_CAPTURE</code>. When set, <code>MediaProjection</code> silently returns nothing. scrcpy can't override this — the call from inside the app is what blocks the capture.</p>
+
+<p>Common offenders:</p>
+<ul>
+<li>Spotify, Apple Music, YouTube Music — paid streaming audio</li>
+<li>Netflix, Prime Video, Disney+ — DRM-protected video soundtracks</li>
+<li>Some Korean and Japanese mobile games that ship with anti-cheat / anti-mirroring SDKs</li>
+</ul>
+
+<p>If you only ever stream gameplay, this rarely bites you — most games do <em>not</em> set the flag. But if you tested with Spotify in the background, the silent capture can look like scrcpy is broken when the issue is the app.</p>
+
+<h3>5. The audio is forwarding fine, but OBS is listening to the wrong device</h3>
+
+<p>This is the most common failure once you've ruled out 1–4. scrcpy plays the audio through the PC's <em>default output</em>. OBS's "Desktop Audio" source then picks it up — <strong>unless</strong> your default output is a different device than the one OBS is monitoring.</p>
+
+<p>Check on Windows:</p>
+<ol>
+<li>Right-click the speaker icon &rarr; <strong>Sound settings</strong> &rarr; <strong>Volume mixer</strong>.</li>
+<li>Find the scrcpy entry while it's running. Note which output it routes to.</li>
+<li>In OBS, open <strong>Settings &rarr; Audio &rarr; Desktop Audio</strong> and pick the same device.</li>
+</ol>
+
+<p>On macOS this requires a virtual audio driver (BlackHole, Loopback). On Linux, route via PulseAudio's <code>pactl load-module module-loopback</code>.</p>
+
+<h2>Diagnosis flow, condensed</h2>
+
+<pre><code>scrcpy --version             &lt;-- step 1: must be 2.x
+adb shell getprop ro.build.version.release
+                             &lt;-- step 2: must be 11 or higher
+scrcpy --audio-source=output &lt;-- step 3: pick the right source
+test with a non-DRM app      &lt;-- step 4: confirm capture is allowed
+check OBS audio device       &lt;-- step 5: route correctly
+</code></pre>
+
+<h2>When scrcpy still won't cooperate</h2>
+
+<p>If you've walked all five and still have silence (or you're tired of doing this every session), there are three options:</p>
+
+<h3>Option A — Bundled GUI tools</h3>
+<p>Tools that wrap scrcpy with a UI handle the audio routing for you. We're biased — we make <a href="https://apps.microsoft.com/detail/9N87X47V634V">ChargeCast</a> — but the honest pitch is that a one-click tool with a built-in 3-channel mixer (game audio, PC audio, mic) skips most of the failure modes above. It is Windows-only, $4.99/month with a 7-day trial. Worth it if you stream weekly; not worth it if this is a one-off project.</p>
+
+<h3>Option B — Old-school analog routing</h3>
+<p>3.5 mm jack out of the phone (or a USB-C-to-3.5 mm adapter) into your PC's line-in. Zero software complexity, but you give up the digital signal and have to re-balance the levels on every track.</p>
+
+<h3>Option C — Mix on the device</h3>
+<p>Record gameplay on the phone with the system recorder, transfer the file, edit later. Not "live streaming" anymore but works for YouTube uploads.</p>
+
+<h2>What about DroidCam, AirDroid, or scrcpy alternatives?</h2>
+
+<p>Short version: <strong>DroidCam</strong> treats the phone as a webcam, not a screen mirror — its audio goes through the mic capture, so game audio fights with your voice. <strong>AirDroid</strong> and similar Wi-Fi mirrors send video without audio at all on most plans, and the latency is worse. None of them solve the underlying Android 11+ / DRM constraints; they just hide them differently.</p>
+
+<p>scrcpy is still the right base tool. The question is only whether you wire it up yourself or use a wrapper.</p>
+
+<div class="cta-box">
+  <p style="margin:0 0 .5rem"><strong>Skip the audio routing dance.</strong></p>
+  <p style="margin:0;color:var(--fg-soft);font-size:.95rem">ChargeCast bundles scrcpy with a 3-channel audio mixer that lands in OBS as one clean source. 7-day free trial.</p>
+  <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Try ChargeCast on Microsoft Store</a>
+</div>
+
+</article>
+<footer>
+<p><a href="../">← All posts</a> · <a href="../../">ChargeCast home</a></p>
+</footer>
+</div>
+</body>
+</html>

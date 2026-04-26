@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>キャプチャボードなしで Android を OBS に配信する（2026 年版）| ChargeCast</title>
+<meta name="description" content="Elgato や HDMI キャプチャを買わずに Android ゲーム配信を始める実用ガイド。USB と scrcpy で OBS に画面を渡し、音と充電の問題まで含めて 2026 年に動く方法を整理。">
+<meta property="og:title" content="キャプチャボードなしで Android を OBS に配信する（2026 年版）">
+<meta property="og:description" content="USB と scrcpy で OBS に画面を渡せる。本当に詰まるのは「音」と「充電」。実機で動く 2026 年の手順と、落とし穴の場所をまとめる。">
+<meta property="og:image" content="../../../assets/Thumbnail.png">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/ja/blog/stream-android-to-obs-no-capture-card/">
+<link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/ChargeCast-notes/blog/stream-android-to-obs-no-capture-card/">
+<link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/ChargeCast-notes/ja/blog/stream-android-to-obs-no-capture-card/">
+<style>
+:root{--bg:#ffffff;--fg:#1a1a2e;--fg-soft:#4a4a5e;--accent:#ff4757;--accent-soft:#ffe8ea;--card:#f7f7fb;--border:#e6e6ee;--shadow:0 8px 24px rgba(26,26,46,.06);}
+@media (prefers-color-scheme: dark){:root{--bg:#14141c;--fg:#f2f2f5;--fg-soft:#b0b0c0;--accent:#ff6b7a;--accent-soft:#3a1d22;--card:#1d1d28;--border:#2a2a38;--shadow:0 8px 24px rgba(0,0,0,.4);}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;background:var(--bg);color:var(--fg);line-height:1.85;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:2rem 1.25rem 4rem}
+.crumbs{font-size:.9rem;color:var(--fg-soft);margin-bottom:2rem}
+.crumbs a{color:var(--fg-soft);text-decoration:none;border-bottom:1px solid transparent}
+.crumbs a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+article h1{font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.4;margin:0 0 1rem;letter-spacing:-.005em}
+article .meta{color:var(--fg-soft);font-size:.95rem;margin-bottom:2.5rem}
+article .meta time{margin-right:1rem}
+h2{font-size:1.4rem;margin:3rem 0 1rem;letter-spacing:-.005em;position:relative;padding-left:1rem}
+h2::before{content:"";position:absolute;left:0;top:.3em;bottom:.3em;width:4px;border-radius:2px;background:var(--accent)}
+h3{font-size:1.1rem;margin:2rem 0 .5rem}
+p{margin:.75rem 0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
+a:hover{border-bottom-color:var(--accent)}
+ul,ol{padding-left:1.5rem}
+li{margin:.4rem 0}
+code{background:var(--accent-soft);color:var(--accent);padding:.1rem .4rem;border-radius:4px;font-size:.92em}
+pre{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;overflow-x:auto;font-size:.92rem;line-height:1.6}
+pre code{background:transparent;color:var(--fg);padding:0}
+blockquote{border-left:3px solid var(--accent);background:var(--accent-soft);padding:.75rem 1.25rem;margin:1.5rem 0;border-radius:0 8px 8px 0}
+blockquote p{margin:.25rem 0}
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.95rem}
+th,td{border:1px solid var(--border);padding:.55rem .75rem;text-align:left;vertical-align:top}
+th{background:var(--card);font-weight:600}
+.tldr{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;margin:1.5rem 0}
+.tldr strong{display:block;color:var(--accent);margin-bottom:.5rem;font-size:.95rem;letter-spacing:.05em}
+.cta-box{background:var(--accent-soft);border-radius:14px;padding:1.5rem;margin:2.5rem 0;text-align:center}
+.cta{display:inline-block;background:var(--accent);color:#fff;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;margin-top:.5rem;box-shadow:0 4px 12px rgba(255,71,87,.25)}
+.cta:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(255,71,87,.35);border-bottom:none}
+hr{border:none;border-top:1px solid var(--border);margin:3rem 0}
+footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+footer a{color:var(--fg-soft)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="crumbs"><a href="../../../">ChargeCast</a> · <a href="../">ブログ</a> · キャプチャボードなしで Android を OBS に配信する</nav>
+<p style="text-align:right;font-size:.9rem;color:var(--fg-soft);margin-bottom:1rem"><a href="../../../blog/stream-android-to-obs-no-capture-card/">🌐 Read in English</a></p>
+<article>
+<h1>キャプチャボードなしで Android を OBS に配信する（2026 年版）</h1>
+<p class="meta"><time datetime="2026-04-27">2026 年 4 月 27 日</time> · 約 8 分</p>
+
+<div class="tldr">
+<strong>要点</strong>
+<p>Android ゲームを OBS に配信するのに、Elgato やキャプチャボードは要らない。USB ケーブル 1 本と <code>scrcpy</code> で、OBS に渡せるきれいなウィンドウが手に入る。本当に難しいのは「音」のほう — 多くの「無料でできるよ」記事はここで静かに失敗している。実際に動く 2026 年の手順を、落とし穴ごと整理する。</p>
+</div>
+
+<h2>そもそも、なぜキャプチャボードに手が伸びるのか</h2>
+
+<p>コンシューマ機ストリーマーの「正解」セットアップは、HDMI 出力 → キャプチャボード → PC、という流れだ。Android で同じ形にしようとすると、USB-C → HDMI 変換 → キャプチャボード、になる。ここに何となく流れる人が多いのには理由がふたつある。</p>
+
+<ol>
+<li><strong>メンタルモデルの引き継ぎ。</strong>すでに PS5 や Switch を配信していると、キャプチャボードは見慣れた箱だ。「同じことをスマホでも」が一番考えなくていい選択肢になる。</li>
+<li><strong>音の問題が見えなくなる。</strong>キャプチャボードは映像とゲーム音をまとめてエンコードしてくれるので、「音をどう乗せるか」という問題が水面下に隠れる。USB だけで配信を組もうとした瞬間、この問題が表に出てくる。</li>
+</ol>
+
+<p>ただし落とし穴がある。USB-C → HDMI 変換アダプタは <em>スマホから</em> 電力を吸う側で、しかも長時間配信では HDMI 信号自体が安定しないスマホが多い。つまりこの「プロ感のある」経路は、合計 2〜3 万円かかったうえで、バッテリーは減るし、結局「自分の声をどう乗せるか」という問題は残る。</p>
+
+<h2>キャプチャボードなしの 3 ステップ</h2>
+
+<p>USB デバッグが使える Android なら何でも動く。ケーブルは普段使ってる充電ケーブルで OK。</p>
+
+<h3>1. USB デバッグを有効化</h3>
+<ol>
+<li><strong>設定 → 端末情報</strong>を開く</li>
+<li><strong>ビルド番号</strong>を 7 回タップして「開発者になりました」と出るまで</li>
+<li><strong>設定 → システム → 開発者向けオプション</strong>から <strong>USB デバッグ</strong>を ON</li>
+<li>ケーブルを挿したときに出る許可ダイアログで「許可」</li>
+</ol>
+
+<h3>2. scrcpy を起動</h3>
+
+<p><a href="https://github.com/Genymobile/scrcpy">scrcpy</a>（Genymobile、Apache 2.0）はこの手のオープンソースの定番。USB 経由で Android の画面を PC のウィンドウに出してくれる。</p>
+
+<pre><code># Windows (winget)
+winget install Genymobile.scrcpy
+
+# macOS
+brew install scrcpy
+
+# Linux (Debian/Ubuntu)
+sudo apt install scrcpy
+</code></pre>
+
+<p>配信向きのオプションで起動する：</p>
+
+<pre><code>scrcpy --max-size=1920 --max-fps=60 --video-bit-rate=8M
+</code></pre>
+
+<h3>3. OBS の Window Capture で取る</h3>
+<ol>
+<li>OBS の <strong>ソース</strong>横の「+」 → <strong>ウィンドウキャプチャ</strong></li>
+<li>scrcpy のウィンドウをドロップダウンから選ぶ</li>
+<li>サイズと位置を整える — これで Android 画面が OBS のソースになった</li>
+</ol>
+
+<p>ここまでで「映像」は終わり。次が本題、ゲーム音と自分の声を乗せる話。</p>
+
+<h2>音 — 誰も先に教えてくれない部分</h2>
+
+<p>素の <code>scrcpy</code> はゲーム音を必ずしも運んでくれない。2026 年現在、現実的な選択肢は 3 つある。摩擦の少ない順に並べる。</p>
+
+<h3>選択肢 A — scrcpy のオーディオ転送（Android 11 以上）</h3>
+
+<p>scrcpy 2.0 から、デバイス側の音声を PC に流せるようになった。</p>
+
+<pre><code>scrcpy --audio-source=output --audio-codec=aac
+</code></pre>
+
+<p>注意点：</p>
+<ul>
+<li><strong>Android 11 以上</strong>が必須。Android 10 以下はそもそも MediaProjection の音声 API が無いので、警告が出て静かに音声無しになる。</li>
+<li>DRM フラグを立てているアプリ（Spotify、Netflix など）は通らない。ゲームの大半は通るが、音楽ストリーミングをバックで流していると気づきにくい。</li>
+<li>scrcpy が PC に流した音を OBS で拾うルーティングが別途必要。Windows なら「アプリケーションオーディオキャプチャ」、macOS / Linux は仮想オーディオデバイス（BlackHole / PulseAudio module-loopback）が要る。</li>
+</ul>
+
+<h3>選択肢 B — Android 側で音をミックス</h3>
+<p>ゲーム自体に配信フックがあるなら（Discord 画面共有や RTMP プラグインなど）、ミックスをスマホ側で済ませて OBS は配信レイヤーとしてだけ使う、という形もとれる。動くが、レイテンシが増えるし可動部品が増える。</p>
+
+<h3>選択肢 C — まとめてくれるツールを使う</h3>
+<p>ここに ChargeCast がいる。手前味噌な話で恐縮だが、正直に書くと：scrcpy + 3 チャンネル・オーディオミキサー（ゲーム音・PC 音・マイク）+ ワンクリック GUI を 1 個に同梱した Windows アプリで、結果的に上の選択肢 A の音声ルーティングを丸ごとスキップできる。月 $4.99 / 買い切り $19.99（7 日間無料トライアルつき）。週に 1 回以上配信するなら時短として割に合う。月 1 回ぐらいなら、生 scrcpy で十分。</p>
+
+<h2>充電しながら配信できる</h2>
+
+<p>USB-C → HDMI ルートが地獄なのは、アダプタが電力を吸うから。USB ルートはこれが逆になる。<strong>充電ケーブルがそのままデータケーブル</strong>になるので、PC の USB 3.x ポート（5V 1A 程度で十分）に挿せば、配信中ずっとトリクル充電される。</p>
+
+<p>scrcpy ベースの USB 配信は、現代のスマホで 4〜6 時間流しっぱなしでもサーマルスロットリングまで行かないことが多い。HDMI アダプタ経由ではそうはならない。</p>
+
+<h2>レイテンシと画質の目安</h2>
+
+<p>機種差・PC 差はあるが、桁の感覚としてはこのくらい：</p>
+
+<table>
+<thead><tr><th>経路</th><th>スマホ画面 → OBS プレビュー遅延</th><th>セットアップ費用</th></tr></thead>
+<tbody>
+<tr><td>USB + scrcpy + OBS Window Capture</td><td>30〜60 ms</td><td>無料</td></tr>
+<tr><td>Wi-Fi ミラーリング（Miracast / scrcpy TCP/IP）</td><td>80〜200 ms（揺れる）</td><td>無料</td></tr>
+<tr><td>USB-C → HDMI → キャプチャボード</td><td>40〜80 ms</td><td>1.5〜2.5 万円</td></tr>
+<tr><td>USB + GUI 同梱ツール（ChargeCast 等）</td><td>30〜60 ms</td><td>0〜2 千円</td></tr>
+</tbody>
+</table>
+
+<p>Twitch / YouTube 視聴者の眼は 30 ms と 60 ms を区別しない。視聴者が体感する「カクつき」の正体は、ほぼ Wi-Fi ミラーリングの遅延スパイクのほう。</p>
+
+<h2>それでもキャプチャボードがいい場合</h2>
+
+<p>USB ルートが万能ではない。次のケースはキャプチャボードの方が正解：</p>
+
+<ul>
+<li><strong>ソースが HDMI のとき。</strong>Switch、PS5、Xbox、GoPro、ミラーレス。ADB という入口が無い。</li>
+<li><strong>iPhone を、AirPlay 受信ソフト無しで配信したいとき。</strong>iOS には Android の USB デバッグに相当するレイヤーが無い。</li>
+<li><strong>OBS 上で複数の物理機器を 1 シーンに並べたいとき。</strong>scrcpy ウィンドウを何枚も開くより、ハードウェアエンコーダの方が安定する。</li>
+</ul>
+
+<p>普段の Android ゲーム配信ではどれも当たらない。USB + scrcpy + OBS が、安くて簡単で安定している。</p>
+
+<h2>まとめ</h2>
+
+<ul>
+<li>Android 配信にキャプチャボードは要らない</li>
+<li>本当の難所は音 — 上の 3 択を上から順に検討</li>
+<li>USB を選んだ瞬間、バッテリー戦争からも降りられる</li>
+<li>キャプチャボードは HDMI ソースと iPhone のための道具で、Android 用ではない</li>
+</ul>
+
+<div class="cta-box">
+  <p style="margin:0 0 .5rem"><strong>音のルーティングを丸投げしたい？</strong></p>
+  <p style="margin:0;color:var(--fg-soft);font-size:.95rem">ChargeCast は scrcpy と 3 チャンネル・オーディオミキサーを同梱。OBS に渡すのは Window Capture 1 枚で済む。Windows 専用、7 日間無料トライアル。</p>
+  <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Microsoft Store で ChargeCast を入手</a>
+</div>
+
+</article>
+<footer>
+<p><a href="../">← 記事一覧</a> · <a href="../../">ChargeCast ホーム</a></p>
+</footer>
+</div>
+</body>
+</html>

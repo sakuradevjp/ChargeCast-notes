@@ -97,6 +97,8 @@ def render(lang: str, strings: dict) -> str:
     ctx["lang"] = lang
     ctx["dirAttr"] = ' dir="rtl"' if lang in RTL_LANGS else ""
     ctx["assetsPath"] = relative_to_root(lang) + "assets/"
+    ctx["rootPath"] = relative_to_root(lang)
+    ctx["blogPath"] = blog_path_for(lang)
     ctx["langSwitcher"] = build_switcher(lang)
     ctx["hreflangLinks"] = build_hreflang_links(lang)
     ctx["canonicalLink"] = build_canonical_link(lang)
@@ -109,6 +111,21 @@ def render(lang: str, strings: dict) -> str:
         return ctx[key]
 
     return re.sub(r"\{\{(\w+)\}\}", replace, TEMPLATE)
+
+
+BLOG_POSTS = [
+    "stream-android-to-obs-no-capture-card",
+    "scrcpy-audio-not-working",
+    "droidcam-vs-chargecast",
+]
+# Languages that have a localized /blog/ tree. Others fall back to the English blog.
+BLOG_LOCALES = ["en", "ja"]
+
+
+def blog_path_for(lang: str) -> str:
+    """Path to the most-localized blog from a given language's index page."""
+    target_lang = lang if lang in BLOG_LOCALES else "en"
+    return relative_to_root(lang) + path_for(target_lang) + "blog/"
 
 
 def write_sitemap() -> None:
@@ -134,6 +151,23 @@ def write_sitemap() -> None:
             href = base_url + path_for(code)
             lines.append(f'    <xhtml:link rel="alternate" hreflang="{code}" href="{href}"/>')
         lines.append("  </url>")
+
+    # Blog: emit one <url> per (locale, page) pair, with hreflang alternates
+    blog_pages = [""] + [f"{slug}/" for slug in BLOG_POSTS]
+    for page in blog_pages:
+        for locale in BLOG_LOCALES:
+            loc = f"{base_url}{path_for(locale)}blog/{page}"
+            lines.append("  <url>")
+            lines.append(f"    <loc>{loc}</loc>")
+            lines.append(f"    <lastmod>{today}</lastmod>")
+            lines.append("    <changefreq>" + ("weekly" if page == "" else "monthly") + "</changefreq>")
+            lines.append("    <priority>" + ("0.7" if page == "" else "0.6") + "</priority>")
+            for alt_locale in BLOG_LOCALES:
+                alt_href = f"{base_url}{path_for(alt_locale)}blog/{page}"
+                lines.append(f'    <xhtml:link rel="alternate" hreflang="{alt_locale}" href="{alt_href}"/>')
+            lines.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{base_url}blog/{page}"/>')
+            lines.append("  </url>")
+
     lines.append("</urlset>")
     (ROOT / "sitemap.xml").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("wrote sitemap.xml")

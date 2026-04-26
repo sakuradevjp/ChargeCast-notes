@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ブログ | ChargeCast</title>
+<meta name="description" content="Android を OBS に配信するときの実用ノート — キャプチャボード不要のセットアップ、scrcpy の音問題、ツールの比較。">
+<meta property="og:title" content="ChargeCast ブログ">
+<meta property="og:description" content="Android 配信を「詰まらせない」ための現場メモ。">
+<meta property="og:image" content="../../assets/Thumbnail.png">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/ja/blog/">
+<link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/ChargeCast-notes/blog/">
+<link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/ChargeCast-notes/ja/blog/">
+<link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/ChargeCast-notes/blog/">
+<style>
+:root{--bg:#ffffff;--fg:#1a1a2e;--fg-soft:#4a4a5e;--accent:#ff4757;--accent-soft:#ffe8ea;--card:#f7f7fb;--border:#e6e6ee;--shadow:0 8px 24px rgba(26,26,46,.06);}
+@media (prefers-color-scheme: dark){:root{--bg:#14141c;--fg:#f2f2f5;--fg-soft:#b0b0c0;--accent:#ff6b7a;--accent-soft:#3a1d22;--card:#1d1d28;--border:#2a2a38;--shadow:0 8px 24px rgba(0,0,0,.4);}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;background:var(--bg);color:var(--fg);line-height:1.85;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:2rem 1.25rem 4rem}
+.crumbs{font-size:.9rem;color:var(--fg-soft);margin-bottom:2rem}
+.crumbs a{color:var(--fg-soft);text-decoration:none;border-bottom:1px solid transparent}
+.crumbs a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+header.hero{padding:1.5rem 0 2rem}
+header.hero h1{font-size:clamp(1.8rem,4.5vw,2.6rem);margin:0 0 .5rem;letter-spacing:-.01em}
+header.hero p{color:var(--fg-soft);margin:0}
+.posts{margin-top:2rem}
+.post{display:block;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;margin:1rem 0;text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease}
+.post:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--accent);border-bottom:1px solid var(--accent)}
+.post h2{font-size:1.25rem;margin:0 0 .5rem;color:var(--fg)}
+.post .meta{color:var(--fg-soft);font-size:.9rem;margin:0 0 .75rem}
+.post .excerpt{margin:0;color:var(--fg-soft);font-size:.97rem;line-height:1.7}
+footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+footer a{color:var(--fg-soft)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="crumbs"><a href="../">ChargeCast</a> · ブログ</nav>
+<p style="text-align:right;font-size:.9rem;color:var(--fg-soft);margin-bottom:1rem"><a href="../../blog/">🌐 Read in English</a></p>
+<header class="hero">
+<h1>ChargeCast ノート</h1>
+<p>Android を OBS に配信するときに、実際に詰まる場所と、その回避メモ。</p>
+</header>
+
+<div class="posts">
+
+<a class="post" href="stream-android-to-obs-no-capture-card/">
+<h2>キャプチャボードなしで Android を OBS に配信する（2026 年版）</h2>
+<p class="meta"><time datetime="2026-04-27">2026 年 4 月 27 日</time> · 約 8 分</p>
+<p class="excerpt">Elgato も HDMI キャプチャも要らない。USB と scrcpy だけで OBS にきれいなウィンドウを渡せる。難所は「音」で、ここで多くの解説記事は静かに沈黙する。実際の手順と落とし穴を整理。</p>
+</a>
+
+<a class="post" href="scrcpy-audio-not-working/">
+<h2>scrcpy で音が出ない — 実際に効く対処法</h2>
+<p class="meta"><time datetime="2026-04-27">2026 年 4 月 27 日</time> · 約 7 分</p>
+<p class="excerpt">scrcpy 2.x のオーディオ転送は5つの理由で静かに失敗する。バージョン、Android 11 の壁、ソースフラグ、DRM フラグ、OBS 側のルーティング。順番に切り分けるためのチェックリスト。</p>
+</a>
+
+<a class="post" href="droidcam-vs-chargecast/">
+<h2>DroidCam と ChargeCast の違い — USB で Android を配信する</h2>
+<p class="meta"><time datetime="2026-04-27">2026 年 4 月 27 日</time> · 約 8 分</p>
+<p class="excerpt">DroidCam は「ウェブカメラ入力」、ChargeCast は「画面ミラー＋オーディオミキサー＋充電」。同じ USB ケーブルでも仕事が違う。どちらが自分に合うか即決できるチェックリスト付き。</p>
+</a>
+
+</div>
+
+<footer>
+<p><a href="../">← ChargeCast に戻る</a></p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DroidCam と ChargeCast の違い — USB で Android を配信する（2026）| ChargeCast</title>
+<meta name="description" content="DroidCam と ChargeCast は同じ USB ケーブルでも仕事が違う。DroidCam はウェブカメラ入力、ChargeCast は画面ミラー＋オーディオミキサー＋充電。どちらが自分に合うか即決できる比較。">
+<meta property="og:title" content="DroidCam と ChargeCast の違い — USB で Android を配信する（2026）">
+<meta property="og:description" content="同じ USB ケーブルでも仕事が違う。「自分の顔を映すか」「スマホの画面を映すか」で選び方が決まる、シンプルな判断軸。">
+<meta property="og:image" content="../../../assets/Thumbnail.png">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/ja/blog/droidcam-vs-chargecast/">
+<link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/ChargeCast-notes/blog/droidcam-vs-chargecast/">
+<link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/ChargeCast-notes/ja/blog/droidcam-vs-chargecast/">
+<style>
+:root{--bg:#ffffff;--fg:#1a1a2e;--fg-soft:#4a4a5e;--accent:#ff4757;--accent-soft:#ffe8ea;--card:#f7f7fb;--border:#e6e6ee;--shadow:0 8px 24px rgba(26,26,46,.06);}
+@media (prefers-color-scheme: dark){:root{--bg:#14141c;--fg:#f2f2f5;--fg-soft:#b0b0c0;--accent:#ff6b7a;--accent-soft:#3a1d22;--card:#1d1d28;--border:#2a2a38;--shadow:0 8px 24px rgba(0,0,0,.4);}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;background:var(--bg);color:var(--fg);line-height:1.85;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:2rem 1.25rem 4rem}
+.crumbs{font-size:.9rem;color:var(--fg-soft);margin-bottom:2rem}
+.crumbs a{color:var(--fg-soft);text-decoration:none;border-bottom:1px solid transparent}
+.crumbs a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+article h1{font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.4;margin:0 0 1rem;letter-spacing:-.005em}
+article .meta{color:var(--fg-soft);font-size:.95rem;margin-bottom:2.5rem}
+article .meta time{margin-right:1rem}
+h2{font-size:1.4rem;margin:3rem 0 1rem;letter-spacing:-.005em;position:relative;padding-left:1rem}
+h2::before{content:"";position:absolute;left:0;top:.3em;bottom:.3em;width:4px;border-radius:2px;background:var(--accent)}
+h3{font-size:1.1rem;margin:2rem 0 .5rem}
+p{margin:.75rem 0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
+a:hover{border-bottom-color:var(--accent)}
+ul,ol{padding-left:1.5rem}
+li{margin:.4rem 0}
+code{background:var(--accent-soft);color:var(--accent);padding:.1rem .4rem;border-radius:4px;font-size:.92em}
+pre{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;overflow-x:auto;font-size:.92rem;line-height:1.6}
+pre code{background:transparent;color:var(--fg);padding:0}
+blockquote{border-left:3px solid var(--accent);background:var(--accent-soft);padding:.75rem 1.25rem;margin:1.5rem 0;border-radius:0 8px 8px 0}
+blockquote p{margin:.25rem 0}
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.95rem}
+th,td{border:1px solid var(--border);padding:.55rem .75rem;text-align:left;vertical-align:top}
+th{background:var(--card);font-weight:600}
+.tldr{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;margin:1.5rem 0}
+.tldr strong{display:block;color:var(--accent);margin-bottom:.5rem;font-size:.95rem;letter-spacing:.05em}
+.cta-box{background:var(--accent-soft);border-radius:14px;padding:1.5rem;margin:2.5rem 0;text-align:center}
+.cta{display:inline-block;background:var(--accent);color:#fff;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;margin-top:.5rem;box-shadow:0 4px 12px rgba(255,71,87,.25)}
+.cta:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(255,71,87,.35);border-bottom:none}
+hr{border:none;border-top:1px solid var(--border);margin:3rem 0}
+.disclosure{font-size:.85rem;color:var(--fg-soft);font-style:italic;border-top:1px dashed var(--border);padding-top:.75rem;margin-top:1.5rem}
+footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+footer a{color:var(--fg-soft)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="crumbs"><a href="../../../">ChargeCast</a> · <a href="../">ブログ</a> · DroidCam と ChargeCast の違い</nav>
+<p style="text-align:right;font-size:.9rem;color:var(--fg-soft);margin-bottom:1rem"><a href="../../../blog/droidcam-vs-chargecast/">🌐 Read in English</a></p>
+<article>
+<h1>DroidCam と ChargeCast の違い — USB で Android を配信する（2026）</h1>
+<p class="meta"><time datetime="2026-04-27">2026 年 4 月 27 日</time> · 約 8 分</p>
+
+<p class="disclosure">情報開示：ChargeCast は当方が作っているアプリ。なるべくフェアに比較した。DroidCam は本来の用途では優秀なツールで、ChargeCast とは仕事が違うだけ。</p>
+
+<div class="tldr">
+<strong>要点</strong>
+<p><strong>DroidCam はウェブカメラ入力</strong>、<strong>ChargeCast は画面ミラー＋ 3 チャンネル・オーディオミキサー</strong>。同じ USB ケーブルを使うけど、解こうとしている問題が違う。「OBS に自分の顔を入れたい」なら DroidCam、「OBS にスマホのゲーム画面を入れたい」なら ChargeCast。</p>
+</div>
+
+<h2>1 行で言うと</h2>
+
+<p>1 つだけ覚えるなら：</p>
+
+<blockquote><p>DroidCam はスマホを <em>ウェブカメラとして振る舞わせる</em>。ChargeCast はスマホの <em>画面を OBS のキャプチャソースとして出す</em>。充電と音のルーティングは ChargeCast 側で吸収する。</p></blockquote>
+
+<p>ネット上の混乱の大半は、片方を相手の仕事に充てようとして「音が壊れてる」「フレームレートが出ない」と結論する流れから生まれる。両方とも、本来の用途では正しく動く。</p>
+
+<h2>並べて比較</h2>
+
+<table>
+<thead><tr><th></th><th>DroidCam</th><th>ChargeCast</th></tr></thead>
+<tbody>
+<tr><td><strong>映すもの</strong></td><td>スマホのカメラ（前面 / 背面）</td><td>スマホの画面そのもの</td></tr>
+<tr><td><strong>OBS から見ると</strong></td><td>映像キャプチャデバイス（ウェブカメラ）</td><td>ウィンドウキャプチャ（ミラーウィンドウ）</td></tr>
+<tr><td><strong>接続</strong></td><td>USB / Wi-Fi 両対応</td><td>USB が前提</td></tr>
+<tr><td><strong>音声</strong></td><td>スマホのマイクのみ（顔出し用途）</td><td>3 チャンネルミキサー：デバイス音 + PC 音 + マイク</td></tr>
+<tr><td><strong>バッテリー</strong></td><td>使用中は減る</td><td>同じケーブルで充電される</td></tr>
+<tr><td><strong>解像度</strong></td><td>最大 1080p（有料版）</td><td>最大 1440p / 60fps</td></tr>
+<tr><td><strong>OS / ソース</strong></td><td>Windows / macOS / Linux 受け、iOS もソースに</td><td>Windows のみ、Android がソース</td></tr>
+<tr><td><strong>価格</strong></td><td>無料版（透かし入り）/ DroidCamX 約 $5 買い切り</td><td>$4.99/月、$19.99 買い切り、7 日間無料</td></tr>
+<tr><td><strong>狙い</strong></td><td>ビデオ通話、Vlog の顔出し</td><td>モバイルゲーム配信</td></tr>
+</tbody>
+</table>
+
+<h2>DroidCam が正解のケース</h2>
+
+<p>こういうときは DroidCam を選ぶべき：</p>
+
+<ul>
+<li><strong>自分の顔を映したい。</strong>コンシューマ機を遊びながら自分の顔を出すのは DroidCam の本来用途。</li>
+<li><strong>Mac か Linux で配信している。</strong>ChargeCast は Windows 専用。</li>
+<li><strong>iPhone をソースにしたい。</strong>DroidCam は iOS ソースアプリがある。ChargeCast は ADB に依存しているので Android 専用。</li>
+<li><strong>映像だけで済む。</strong>音声は別取りで OK、スマホは「ただのカメラ」だけ、というシンプル構成なら DroidCam の方が手軽。</li>
+</ul>
+
+<p>DroidCam の背面カメラを別端末の画面に向けて「ゲーム画面ミラー」にしようとする人がたまにいる。動くには動くが、解像度が落ちる、反射が映る、フレームレートが安定しない。ゲーム画面が目的ならそもそも工具が違う。</p>
+
+<h2>ChargeCast が正解のケース</h2>
+
+<p>こういうときは ChargeCast：</p>
+
+<ul>
+<li><strong>コンテンツ自体がスマホ画面。</strong>モバイルゲーム実況、アプリ紹介、チュートリアル、開発デモ。</li>
+<li><strong>ゲーム音と自分の声、両方を 1 本の配信に乗せたい。</strong>3 チャンネルミキサーが OBS 側に渡すソースを 1 個にまとめる。</li>
+<li><strong>長時間配信が前提。</strong>有線給電のおかげで、4〜6 時間流しっぱなしでも熱と電池の心配が要らない。</li>
+<li><strong>Windows で、生 scrcpy + 仮想オーディオデバイスを自分で配線したくない。</strong></li>
+</ul>
+
+<p>生 scrcpy を一度でも試したことがあるなら、本当のコストが「音のルーティング」にあると分かる。ChargeCast の売り文句は要するに「月 $5 でそれをスキップしませんか」。</p>
+
+<h2>「両方使ったらいいんじゃない？」</h2>
+
+<p>そう。実際そういう人は多い。モバイルゲームのバラエティ配信で典型的な OBS シーン構成：</p>
+
+<ol>
+<li><strong>ChargeCast</strong> をウィンドウキャプチャに — ゲーム画面そのもの</li>
+<li><strong>DroidCam</strong> を映像キャプチャデバイスに — 隅っこに自分の顔</li>
+<li>OBS のデスクトップオーディオ — ゲーム音と自分の声は ChargeCast 側で混合済み</li>
+</ol>
+
+<p>USB ケーブル 2 本（または役割ごとにスマホ 1 台ずつ）で済む。両者は競合しない。DroidCam はカメラを、ChargeCast は ADB 経由で画面を取りに行くので、内部的にも干渉しない。</p>
+
+<h2>scrcpy 単体で十分なケース</h2>
+
+<p>scrcpy は ChargeCast が中で使っているツールそのもの。コマンドラインに抵抗が無く、音声まわりの要件がシンプルなら、生 <code>scrcpy</code> + OBS のウィンドウキャプチャは無料で十分よくできている。音まわりの落とし穴は <a href="../scrcpy-audio-not-working/">別記事</a> で整理した。</p>
+
+<p>正直に言うと：時間の単価が月 $5 より高くて、週 1 ペースで配信するなら ChargeCast を買う方が割に合う。月 1 程度の趣味配信なら、生 scrcpy で十分。</p>
+
+<h2>Wi-Fi ミラー系のツールは？</h2>
+
+<p>AirDroid、ApowerMirror、AnyMirror、FluxScreen 等の Wi-Fi 前提のツールは、また別のニッチを狙っている：サポート用途、家族用、ワンショット録画など。ライブ配信での致命傷はレイテンシで、80〜200 ms に揺らぎが乗ると、ビデオ通話では気づかなくても Twitch のチャットがゲームに反応するペースには露骨に出る。DroidCam も ChargeCast も「USB モード」を持っているのは、まさにこの理由から。</p>
+
+<h2>判断チェックリスト</h2>
+
+<ul>
+<li>顔を配信に映したい？ → <strong>DroidCam</strong></li>
+<li>スマホ画面を Windows で週 1 以上配信？ → <strong>ChargeCast</strong></li>
+<li>スマホ画面、月 1 ペースの趣味、CLI に抵抗無し？ → <strong>生 scrcpy</strong></li>
+<li>iPhone を配信したい？ → DroidCam か AirPlay 受信ソフト</li>
+<li>HDMI ソース（Switch / PS5 等）？ → キャプチャボード（このカテゴリの話ではない）</li>
+</ul>
+
+<div class="cta-box">
+  <p style="margin:0 0 .5rem"><strong>顔ではなく「スマホ画面」を配信したいなら。</strong></p>
+  <p style="margin:0;color:var(--fg-soft);font-size:.95rem">ChargeCast は scrcpy + 3 チャンネル・オーディオミキサー + USB 充電を 1 個の Windows アプリにまとめている。7 日間無料トライアル。</p>
+  <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Microsoft Store で ChargeCast を試す</a>
+</div>
+
+</article>
+<footer>
+<p><a href="../">← 記事一覧</a> · <a href="../../">ChargeCast ホーム</a></p>
+</footer>
+</div>
+</body>
+</html>
