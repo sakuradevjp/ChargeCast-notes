@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="RPeFRbPtUKcboLMVO3Kq-iB7prdmXvIFXj_dpZLpyEc">
 <title>ChargeCast — Insteken. Streamen. Opgeladen blijven.</title>
-<meta name="description" content="Spiegel Android naar Windows via USB met een 3-kanaals audiomixer, kant-en-klare streamingpresets en 7 dagen gratis in de Microsoft Store.">
+<meta name="description" content="Stream Android-gameplay naar OBS via USB — zonder capture card, zonder Elgato. ChargeCast bundelt scrcpy met een 3-kanaals audiomixer en laadt je telefoon terwijl je streamt. 7 dagen gratis proberen via de Microsoft Store.">
 <meta property="og:title" content="ChargeCast — Insteken. Streamen. Opgeladen blijven.">
-<meta property="og:description" content="Spiegel Android naar Windows via USB met een 3-kanaals audiomixer, kant-en-klare streamingpresets en 7 dagen gratis in de Microsoft Store.">
+<meta property="og:description" content="Stream Android-gameplay naar OBS via USB — zonder capture card, zonder Elgato. ChargeCast bundelt scrcpy met een 3-kanaals audiomixer en laadt je telefoon terwijl je streamt. 7 dagen gratis proberen via de Microsoft Store.">
 <meta property="og:image" content="../assets/Thumbnail.png">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/nl/">
@@ -141,9 +141,9 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <h2>Klinkt iets hiervan bekend?</h2>
 <div class="pain-points">
 <ul>
-  <li>Je wilt Android-gameplay op OBS streamen, maar <strong>schermopname, game-audio en je eigen mic</strong> komen nooit helemaal bij elkaar.</li>
+  <li>Je wilt Android-gameplay streamen op OBS <strong>zonder daarvoor een capture card of Elgato te moeten kopen</strong>, maar schermopname, game-audio en je eigen mic vallen nooit netjes op één lijn.</li>
   <li>Wi-Fi-mirroring is een ellende: pieken in <strong>latency</strong> en een <strong>batterij die leegloopt</strong>.</li>
-  <li>Zelfs met <code>scrcpy</code> op de CLI wordt het ritueel saai — <strong>elke sessie opnieuw</strong>.</li>
+  <li>Je hebt <code>scrcpy</code> via de CLI of DroidCam geprobeerd — maar <strong>de audio komt niet door</strong>, of het ritueel begint elke sessie tegen te staan.</li>
   <li>Midden in de stream staat je telefoon op 12 % en wordt heet. <strong>Klamme handen.</strong></li>
 </ul>
 <p style="margin:1rem 0 0">ChargeCast lost alle vier op met <strong>één USB-kabel en een vriendelijke GUI</strong>. Alleen Windows, streaming-first.</p>
@@ -250,6 +250,7 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <details><summary>Welke streamingsoftware moet ik gebruiken?</summary><p>OBS Studio is de referentie-opstelling (gebruik een Vensteropname-bron). XSplit en vergelijkbare tools werken op dezelfde manier.</p></details>
 <details><summary>En games in portretstand?</summary><p>De oriëntatie kun je vastzetten op Portrait, Landscape of Auto, zodat je OBS-layout stabiel blijft.</p></details>
 <details><summary>Belt hij naar huis?</summary><p>Alle opname loopt lokaal via ADB. ChargeCast zelf stuurt geen apparaatinfo ergens heen.</p></details>
+<details><summary>Hoe verschilt dit van scrcpy of DroidCam?</summary><p>ChargeCast bundelt <code>scrcpy</code> met een 3-kanaals audiomixer en een GUI met één klik, zodat game-audio en je mic als één schone bron in OBS terechtkomen. Kale <code>scrcpy</code> kan de game-audio niet altijd doorgeven (alleen Android 11+, met beperkingen) en DroidCam behandelt je telefoon als webcam, niet als schermspiegel. ChargeCast is gebouwd rond de streamer-flow: USB-kabel, opladen, OBS-vensteropname.</p></details>
 
 <h2>Een opmerking over OBS-integratie</h2>
 <p>ChargeCast <strong>is op zichzelf geen streamingapp</strong>. Zie het als het podium dat een schone take aan OBS overhandigt.</p>

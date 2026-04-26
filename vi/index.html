@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="RPeFRbPtUKcboLMVO3Kq-iB7prdmXvIFXj_dpZLpyEc">
 <title>ChargeCast — Cắm vào. Stream đi. Luôn đầy pin.</title>
-<meta name="description" content="Mirror Android sang Windows qua USB với mixer âm thanh 3 kênh, preset stream tích hợp sẵn và 7 ngày dùng thử miễn phí trên Microsoft Store.">
+<meta name="description" content="Stream gameplay Android tới OBS qua USB — không cần card capture, không cần Elgato. ChargeCast gộp scrcpy với mixer audio 3 kênh và sạc điện thoại trong lúc bạn stream. Dùng thử 7 ngày miễn phí trên Microsoft Store.">
 <meta property="og:title" content="ChargeCast — Cắm vào. Stream đi. Luôn đầy pin.">
-<meta property="og:description" content="Mirror Android sang Windows qua USB với mixer âm thanh 3 kênh, preset stream tích hợp sẵn và 7 ngày dùng thử miễn phí trên Microsoft Store.">
+<meta property="og:description" content="Stream gameplay Android tới OBS qua USB — không cần card capture, không cần Elgato. ChargeCast gộp scrcpy với mixer audio 3 kênh và sạc điện thoại trong lúc bạn stream. Dùng thử 7 ngày miễn phí trên Microsoft Store.">
 <meta property="og:image" content="../assets/Thumbnail.png">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/vi/">
@@ -141,9 +141,9 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <h2>Nghe có quen không?</h2>
 <div class="pain-points">
 <ul>
-  <li>Bạn muốn stream game Android trên OBS, nhưng <strong>capture màn hình, âm thanh game và mic của bạn</strong> chẳng bao giờ khớp nhau cho đàng hoàng.</li>
+  <li>Bạn muốn stream gameplay Android trên OBS <strong>mà không phải mua thêm card capture hay Elgato</strong>, nhưng capture màn hình, âm thanh game và mic của bạn chẳng bao giờ khớp với nhau.</li>
   <li>Mirror qua Wi-Fi là cả một nỗi khổ: <strong>độ trễ</strong> giật cục và <strong>pin tụt</strong> thấy rõ.</li>
-  <li>Ngay cả khi xài <code>scrcpy</code> trên CLI, cái nghi thức ấy cũng sớm phát chán — <strong>lần nào stream cũng vậy</strong>.</li>
+  <li>Bạn đã thử <code>scrcpy</code> trên CLI hoặc DroidCam — nhưng <strong>âm thanh không truyền qua</strong>, hoặc nghi thức đó cứ nhàm dần sau mỗi buổi stream.</li>
   <li>Đang stream giữa chừng, điện thoại còn 12% và bắt đầu nóng lên. <strong>Toát mồ hôi.</strong></li>
 </ul>
 <p style="margin:1rem 0 0">ChargeCast giải quyết cả bốn vấn đề chỉ với <strong>một sợi cáp USB và một GUI thân thiện</strong>. Chỉ cho Windows, ưu tiên streaming.</p>
@@ -250,6 +250,7 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <details><summary>Nên dùng phần mềm stream nào?</summary><p>OBS Studio là cấu hình chuẩn (dùng nguồn Window Capture). XSplit và các công cụ tương tự hoạt động theo cùng cách.</p></details>
 <details><summary>Còn game dọc thì sao?</summary><p>Có thể khóa hướng ở Portrait, Landscape hoặc Auto để bố cục OBS của bạn không bị xô lệch.</p></details>
 <details><summary>App có tự gửi dữ liệu ra ngoài không?</summary><p>Toàn bộ capture là cục bộ qua ADB. Bản thân ChargeCast không gửi thông tin thiết bị đi đâu cả.</p></details>
+<details><summary>Khác gì so với scrcpy hay DroidCam?</summary><p>ChargeCast gộp <code>scrcpy</code> với mixer audio 3 kênh và GUI một-click, nên âm thanh game và mic đến OBS như một nguồn duy nhất sạch sẽ. <code>scrcpy</code> nguyên bản không phải lúc nào cũng truyền được âm thanh game (chỉ Android 11+, có điều kiện), còn DroidCam coi điện thoại như webcam chứ không phải gương màn hình. ChargeCast được thiết kế quanh luồng của streamer: cáp USB, sạc, OBS Window Capture.</p></details>
 
 <h2>Ghi chú về việc tích hợp với OBS</h2>
 <p>ChargeCast <strong>bản thân nó không phải là app stream</strong>. Hãy xem nó như sân khấu đưa một bản ghi sạch gọn cho OBS.</p>

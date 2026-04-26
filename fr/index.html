@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="RPeFRbPtUKcboLMVO3Kq-iB7prdmXvIFXj_dpZLpyEc">
 <title>ChargeCast — Branche, diffuse, batterie toujours au top.</title>
-<meta name="description" content="Mirroir Android vers Windows via USB, avec mixeur audio 3 canaux, préréglages de streaming intégrés et 7 jours d'essai gratuit sur le Microsoft Store.">
+<meta name="description" content="Streame ton gameplay Android sur OBS via USB — sans carte de capture, sans Elgato. ChargeCast embarque scrcpy avec un mixeur audio 3 canaux et recharge ton téléphone pendant que tu diffuses. 7 jours d'essai gratuit sur le Microsoft Store.">
 <meta property="og:title" content="ChargeCast — Branche, diffuse, batterie toujours au top.">
-<meta property="og:description" content="Mirroir Android vers Windows via USB, avec mixeur audio 3 canaux, préréglages de streaming intégrés et 7 jours d'essai gratuit sur le Microsoft Store.">
+<meta property="og:description" content="Streame ton gameplay Android sur OBS via USB — sans carte de capture, sans Elgato. ChargeCast embarque scrcpy avec un mixeur audio 3 canaux et recharge ton téléphone pendant que tu diffuses. 7 jours d'essai gratuit sur le Microsoft Store.">
 <meta property="og:image" content="../assets/Thumbnail.png">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/fr/">
@@ -141,9 +141,9 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <h2>Ça te parle ?</h2>
 <div class="pain-points">
 <ul>
-  <li>Tu veux streamer du gameplay Android sur OBS, mais <strong>la capture d'écran, le son du jeu et ton propre micro</strong> ne s'alignent jamais vraiment.</li>
+  <li>Tu veux streamer du gameplay Android sur OBS <strong>sans avoir à racheter une carte de capture ou un Elgato</strong>, mais la capture d'écran, le son du jeu et ton propre micro ne s'alignent jamais vraiment.</li>
   <li>Le mirroring Wi-Fi, c'est la galère : <strong>latence</strong> qui monte et <strong>batterie</strong> qui fond.</li>
-  <li>Même avec <code>scrcpy</code> en ligne de commande, le rituel devient pesant — <strong>à chaque session</strong>.</li>
+  <li>Tu as essayé <code>scrcpy</code> en ligne de commande ou DroidCam — mais <strong>le son ne passe pas</strong>, ou le rituel devient pesant à chaque session.</li>
   <li>En plein stream, le téléphone est à 12% et chauffe. <strong>Sueurs froides.</strong></li>
 </ul>
 <p style="margin:1rem 0 0">ChargeCast règle les quatre en même temps, avec <strong>un câble USB et une GUI sympa</strong>. Windows uniquement, pensé pour le streaming.</p>
@@ -250,6 +250,7 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <details><summary>Quel logiciel de streaming utiliser ?</summary><p>OBS Studio est la référence (utilise une source Capture de fenêtre). XSplit et consorts fonctionnent de la même façon.</p></details>
 <details><summary>Et les jeux en mode portrait ?</summary><p>L'orientation peut être verrouillée en portrait, paysage ou auto, pour que ta scène OBS reste stable.</p></details>
 <details><summary>Est-ce que ça envoie des données ailleurs ?</summary><p>Toute la capture est locale via ADB. ChargeCast lui-même n'envoie aucune info sur l'appareil.</p></details>
+<details><summary>En quoi est-ce différent de scrcpy ou DroidCam ?</summary><p>ChargeCast embarque <code>scrcpy</code> avec un mixeur audio 3 canaux et une GUI en un clic, pour que le son du jeu et ton micro arrivent dans OBS comme une seule source propre. Le <code>scrcpy</code> brut ne fait pas toujours passer le son du jeu (uniquement Android 11+, avec restrictions) et DroidCam traite le téléphone comme une webcam, pas comme un miroir d'écran. ChargeCast est pensé autour du flux du streamer : câble USB, recharge, Capture de fenêtre OBS.</p></details>
 
 <h2>Une note sur l'intégration OBS</h2>
 <p>ChargeCast <strong>n'est pas une appli de streaming à lui tout seul</strong>. Vois-le comme la scène qui tend une prise propre à OBS.</p>

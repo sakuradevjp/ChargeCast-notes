@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="RPeFRbPtUKcboLMVO3Kq-iB7prdmXvIFXj_dpZLpyEc">
 <title>ChargeCast — เสียบสาย. สตรีมเลย. ชาร์จไปด้วย.</title>
-<meta name="description" content="มิเรอร์ Android ไปยัง Windows ผ่าน USB พร้อมมิกเซอร์เสียง 3 แชนเนล พรีเซ็ตสตรีมในตัว และทดลองใช้ฟรี 7 วันบน Microsoft Store">
+<meta name="description" content="สตรีมเกมเพลย์ Android ไปยัง OBS ผ่าน USB — ไม่ต้องใช้การ์ดแคปเจอร์ ไม่ต้องใช้ Elgato. ChargeCast รวม scrcpy เข้ากับมิกเซอร์เสียง 3 ช่องและชาร์จมือถือไปด้วยขณะที่คุณสตรีม. ทดลองใช้ฟรี 7 วันบน Microsoft Store.">
 <meta property="og:title" content="ChargeCast — เสียบสาย. สตรีมเลย. ชาร์จไปด้วย.">
-<meta property="og:description" content="มิเรอร์ Android ไปยัง Windows ผ่าน USB พร้อมมิกเซอร์เสียง 3 แชนเนล พรีเซ็ตสตรีมในตัว และทดลองใช้ฟรี 7 วันบน Microsoft Store">
+<meta property="og:description" content="สตรีมเกมเพลย์ Android ไปยัง OBS ผ่าน USB — ไม่ต้องใช้การ์ดแคปเจอร์ ไม่ต้องใช้ Elgato. ChargeCast รวม scrcpy เข้ากับมิกเซอร์เสียง 3 ช่องและชาร์จมือถือไปด้วยขณะที่คุณสตรีม. ทดลองใช้ฟรี 7 วันบน Microsoft Store.">
 <meta property="og:image" content="../assets/Thumbnail.png">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/th/">
@@ -141,9 +141,9 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <h2>เคยเจอปัญหาแบบนี้บ้างไหม?</h2>
 <div class="pain-points">
 <ul>
-  <li>อยากสตรีมเกม Android บน OBS แต่ <strong>หน้าจอ เสียงเกม และไมค์ของคุณเอง</strong> ไม่เคยเข้ากันลงตัวสักที</li>
+  <li>อยากสตรีมเกมเพลย์ Android บน OBS <strong>โดยไม่ต้องซื้อการ์ดแคปเจอร์หรือ Elgato</strong> แต่การจับภาพหน้าจอ เสียงเกม และไมค์ของคุณ ก็ไม่เคยลงตัวสักที</li>
   <li>การมิเรอร์ผ่าน Wi-Fi คือนรกชัด ๆ: <strong>ดีเลย์</strong> พุ่ง และ <strong>แบตหมดไว</strong></li>
-  <li>แม้จะใช้ <code>scrcpy</code> บน CLI พิธีกรรมเดิม ๆ ก็น่าเบื่อ — <strong>ทุกครั้งที่เปิดสตรีม</strong></li>
+  <li>ลอง <code>scrcpy</code> บน CLI หรือ DroidCam มาแล้ว — แต่ <strong>เสียงไม่ผ่าน</strong>, หรือไม่ก็ขั้นตอนเดิมเริ่มน่าเบื่อทุกรอบที่ไลฟ์</li>
   <li>กลางสตรีม มือถือเหลือ 12% และเริ่มร้อน <strong>เหงื่อตก.</strong></li>
 </ul>
 <p style="margin:1rem 0 0">ChargeCast แก้ปัญหาทั้งสี่ข้อด้วย <strong>สาย USB เส้นเดียวและ GUI ที่ใช้ง่าย</strong> เฉพาะ Windows โฟกัสที่การสตรีม</p>
@@ -250,6 +250,7 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <details><summary>ควรใช้ซอฟต์แวร์สตรีมตัวไหนดี?</summary><p>OBS Studio คือตัวอ้างอิง (ใช้ Window Capture source) XSplit และเครื่องมือคล้าย ๆ กันก็ทำงานแบบเดียวกัน</p></details>
 <details><summary>แล้วเกมแนวตั้งล่ะ?</summary><p>ล็อกการวางแนวเป็น Portrait, Landscape หรือ Auto ได้ เลย์เอาต์ OBS จะอยู่นิ่ง</p></details>
 <details><summary>มีการส่งข้อมูลกลับบ้านไหม?</summary><p>การแคปเจอร์ทั้งหมดทำในเครื่องผ่าน ADB ตัว ChargeCast เองไม่ส่งข้อมูลอุปกรณ์ไปที่ไหนเลย</p></details>
+<details><summary>ต่างจาก scrcpy หรือ DroidCam ยังไง?</summary><p>ChargeCast รวม <code>scrcpy</code> เข้ากับมิกเซอร์เสียง 3 ช่องและ GUI คลิกเดียว ทำให้เสียงเกมและไมค์ของคุณไปถึง OBS เป็นซอร์สเดียวที่สะอาด. <code>scrcpy</code> เปล่า ๆ อาจไม่ส่งเสียงเกมได้เสมอไป (เฉพาะ Android 11+ และมีเงื่อนไข) ส่วน DroidCam มองมือถือเป็นเว็บแคม ไม่ใช่กระจกหน้าจอ. ChargeCast ออกแบบรอบ ๆ การไหลของสตรีมเมอร์: เสียบ USB, ชาร์จไปด้วย, ใช้ OBS Window Capture.</p></details>
 
 <h2>หมายเหตุเรื่องการเชื่อมกับ OBS</h2>
 <p>ChargeCast <strong>ไม่ใช่แอปสตรีมในตัวมันเอง</strong> มองเป็นเวทีที่ส่งฟีดสะอาด ๆ ให้ OBS จะเข้าใจง่ายกว่า</p>
