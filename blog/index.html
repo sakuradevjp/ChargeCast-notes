@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blog | ChargeCast</title>
+<meta name="description" content="Notes on streaming Android to OBS — capture-card-free setups, scrcpy audio failures, and tool comparisons.">
+<meta property="og:title" content="ChargeCast Blog">
+<meta property="og:description" content="Notes on streaming Android to OBS without the friction.">
+<meta property="og:image" content="../assets/Thumbnail.png">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/blog/">
+<link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/ChargeCast-notes/blog/">
+<link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/ChargeCast-notes/ja/blog/">
+<link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/ChargeCast-notes/blog/">
+<style>
+:root{--bg:#ffffff;--fg:#1a1a2e;--fg-soft:#4a4a5e;--accent:#ff4757;--accent-soft:#ffe8ea;--card:#f7f7fb;--border:#e6e6ee;--shadow:0 8px 24px rgba(26,26,46,.06);}
+@media (prefers-color-scheme: dark){:root{--bg:#14141c;--fg:#f2f2f5;--fg-soft:#b0b0c0;--accent:#ff6b7a;--accent-soft:#3a1d22;--card:#1d1d28;--border:#2a2a38;--shadow:0 8px 24px rgba(0,0,0,.4);}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;background:var(--bg);color:var(--fg);line-height:1.75;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:2rem 1.25rem 4rem}
+.crumbs{font-size:.9rem;color:var(--fg-soft);margin-bottom:2rem}
+.crumbs a{color:var(--fg-soft);text-decoration:none;border-bottom:1px solid transparent}
+.crumbs a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+header.hero{padding:1.5rem 0 2rem}
+header.hero h1{font-size:clamp(1.8rem,4.5vw,2.6rem);margin:0 0 .5rem;letter-spacing:-.01em}
+header.hero p{color:var(--fg-soft);margin:0}
+.posts{margin-top:2rem}
+.post{display:block;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;margin:1rem 0;text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease}
+.post:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--accent);border-bottom:1px solid var(--accent)}
+.post h2{font-size:1.25rem;margin:0 0 .5rem;color:var(--fg)}
+.post .meta{color:var(--fg-soft);font-size:.9rem;margin:0 0 .75rem}
+.post .excerpt{margin:0;color:var(--fg-soft);font-size:.97rem;line-height:1.6}
+footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+footer a{color:var(--fg-soft)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="crumbs"><a href="../">ChargeCast</a> · Blog</nav>
+<p style="text-align:right;font-size:.9rem;color:var(--fg-soft);margin-bottom:1rem"><a href="../ja/blog/">🌐 日本語で読む</a></p>
+<header class="hero">
+<h1>ChargeCast notes</h1>
+<p>Field notes on streaming Android to OBS — what actually works in 2026.</p>
+</header>
+
+<div class="posts">
+
+<a class="post" href="stream-android-to-obs-no-capture-card/">
+<h2>Stream Android to OBS without a capture card (2026 guide)</h2>
+<p class="meta"><time datetime="2026-04-27">April 27, 2026</time> · ~7 min read</p>
+<p class="excerpt">You don't need an Elgato or any capture card to stream Android. USB plus scrcpy gives OBS a clean window. The hard part is audio — here's the honest setup, with the trade-offs spelled out.</p>
+</a>
+
+<a class="post" href="scrcpy-audio-not-working/">
+<h2>scrcpy audio not working — what actually works</h2>
+<p class="meta"><time datetime="2026-04-27">April 27, 2026</time> · ~6 min read</p>
+<p class="excerpt">scrcpy 2.x audio forwarding fails silently in five common ways: old version, Android 10, wrong source flag, DRM-protected app, OBS routing. Walk the diagnosis tree before rebuilding your setup.</p>
+</a>
+
+<a class="post" href="droidcam-vs-chargecast/">
+<h2>DroidCam vs ChargeCast: USB streaming for Android</h2>
+<p class="meta"><time datetime="2026-04-27">April 27, 2026</time> · ~7 min read</p>
+<p class="excerpt">DroidCam is a webcam input. ChargeCast is a screen mirror with a 3-channel audio mixer and charging. Same USB cable, different jobs — here's which one fits which streamer.</p>
+</a>
+
+</div>
+
+<footer>
+<p><a href="../">← Back to ChargeCast</a></p>
+</footer>
+</div>
+</body>
+</html>

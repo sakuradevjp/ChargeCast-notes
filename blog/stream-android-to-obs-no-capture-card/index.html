@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stream Android to OBS without a capture card (2026 guide) | ChargeCast</title>
+<meta name="description" content="A practical 2026 guide to streaming Android gameplay to OBS without an Elgato or any capture card. USB, scrcpy, audio routing, and where each option breaks down.">
+<meta property="og:title" content="Stream Android to OBS without a capture card (2026 guide)">
+<meta property="og:description" content="USB + scrcpy gives OBS a clean window to grab. Here is the actual setup, where the audio gets tricky, and when a capture card is still the right call.">
+<meta property="og:image" content="../../assets/Thumbnail.png">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/blog/stream-android-to-obs-no-capture-card/">
+<link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/ChargeCast-notes/blog/stream-android-to-obs-no-capture-card/">
+<link rel="alternate" hreflang="ja" href="https://sakuradevjp.github.io/ChargeCast-notes/ja/blog/stream-android-to-obs-no-capture-card/">
+<link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/ChargeCast-notes/blog/stream-android-to-obs-no-capture-card/">
+<style>
+:root{--bg:#ffffff;--fg:#1a1a2e;--fg-soft:#4a4a5e;--accent:#ff4757;--accent-soft:#ffe8ea;--card:#f7f7fb;--border:#e6e6ee;--shadow:0 8px 24px rgba(26,26,46,.06);}
+@media (prefers-color-scheme: dark){:root{--bg:#14141c;--fg:#f2f2f5;--fg-soft:#b0b0c0;--accent:#ff6b7a;--accent-soft:#3a1d22;--card:#1d1d28;--border:#2a2a38;--shadow:0 8px 24px rgba(0,0,0,.4);}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;background:var(--bg);color:var(--fg);line-height:1.75;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:2rem 1.25rem 4rem}
+.crumbs{font-size:.9rem;color:var(--fg-soft);margin-bottom:2rem}
+.crumbs a{color:var(--fg-soft);text-decoration:none;border-bottom:1px solid transparent}
+.crumbs a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+article h1{font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.25;margin:0 0 1rem;letter-spacing:-.01em}
+article .meta{color:var(--fg-soft);font-size:.95rem;margin-bottom:2.5rem}
+article .meta time{margin-right:1rem}
+h2{font-size:1.45rem;margin:3rem 0 1rem;letter-spacing:-.005em;position:relative;padding-left:1rem}
+h2::before{content:"";position:absolute;left:0;top:.3em;bottom:.3em;width:4px;border-radius:2px;background:var(--accent)}
+h3{font-size:1.15rem;margin:2rem 0 .5rem}
+p{margin:.75rem 0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
+a:hover{border-bottom-color:var(--accent)}
+ul,ol{padding-left:1.5rem}
+li{margin:.4rem 0}
+code{background:var(--accent-soft);color:var(--accent);padding:.1rem .4rem;border-radius:4px;font-size:.92em}
+pre{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;overflow-x:auto;font-size:.92rem;line-height:1.6}
+pre code{background:transparent;color:var(--fg);padding:0}
+blockquote{border-left:3px solid var(--accent);background:var(--accent-soft);padding:.75rem 1.25rem;margin:1.5rem 0;border-radius:0 8px 8px 0}
+blockquote p{margin:.25rem 0}
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.95rem}
+th,td{border:1px solid var(--border);padding:.55rem .75rem;text-align:left;vertical-align:top}
+th{background:var(--card);font-weight:600}
+.tldr{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;margin:1.5rem 0}
+.tldr strong{display:block;color:var(--accent);margin-bottom:.5rem;font-size:.95rem;letter-spacing:.05em;text-transform:uppercase}
+.cta-box{background:var(--accent-soft);border-radius:14px;padding:1.5rem;margin:2.5rem 0;text-align:center}
+.cta{display:inline-block;background:var(--accent);color:#fff;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;margin-top:.5rem;box-shadow:0 4px 12px rgba(255,71,87,.25)}
+.cta:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(255,71,87,.35);border-bottom:none}
+hr{border:none;border-top:1px solid var(--border);margin:3rem 0}
+footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+footer a{color:var(--fg-soft)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="crumbs"><a href="../../">ChargeCast</a> · <a href="../">Blog</a> · Stream Android to OBS without a capture card</nav>
+<p style="text-align:right;font-size:.9rem;color:var(--fg-soft);margin-bottom:1rem"><a href="../../ja/blog/stream-android-to-obs-no-capture-card/">🌐 日本語で読む</a></p>
+<article>
+<h1>Stream Android to OBS without a capture card (2026 guide)</h1>
+<p class="meta"><time datetime="2026-04-27">April 27, 2026</time> · ~7 min read</p>
+
+<div class="tldr">
+<strong>TL;DR</strong>
+<p>You do not need an Elgato or any capture card to stream Android gameplay. A USB cable plus <code>scrcpy</code> gives OBS a clean window to grab. The hard part is audio — and that is exactly where most "free path" guides quietly fail. Here is the honest setup.</p>
+</div>
+
+<h2>Why people reach for a capture card in the first place</h2>
+
+<p>The "real" streaming setup popularized by console creators looks like this: HDMI out from the console &rarr; capture card &rarr; PC. For Android, the equivalent is a USB-C-to-HDMI adapter feeding a capture card. Two reasons people copy that pattern even when it doesn't fit:</p>
+
+<ol>
+<li><strong>Mental model carry-over.</strong> If you already stream PS5 or Switch, capture cards are familiar. Hitting "do the same thing for the phone" is the path of least thinking.</li>
+<li><strong>The audio problem is invisible until you try.</strong> Capture cards encode picture + game audio together, so the audio question never surfaces. Skip the capture card and audio is suddenly your problem.</li>
+</ol>
+
+<p>The trap: a USB-C-to-HDMI adapter draws current <em>from</em> the phone instead of charging it, and most phones don't keep a stable HDMI signal under streaming load. So that "professional" path costs ~$200 (adapter + capture card), still drains the battery, and you're back to needing a way to hear yourself talk.</p>
+
+<h2>The capture-card-free path, in three steps</h2>
+
+<p>This works on any USB-debugging-capable Android phone. Cable can be your everyday charging cable.</p>
+
+<h3>1. Enable USB debugging</h3>
+<p>On your Android phone:</p>
+<ol>
+<li>Open <strong>Settings &rarr; About phone</strong>.</li>
+<li>Tap <strong>Build number</strong> seven times until you see "You are now a developer."</li>
+<li>Go to <strong>Settings &rarr; System &rarr; Developer options</strong> and turn <strong>USB debugging</strong> on.</li>
+<li>Plug the cable into your PC and tap <strong>Allow</strong> on the prompt.</li>
+</ol>
+
+<h3>2. Run scrcpy</h3>
+<p><a href="https://github.com/Genymobile/scrcpy">scrcpy</a> (Genymobile, Apache 2.0) is the open-source workhorse. It opens a window on your PC showing your Android screen in real time over USB. Install via the project's releases or your package manager:</p>
+
+<pre><code># Windows (winget)
+winget install Genymobile.scrcpy
+
+# macOS
+brew install scrcpy
+
+# Linux (Debian/Ubuntu)
+sudo apt install scrcpy
+</code></pre>
+
+<p>Then run with reasonable streaming defaults:</p>
+
+<pre><code>scrcpy --max-size=1920 --max-fps=60 --video-bit-rate=8M
+</code></pre>
+
+<h3>3. Add a Window Capture in OBS</h3>
+<ol>
+<li>In OBS, click <strong>+</strong> under Sources &rarr; <strong>Window Capture</strong>.</li>
+<li>Pick the scrcpy window from the dropdown.</li>
+<li>Crop and resize. Done — your phone screen is now an OBS source.</li>
+</ol>
+
+<p>That gets you video. If you also want game audio and your own voice in the stream, keep reading.</p>
+
+<h2>Audio: the part nobody warns you about</h2>
+
+<p>Plain <code>scrcpy</code> does not always carry game audio. There are three workable approaches in 2026, ranked by how forgiving they are:</p>
+
+<h3>Option A — scrcpy native audio forwarding (Android 11+)</h3>
+<p>Since version 2.0, scrcpy can forward audio from the device:</p>
+
+<pre><code>scrcpy --audio-source=output --audio-codec=aac
+</code></pre>
+
+<p>Caveats:</p>
+<ul>
+<li>Requires <strong>Android 11 or later</strong>. Older devices fall back silently to no audio.</li>
+<li>Some apps mark their audio as "protected" (DRM-flagged streaming apps especially) and won't forward.</li>
+<li>You still need to route the scrcpy audio output into OBS — see <a href="https://obsproject.com/wiki/Sources-Guide#audio-output-capture">OBS Audio Output Capture</a> on Windows or a virtual cable on macOS/Linux.</li>
+</ul>
+
+<h3>Option B — Mix on the Android side</h3>
+<p>If your game has its own streaming hooks (e.g. via Discord screen share, or RTMP plugins), you let the phone do the mixing and only use OBS as the broadcast layer. This works but adds latency and another moving part.</p>
+
+<h3>Option C — Bundled tools that handle it for you</h3>
+<p>This is where ChargeCast lives. Full disclosure — we make the tool — but the honest pitch is: it bundles scrcpy with a 3-channel audio mixer (game audio, PC audio, your mic) and a one-click GUI, so all three reach OBS as a single Window Capture source. It is Windows-only and not free ($4.99/month or $19.99 lifetime, with a 7-day free trial), so it's not the right call if you have time and patience to wire up Option A or B yourself.</p>
+
+<h2>Charging while streaming</h2>
+
+<p>One reason the capture-card-via-HDMI path is painful: the adapter draws power, the phone overheats, and the battery dies mid-stream. The USB path inverts this — your charging cable <em>is</em> the data cable. Plug it into a USB 3.x port (5 V, 1 A is fine; faster is better) and the phone trickle-charges through the same line that carries the screen.</p>
+
+<p>Long sessions of <code>scrcpy</code>-based streaming can run 4–6 hours without thermal throttling on most modern phones. That is not true with the USB-C-to-HDMI-adapter path.</p>
+
+<h2>Latency and quality, ballparked</h2>
+
+<p>End-to-end measurements vary by phone and PC, but the order of magnitude looks like this:</p>
+
+<table>
+<thead><tr><th>Path</th><th>Phone-screen-to-OBS-preview latency</th><th>Setup cost</th></tr></thead>
+<tbody>
+<tr><td>USB + scrcpy + OBS Window Capture</td><td>~30–60 ms</td><td>Free</td></tr>
+<tr><td>Wi-Fi mirroring (Miracast / scrcpy TCP/IP)</td><td>~80–200 ms, spiky</td><td>Free</td></tr>
+<tr><td>USB-C → HDMI → capture card</td><td>~40–80 ms</td><td>~$150–250</td></tr>
+<tr><td>USB + bundled GUI (e.g. ChargeCast)</td><td>~30–60 ms</td><td>$0–20</td></tr>
+</tbody>
+</table>
+
+<p>For Twitch and YouTube streaming the human eye does not separate 30 ms from 60 ms. Spiky Wi-Fi mirroring is what audiences actually notice.</p>
+
+<h2>When you <em>do</em> still want a capture card</h2>
+
+<p>The capture-card-free path is not universal. A capture card is the right answer when:</p>
+
+<ul>
+<li><strong>Your source is HDMI</strong>: Switch, PS5, Xbox, GoPro, DSLR. ADB does not exist there.</li>
+<li><strong>You're streaming an iPhone with no AirPlay receiver on the PC.</strong> iOS doesn't expose a USB debugging surface like Android does.</li>
+<li><strong>You compose multiple physical devices in one OBS scene</strong> and want each on its own dedicated capture, where the predictable hardware encoder is nicer than juggling several scrcpy windows.</li>
+</ul>
+
+<p>For everyday Android gameplay streaming, none of those apply. USB + scrcpy + OBS is the cheaper, simpler, more reliable path.</p>
+
+<h2>Wrap-up</h2>
+
+<ul>
+<li>You do not need a capture card to stream Android.</li>
+<li>The actual hard problem is audio — three options, ranked by friction above.</li>
+<li>USB-first means you also stop fighting the battery.</li>
+<li>Capture cards are still the right answer for HDMI sources and iPhone, just not for everyday Android.</li>
+</ul>
+
+<div class="cta-box">
+  <p style="margin:0 0 .5rem"><strong>Want the audio problem solved for you?</strong></p>
+  <p style="margin:0;color:var(--fg-soft);font-size:.95rem">ChargeCast bundles scrcpy with a 3-channel audio mixer and one-click presets. 7-day free trial, Windows only.</p>
+  <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Get ChargeCast on Microsoft Store</a>
+</div>
+
+</article>
+<footer>
+<p><a href="../">← All posts</a> · <a href="../../">ChargeCast home</a></p>
+</footer>
+</div>
+</body>
+</html>

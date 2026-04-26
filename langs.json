@@ -101,7 +101,8 @@
     "finalCtaButton": "Get ChargeCast on Microsoft Store",
     "footer": "ChargeCast is a Windows app by <a href=\"https://github.com/sakuradevjp\">sakura.dev.jp</a>. Product ID: <code>sakura.dev.jp.ChargeCast</code>",
     "faq6Q": "How is this different from scrcpy or DroidCam?",
-    "faq6A": "ChargeCast bundles <code>scrcpy</code> with a 3-channel audio mixer and a one-click GUI, so game audio and your mic both reach OBS as a single clean source. Plain <code>scrcpy</code> can't always pass game audio (Android 11+ only, with caveats), and DroidCam treats the phone as a webcam rather than a screen mirror. ChargeCast is built around the streamer flow: USB cable, charge, OBS Window Capture."
+    "faq6A": "ChargeCast bundles <code>scrcpy</code> with a 3-channel audio mixer and a one-click GUI, so game audio and your mic both reach OBS as a single clean source. Plain <code>scrcpy</code> can't always pass game audio (Android 11+ only, with caveats), and DroidCam treats the phone as a webcam rather than a screen mirror. ChargeCast is built around the streamer flow: USB cable, charge, OBS Window Capture.",
+    "blogLinkLabel": "Read the blog"
   },
   "ja": {
     "metaTitle": "ChargeCast — USBでつなぐだけ、Android 配信がこんなに軽い",
@@ -205,7 +206,8 @@
     "finalCtaButton": "Microsoft Store で ChargeCast を入手",
     "footer": "ChargeCast は <a href=\"https://github.com/sakuradevjp\">sakura.dev.jp</a> が開発する Windows アプリです。製品 ID: <code>sakura.dev.jp.ChargeCast</code>",
     "faq6Q": "scrcpy や DroidCam と何が違いますか？",
-    "faq6A": "ChargeCast は <code>scrcpy</code> に 3 チャンネル・オーディオミキサーとワンクリック GUI を乗せて、ゲーム音とマイクを「1本のきれいなソース」として OBS に渡します。素の <code>scrcpy</code> はゲーム音を必ずしも拾えず（Android 11 以降のみ・条件付き）、DroidCam はスマホをウェブカメラ扱いにする発想で、画面ミラーリング向けではありません。ChargeCast は「USB を挿す → 充電される → OBS の Window Capture で取る」という配信者の動線を前提に作られています。"
+    "faq6A": "ChargeCast は <code>scrcpy</code> に 3 チャンネル・オーディオミキサーとワンクリック GUI を乗せて、ゲーム音とマイクを「1本のきれいなソース」として OBS に渡します。素の <code>scrcpy</code> はゲーム音を必ずしも拾えず（Android 11 以降のみ・条件付き）、DroidCam はスマホをウェブカメラ扱いにする発想で、画面ミラーリング向けではありません。ChargeCast は「USB を挿す → 充電される → OBS の Window Capture で取る」という配信者の動線を前提に作られています。",
+    "blogLinkLabel": "ブログを読む"
   },
   "zh-Hans": {
     "metaTitle": "ChargeCast — 插上就播，边播边充。",
@@ -309,7 +311,8 @@
     "finalCtaButton": "在 Microsoft Store 获取 ChargeCast",
     "footer": "ChargeCast 是 <a href=\"https://github.com/sakuradevjp\">sakura.dev.jp</a> 出品的 Windows 应用。产品 ID：<code>sakura.dev.jp.ChargeCast</code>",
     "faq6Q": "和 scrcpy 或 DroidCam 有什么不同？",
-    "faq6A": "ChargeCast 把 <code>scrcpy</code> 与 3 通道音频混音器以及一键 GUI 打包在一起，让游戏音和麦克风作为一路干净的来源进入 OBS。原版 <code>scrcpy</code> 不一定能传游戏声（仅 Android 11+ 且有限制），而 DroidCam 是把手机当作网络摄像头来用，并不针对屏幕镜像。ChargeCast 围绕直播主的实际流程设计：插 USB、边充电、OBS 窗口捕获。"
+    "faq6A": "ChargeCast 把 <code>scrcpy</code> 与 3 通道音频混音器以及一键 GUI 打包在一起，让游戏音和麦克风作为一路干净的来源进入 OBS。原版 <code>scrcpy</code> 不一定能传游戏声（仅 Android 11+ 且有限制），而 DroidCam 是把手机当作网络摄像头来用，并不针对屏幕镜像。ChargeCast 围绕直播主的实际流程设计：插 USB、边充电、OBS 窗口捕获。",
+    "blogLinkLabel": "阅读博客"
   },
   "zh-Hant": {
     "metaTitle": "ChargeCast — 插上就播，邊播邊充。",
@@ -413,7 +416,8 @@
     "finalCtaButton": "在 Microsoft Store 取得 ChargeCast",
     "footer": "ChargeCast 是 <a href=\"https://github.com/sakuradevjp\">sakura.dev.jp</a> 出品的 Windows 應用程式。產品 ID：<code>sakura.dev.jp.ChargeCast</code>",
     "faq6Q": "和 scrcpy 或 DroidCam 有什麼差別？",
-    "faq6A": "ChargeCast 把 <code>scrcpy</code> 加上 3 聲道音訊混音器和一鍵 GUI 打包在一起，讓遊戲音和麥克風以一路乾淨的來源進入 OBS。原生 <code>scrcpy</code> 不一定能傳遊戲音（僅 Android 11+ 且有限制），而 DroidCam 把手機當成網路攝影機，並不是針對螢幕鏡像而設計。ChargeCast 是圍繞直播主的實際流程做的：插 USB、邊充電、OBS 視窗擷取。"
+    "faq6A": "ChargeCast 把 <code>scrcpy</code> 加上 3 聲道音訊混音器和一鍵 GUI 打包在一起，讓遊戲音和麥克風以一路乾淨的來源進入 OBS。原生 <code>scrcpy</code> 不一定能傳遊戲音（僅 Android 11+ 且有限制），而 DroidCam 把手機當成網路攝影機，並不是針對螢幕鏡像而設計。ChargeCast 是圍繞直播主的實際流程做的：插 USB、邊充電、OBS 視窗擷取。",
+    "blogLinkLabel": "閱讀部落格"
   },
   "ko": {
     "metaTitle": "ChargeCast — 꽂고, 방송하고, 충전까지.",
@@ -517,7 +521,8 @@
     "finalCtaButton": "Microsoft Store에서 ChargeCast 받기",
     "footer": "ChargeCast는 <a href=\"https://github.com/sakuradevjp\">sakura.dev.jp</a>가 만드는 Windows 앱입니다. 제품 ID: <code>sakura.dev.jp.ChargeCast</code>",
     "faq6Q": "scrcpy나 DroidCam과 어떻게 다른가요?",
-    "faq6A": "ChargeCast는 <code>scrcpy</code>에 3채널 오디오 믹서와 원클릭 GUI를 얹어, 게임 사운드와 마이크를 \"하나의 깔끔한 소스\"로 OBS에 전달합니다. 순수 <code>scrcpy</code>는 게임 사운드를 항상 가져올 수 있는 게 아니고(Android 11+, 조건부), DroidCam은 폰을 웹캠처럼 다루는 발상이라 화면 미러링용은 아닙니다. ChargeCast는 \"USB 꽂고 → 충전되고 → OBS 창 캡처로 잡는다\"는 방송 흐름을 전제로 만들어졌습니다."
+    "faq6A": "ChargeCast는 <code>scrcpy</code>에 3채널 오디오 믹서와 원클릭 GUI를 얹어, 게임 사운드와 마이크를 \"하나의 깔끔한 소스\"로 OBS에 전달합니다. 순수 <code>scrcpy</code>는 게임 사운드를 항상 가져올 수 있는 게 아니고(Android 11+, 조건부), DroidCam은 폰을 웹캠처럼 다루는 발상이라 화면 미러링용은 아닙니다. ChargeCast는 \"USB 꽂고 → 충전되고 → OBS 창 캡처로 잡는다\"는 방송 흐름을 전제로 만들어졌습니다.",
+    "blogLinkLabel": "블로그 보기"
   },
   "es": {
     "metaTitle": "ChargeCast — Conecta, transmite, sin quedarte sin batería.",
@@ -621,7 +626,8 @@
     "finalCtaButton": "Consigue ChargeCast en Microsoft Store",
     "footer": "ChargeCast es una app de Windows de <a href=\"https://github.com/sakuradevjp\">sakura.dev.jp</a>. ID de producto: <code>sakura.dev.jp.ChargeCast</code>",
     "faq6Q": "¿En qué se diferencia de scrcpy o DroidCam?",
-    "faq6A": "ChargeCast empaqueta <code>scrcpy</code> con un mezclador de audio de 3 canales y una GUI de un clic, así el audio del juego y tu micro llegan a OBS como una sola fuente limpia. El <code>scrcpy</code> a secas no siempre puede pasar el audio del juego (solo Android 11+, con condiciones) y DroidCam trata el móvil como una webcam, no como un espejo de pantalla. ChargeCast está pensado alrededor del flujo del streamer: cable USB, carga, Captura de ventana en OBS."
+    "faq6A": "ChargeCast empaqueta <code>scrcpy</code> con un mezclador de audio de 3 canales y una GUI de un clic, así el audio del juego y tu micro llegan a OBS como una sola fuente limpia. El <code>scrcpy</code> a secas no siempre puede pasar el audio del juego (solo Android 11+, con condiciones) y DroidCam trata el móvil como una webcam, no como un espejo de pantalla. ChargeCast está pensado alrededor del flujo del streamer: cable USB, carga, Captura de ventana en OBS.",
+    "blogLinkLabel": "Lee el blog"
   },
   "fr": {
     "metaTitle": "ChargeCast — Branche, diffuse, batterie toujours au top.",
@@ -725,7 +731,8 @@
     "finalCtaButton": "Obtenir ChargeCast sur le Microsoft Store",
     "footer": "ChargeCast est une appli Windows de <a href=\"https://github.com/sakuradevjp\">sakura.dev.jp</a>. ID produit : <code>sakura.dev.jp.ChargeCast</code>",
     "faq6Q": "En quoi est-ce différent de scrcpy ou DroidCam ?",
-    "faq6A": "ChargeCast embarque <code>scrcpy</code> avec un mixeur audio 3 canaux et une GUI en un clic, pour que le son du jeu et ton micro arrivent dans OBS comme une seule source propre. Le <code>scrcpy</code> brut ne fait pas toujours passer le son du jeu (uniquement Android 11+, avec restrictions) et DroidCam traite le téléphone comme une webcam, pas comme un miroir d'écran. ChargeCast est pensé autour du flux du streamer : câble USB, recharge, Capture de fenêtre OBS."
+    "faq6A": "ChargeCast embarque <code>scrcpy</code> avec un mixeur audio 3 canaux et une GUI en un clic, pour que le son du jeu et ton micro arrivent dans OBS comme une seule source propre. Le <code>scrcpy</code> brut ne fait pas toujours passer le son du jeu (uniquement Android 11+, avec restrictions) et DroidCam traite le téléphone comme une webcam, pas comme un miroir d'écran. ChargeCast est pensé autour du flux du streamer : câble USB, recharge, Capture de fenêtre OBS.",
+    "blogLinkLabel": "Lire le blog"
   },
   "de": {
     "metaTitle": "ChargeCast — Einstecken. Streamen. Aufgeladen bleiben.",
@@ -829,7 +836,8 @@
     "finalCtaButton": "ChargeCast im Microsoft Store holen",
     "footer": "ChargeCast ist eine Windows-App von <a href=\"https://github.com/sakuradevjp\">sakura.dev.jp</a>. Produkt-ID: <code>sakura.dev.jp.ChargeCast</code>",
     "faq6Q": "Wie unterscheidet sich das von scrcpy oder DroidCam?",
-    "faq6A": "ChargeCast bündelt <code>scrcpy</code> mit einem 3-Kanal-Audiomixer und einer Ein-Klick-GUI, sodass Spielsound und dein Mikro als eine saubere Quelle in OBS landen. Reines <code>scrcpy</code> kann den Spielsound nicht immer mitnehmen (nur Android 11+ und mit Einschränkungen), und DroidCam behandelt das Handy wie eine Webcam — nicht als Bildschirmspiegel. ChargeCast ist um den Streamer-Workflow herum gebaut: USB einstecken, laden, OBS-Fensteraufnahme."
+    "faq6A": "ChargeCast bündelt <code>scrcpy</code> mit einem 3-Kanal-Audiomixer und einer Ein-Klick-GUI, sodass Spielsound und dein Mikro als eine saubere Quelle in OBS landen. Reines <code>scrcpy</code> kann den Spielsound nicht immer mitnehmen (nur Android 11+ und mit Einschränkungen), und DroidCam behandelt das Handy wie eine Webcam — nicht als Bildschirmspiegel. ChargeCast ist um den Streamer-Workflow herum gebaut: USB einstecken, laden, OBS-Fensteraufnahme.",
+    "blogLinkLabel": "Zum Blog"
   },
   "it": {
     "metaTitle": "ChargeCast — Collega. Stream on. Stai carico.",
@@ -933,7 +941,8 @@
     "finalCtaButton": "Prendi ChargeCast sul Microsoft Store",
     "footer": "ChargeCast è un'app Windows di <a href=\"https://github.com/sakuradevjp\">sakura.dev.jp</a>. ID prodotto: <code>sakura.dev.jp.ChargeCast</code>",
     "faq6Q": "In cosa è diverso da scrcpy o DroidCam?",
-    "faq6A": "ChargeCast integra <code>scrcpy</code> con un mixer audio a 3 canali e una GUI a un clic, così audio di gioco e microfono arrivano in OBS come una sola sorgente pulita. <code>scrcpy</code> puro non sempre riesce a trasportare l'audio di gioco (solo Android 11+, con limiti) e DroidCam tratta il telefono come una webcam, non come uno specchio dello schermo. ChargeCast è costruito attorno al flusso dello streamer: cavo USB, ricarica, Cattura finestra in OBS."
+    "faq6A": "ChargeCast integra <code>scrcpy</code> con un mixer audio a 3 canali e una GUI a un clic, così audio di gioco e microfono arrivano in OBS come una sola sorgente pulita. <code>scrcpy</code> puro non sempre riesce a trasportare l'audio di gioco (solo Android 11+, con limiti) e DroidCam tratta il telefono come una webcam, non come uno specchio dello schermo. ChargeCast è costruito attorno al flusso dello streamer: cavo USB, ricarica, Cattura finestra in OBS.",
+    "blogLinkLabel": "Leggi il blog"
   },
   "pt": {
     "metaTitle": "ChargeCast — Plugue. Transmita. Fique carregado.",
@@ -1037,7 +1046,8 @@
     "finalCtaButton": "Baixar ChargeCast na Microsoft Store",
     "footer": "ChargeCast é um app Windows da <a href=\"https://github.com/sakuradevjp\">sakura.dev.jp</a>. ID do produto: <code>sakura.dev.jp.ChargeCast</code>",
     "faq6Q": "Qual a diferença para scrcpy ou DroidCam?",
-    "faq6A": "ChargeCast empacota <code>scrcpy</code> com um mixer de áudio de 3 canais e uma GUI de um clique, de modo que o áudio do jogo e o seu microfone chegam ao OBS como uma única fonte limpa. O <code>scrcpy</code> puro nem sempre consegue passar o áudio do jogo (só Android 11+, com restrições) e o DroidCam trata o celular como webcam, não como espelhamento de tela. O ChargeCast foi pensado em torno do fluxo do streamer: cabo USB, carga, Captura de Janela no OBS."
+    "faq6A": "ChargeCast empacota <code>scrcpy</code> com um mixer de áudio de 3 canais e uma GUI de um clique, de modo que o áudio do jogo e o seu microfone chegam ao OBS como uma única fonte limpa. O <code>scrcpy</code> puro nem sempre consegue passar o áudio do jogo (só Android 11+, com restrições) e o DroidCam trata o celular como webcam, não como espelhamento de tela. O ChargeCast foi pensado em torno do fluxo do streamer: cabo USB, carga, Captura de Janela no OBS.",
+    "blogLinkLabel": "Ler o blog"
   },
   "nl": {
     "metaTitle": "ChargeCast — Insteken. Streamen. Opgeladen blijven.",
@@ -1141,7 +1151,8 @@
     "finalCtaButton": "Haal ChargeCast in de Microsoft Store",
     "footer": "ChargeCast is een Windows-app van <a href=\"https://github.com/sakuradevjp\">sakura.dev.jp</a>. Product-ID: <code>sakura.dev.jp.ChargeCast</code>",
     "faq6Q": "Hoe verschilt dit van scrcpy of DroidCam?",
-    "faq6A": "ChargeCast bundelt <code>scrcpy</code> met een 3-kanaals audiomixer en een GUI met één klik, zodat game-audio en je mic als één schone bron in OBS terechtkomen. Kale <code>scrcpy</code> kan de game-audio niet altijd doorgeven (alleen Android 11+, met beperkingen) en DroidCam behandelt je telefoon als webcam, niet als schermspiegel. ChargeCast is gebouwd rond de streamer-flow: USB-kabel, opladen, OBS-vensteropname."
+    "faq6A": "ChargeCast bundelt <code>scrcpy</code> met een 3-kanaals audiomixer en een GUI met één klik, zodat game-audio en je mic als één schone bron in OBS terechtkomen. Kale <code>scrcpy</code> kan de game-audio niet altijd doorgeven (alleen Android 11+, met beperkingen) en DroidCam behandelt je telefoon als webcam, niet als schermspiegel. ChargeCast is gebouwd rond de streamer-flow: USB-kabel, opladen, OBS-vensteropname.",
+    "blogLinkLabel": "Lees de blog"
   },
   "pl": {
     "metaTitle": "ChargeCast — Podłącz. Streamuj. Zostań naładowany.",
@@ -1245,7 +1256,8 @@
     "finalCtaButton": "Pobierz ChargeCast z Microsoft Store",
     "footer": "ChargeCast to aplikacja Windows od <a href=\"https://github.com/sakuradevjp\">sakura.dev.jp</a>. ID produktu: <code>sakura.dev.jp.ChargeCast</code>",
     "faq6Q": "Czym to się różni od scrcpy albo DroidCam?",
-    "faq6A": "ChargeCast łączy <code>scrcpy</code> z 3-kanałowym mikserem audio i GUI w jednym kliknięciu, więc dźwięk z gry i twój mikrofon trafiają do OBS jako jedno czyste źródło. Sam <code>scrcpy</code> nie zawsze przekazuje dźwięk z gry (tylko Android 11+ i z ograniczeniami), a DroidCam traktuje telefon jako kamerę internetową, nie jako lustro ekranu. ChargeCast jest zbudowany wokół przepływu streamera: kabel USB, ładowanie, Przechwytywanie okna w OBS."
+    "faq6A": "ChargeCast łączy <code>scrcpy</code> z 3-kanałowym mikserem audio i GUI w jednym kliknięciu, więc dźwięk z gry i twój mikrofon trafiają do OBS jako jedno czyste źródło. Sam <code>scrcpy</code> nie zawsze przekazuje dźwięk z gry (tylko Android 11+ i z ograniczeniami), a DroidCam traktuje telefon jako kamerę internetową, nie jako lustro ekranu. ChargeCast jest zbudowany wokół przepływu streamera: kabel USB, ładowanie, Przechwytywanie okna w OBS.",
+    "blogLinkLabel": "Czytaj bloga"
   },
   "sv": {
     "metaTitle": "ChargeCast — Koppla in. Streama på. Håll laddningen.",
@@ -1349,7 +1361,8 @@
     "finalCtaButton": "Hämta ChargeCast på Microsoft Store",
     "footer": "ChargeCast är en Windows-app av <a href=\"https://github.com/sakuradevjp\">sakura.dev.jp</a>. Produkt-ID: <code>sakura.dev.jp.ChargeCast</code>",
     "faq6Q": "Hur skiljer det sig från scrcpy eller DroidCam?",
-    "faq6A": "ChargeCast paketerar <code>scrcpy</code> med en 3-kanals ljudmixer och ett GUI med ett klick, så att spelljudet och din mikrofon når OBS som en ren källa. Rent <code>scrcpy</code> kan inte alltid skicka spelljudet (endast Android 11+, med begränsningar) och DroidCam behandlar telefonen som en webbkamera snarare än som en skärmspegel. ChargeCast är byggt runt streamerns flöde: USB-kabel, laddning, OBS-fönsterfångst."
+    "faq6A": "ChargeCast paketerar <code>scrcpy</code> med en 3-kanals ljudmixer och ett GUI med ett klick, så att spelljudet och din mikrofon når OBS som en ren källa. Rent <code>scrcpy</code> kan inte alltid skicka spelljudet (endast Android 11+, med begränsningar) och DroidCam behandlar telefonen som en webbkamera snarare än som en skärmspegel. ChargeCast är byggt runt streamerns flöde: USB-kabel, laddning, OBS-fönsterfångst.",
+    "blogLinkLabel": "Läs bloggen"
   },
   "ru": {
     "metaTitle": "ChargeCast — Подключил. Стримь. Заряжен.",
@@ -1453,7 +1466,8 @@
     "finalCtaButton": "Скачать ChargeCast в Microsoft Store",
     "footer": "ChargeCast — это Windows-приложение от <a href=\"https://github.com/sakuradevjp\">sakura.dev.jp</a>. ID продукта: <code>sakura.dev.jp.ChargeCast</code>",
     "faq6Q": "Чем это отличается от scrcpy или DroidCam?",
-    "faq6A": "ChargeCast объединяет <code>scrcpy</code> с 3-канальным аудиомикшером и GUI в один клик — звук игры и микрофон попадают в OBS как один чистый источник. Голый <code>scrcpy</code> не всегда умеет передавать звук игры (только Android 11+ и с оговорками), а DroidCam рассматривает телефон как веб-камеру, а не как зеркало экрана. ChargeCast построен вокруг потока стримера: USB-кабель, зарядка, захват окна в OBS."
+    "faq6A": "ChargeCast объединяет <code>scrcpy</code> с 3-канальным аудиомикшером и GUI в один клик — звук игры и микрофон попадают в OBS как один чистый источник. Голый <code>scrcpy</code> не всегда умеет передавать звук игры (только Android 11+ и с оговорками), а DroidCam рассматривает телефон как веб-камеру, а не как зеркало экрана. ChargeCast построен вокруг потока стримера: USB-кабель, зарядка, захват окна в OBS.",
+    "blogLinkLabel": "Читать блог"
   },
   "uk": {
     "metaTitle": "ChargeCast — Підключив. Стрім. Заряджений.",
@@ -1557,7 +1571,8 @@
     "finalCtaButton": "Завантажити ChargeCast у Microsoft Store",
     "footer": "ChargeCast — це Windows-застосунок від <a href=\"https://github.com/sakuradevjp\">sakura.dev.jp</a>. ID продукту: <code>sakura.dev.jp.ChargeCast</code>",
     "faq6Q": "Чим це відрізняється від scrcpy або DroidCam?",
-    "faq6A": "ChargeCast об'єднує <code>scrcpy</code> з 3-канальним аудіомікшером і GUI в один клік — звук гри і мікрофон потрапляють в OBS як одне чисте джерело. Голий <code>scrcpy</code> не завжди вміє передавати звук гри (лише Android 11+ і з обмеженнями), а DroidCam розглядає телефон як вебкамеру, а не як дзеркало екрана. ChargeCast побудований навколо потоку стримера: USB-кабель, заряджання, захоплення вікна в OBS."
+    "faq6A": "ChargeCast об'єднує <code>scrcpy</code> з 3-канальним аудіомікшером і GUI в один клік — звук гри і мікрофон потрапляють в OBS як одне чисте джерело. Голий <code>scrcpy</code> не завжди вміє передавати звук гри (лише Android 11+ і з обмеженнями), а DroidCam розглядає телефон як вебкамеру, а не як дзеркало екрана. ChargeCast побудований навколо потоку стримера: USB-кабель, заряджання, захоплення вікна в OBS.",
+    "blogLinkLabel": "Читати блог"
   },
   "tr": {
     "metaTitle": "ChargeCast — Tak. Yayına geç. Şarjda kal.",
@@ -1661,7 +1676,8 @@
     "finalCtaButton": "ChargeCast'i Microsoft Store'dan al",
     "footer": "ChargeCast, <a href=\"https://github.com/sakuradevjp\">sakura.dev.jp</a> tarafından geliştirilen bir Windows uygulamasıdır. Ürün kimliği: <code>sakura.dev.jp.ChargeCast</code>",
     "faq6Q": "scrcpy veya DroidCam'den farkı nedir?",
-    "faq6A": "ChargeCast, <code>scrcpy</code>'yi 3 kanallı bir ses mikseri ve tek tıklamalık bir GUI ile paketler; oyun sesi ve mikrofonun OBS'a tek temiz bir kaynak olarak ulaşır. Saf <code>scrcpy</code> oyun sesini her zaman taşıyamaz (yalnızca Android 11+, kısıtlamalı), DroidCam ise telefonu ekran yansıması olarak değil web kamerası gibi ele alır. ChargeCast, yayıncının akışı üzerine kurulu: USB kablosu, şarj, OBS Pencere Yakalama."
+    "faq6A": "ChargeCast, <code>scrcpy</code>'yi 3 kanallı bir ses mikseri ve tek tıklamalık bir GUI ile paketler; oyun sesi ve mikrofonun OBS'a tek temiz bir kaynak olarak ulaşır. Saf <code>scrcpy</code> oyun sesini her zaman taşıyamaz (yalnızca Android 11+, kısıtlamalı), DroidCam ise telefonu ekran yansıması olarak değil web kamerası gibi ele alır. ChargeCast, yayıncının akışı üzerine kurulu: USB kablosu, şarj, OBS Pencere Yakalama.",
+    "blogLinkLabel": "Blog'u oku"
   },
   "ar": {
     "metaTitle": "ChargeCast — وصّل الكابل. ابدأ البث. ابقَ مشحوناً.",
@@ -1765,7 +1781,8 @@
     "finalCtaButton": "احصل على ChargeCast من Microsoft Store",
     "footer": "ChargeCast تطبيق Windows من تطوير <a href=\"https://github.com/sakuradevjp\">sakura.dev.jp</a>. معرّف المنتج: <code>sakura.dev.jp.ChargeCast</code>",
     "faq6Q": "ما الفرق بينه وبين scrcpy أو DroidCam؟",
-    "faq6A": "يجمع ChargeCast بين <code>scrcpy</code> ومازج صوت ثلاثي القنوات وواجهة مستخدم بنقرة واحدة، فيصل صوت اللعبة وميكروفونك إلى OBS كمصدر نظيف واحد. <code>scrcpy</code> العادي لا يستطيع دائمًا تمرير صوت اللعبة (فقط Android 11+، وبقيود)، وDroidCam يتعامل مع الهاتف ككاميرا ويب لا كمرآة شاشة. ChargeCast مبني حول تدفق البث: كابل USB، شحن، التقاط نافذة في OBS."
+    "faq6A": "يجمع ChargeCast بين <code>scrcpy</code> ومازج صوت ثلاثي القنوات وواجهة مستخدم بنقرة واحدة، فيصل صوت اللعبة وميكروفونك إلى OBS كمصدر نظيف واحد. <code>scrcpy</code> العادي لا يستطيع دائمًا تمرير صوت اللعبة (فقط Android 11+، وبقيود)، وDroidCam يتعامل مع الهاتف ككاميرا ويب لا كمرآة شاشة. ChargeCast مبني حول تدفق البث: كابل USB، شحن، التقاط نافذة في OBS.",
+    "blogLinkLabel": "اقرأ المدونة"
   },
   "hi": {
     "metaTitle": "ChargeCast — प्लग इन करें। स्ट्रीम ऑन करें। चार्ज बना रहे।",
@@ -1869,7 +1886,8 @@
     "finalCtaButton": "Microsoft Store पर ChargeCast पाएँ",
     "footer": "ChargeCast <a href=\"https://github.com/sakuradevjp\">sakura.dev.jp</a> का बनाया हुआ एक Windows ऐप है। प्रोडक्ट ID: <code>sakura.dev.jp.ChargeCast</code>",
     "faq6Q": "scrcpy या DroidCam से यह कैसे अलग है?",
-    "faq6A": "ChargeCast <code>scrcpy</code> को 3-चैनल ऑडियो मिक्सर और एक-क्लिक GUI के साथ बंडल करता है, इसलिए गेम ऑडियो और आपका माइक OBS में एक साफ सोर्स के रूप में पहुँचते हैं। सादा <code>scrcpy</code> गेम ऑडियो को हमेशा पास नहीं कर पाता (केवल Android 11+, शर्तों के साथ), और DroidCam फोन को वेबकैम की तरह मानता है, स्क्रीन मिरर की तरह नहीं। ChargeCast स्ट्रीमर के फ्लो को ध्यान में रखकर बनाया गया है: USB केबल, चार्जिंग, OBS विंडो कैप्चर।"
+    "faq6A": "ChargeCast <code>scrcpy</code> को 3-चैनल ऑडियो मिक्सर और एक-क्लिक GUI के साथ बंडल करता है, इसलिए गेम ऑडियो और आपका माइक OBS में एक साफ सोर्स के रूप में पहुँचते हैं। सादा <code>scrcpy</code> गेम ऑडियो को हमेशा पास नहीं कर पाता (केवल Android 11+, शर्तों के साथ), और DroidCam फोन को वेबकैम की तरह मानता है, स्क्रीन मिरर की तरह नहीं। ChargeCast स्ट्रीमर के फ्लो को ध्यान में रखकर बनाया गया है: USB केबल, चार्जिंग, OBS विंडो कैप्चर।",
+    "blogLinkLabel": "ब्लॉग पढ़ें"
   },
   "th": {
     "metaTitle": "ChargeCast — เสียบสาย. สตรีมเลย. ชาร์จไปด้วย.",
@@ -1973,7 +1991,8 @@
     "finalCtaButton": "ดาวน์โหลด ChargeCast บน Microsoft Store",
     "footer": "ChargeCast เป็นแอป Windows โดย <a href=\"https://github.com/sakuradevjp\">sakura.dev.jp</a> Product ID: <code>sakura.dev.jp.ChargeCast</code>",
     "faq6Q": "ต่างจาก scrcpy หรือ DroidCam ยังไง?",
-    "faq6A": "ChargeCast รวม <code>scrcpy</code> เข้ากับมิกเซอร์เสียง 3 ช่องและ GUI คลิกเดียว ทำให้เสียงเกมและไมค์ของคุณไปถึง OBS เป็นซอร์สเดียวที่สะอาด. <code>scrcpy</code> เปล่า ๆ อาจไม่ส่งเสียงเกมได้เสมอไป (เฉพาะ Android 11+ และมีเงื่อนไข) ส่วน DroidCam มองมือถือเป็นเว็บแคม ไม่ใช่กระจกหน้าจอ. ChargeCast ออกแบบรอบ ๆ การไหลของสตรีมเมอร์: เสียบ USB, ชาร์จไปด้วย, ใช้ OBS Window Capture."
+    "faq6A": "ChargeCast รวม <code>scrcpy</code> เข้ากับมิกเซอร์เสียง 3 ช่องและ GUI คลิกเดียว ทำให้เสียงเกมและไมค์ของคุณไปถึง OBS เป็นซอร์สเดียวที่สะอาด. <code>scrcpy</code> เปล่า ๆ อาจไม่ส่งเสียงเกมได้เสมอไป (เฉพาะ Android 11+ และมีเงื่อนไข) ส่วน DroidCam มองมือถือเป็นเว็บแคม ไม่ใช่กระจกหน้าจอ. ChargeCast ออกแบบรอบ ๆ การไหลของสตรีมเมอร์: เสียบ USB, ชาร์จไปด้วย, ใช้ OBS Window Capture.",
+    "blogLinkLabel": "อ่านบล็อก"
   },
   "vi": {
     "metaTitle": "ChargeCast — Cắm vào. Stream đi. Luôn đầy pin.",
@@ -2077,7 +2096,8 @@
     "finalCtaButton": "Tải ChargeCast trên Microsoft Store",
     "footer": "ChargeCast là một app Windows do <a href=\"https://github.com/sakuradevjp\">sakura.dev.jp</a> phát triển. Product ID: <code>sakura.dev.jp.ChargeCast</code>",
     "faq6Q": "Khác gì so với scrcpy hay DroidCam?",
-    "faq6A": "ChargeCast gộp <code>scrcpy</code> với mixer audio 3 kênh và GUI một-click, nên âm thanh game và mic đến OBS như một nguồn duy nhất sạch sẽ. <code>scrcpy</code> nguyên bản không phải lúc nào cũng truyền được âm thanh game (chỉ Android 11+, có điều kiện), còn DroidCam coi điện thoại như webcam chứ không phải gương màn hình. ChargeCast được thiết kế quanh luồng của streamer: cáp USB, sạc, OBS Window Capture."
+    "faq6A": "ChargeCast gộp <code>scrcpy</code> với mixer audio 3 kênh và GUI một-click, nên âm thanh game và mic đến OBS như một nguồn duy nhất sạch sẽ. <code>scrcpy</code> nguyên bản không phải lúc nào cũng truyền được âm thanh game (chỉ Android 11+, có điều kiện), còn DroidCam coi điện thoại như webcam chứ không phải gương màn hình. ChargeCast được thiết kế quanh luồng của streamer: cáp USB, sạc, OBS Window Capture.",
+    "blogLinkLabel": "Đọc blog"
   },
   "id": {
     "metaTitle": "ChargeCast — Colokkan. Streaming. Tetap terisi.",
@@ -2181,7 +2201,8 @@
     "finalCtaButton": "Dapatkan ChargeCast di Microsoft Store",
     "footer": "ChargeCast adalah aplikasi Windows dari <a href=\"https://github.com/sakuradevjp\">sakura.dev.jp</a>. Product ID: <code>sakura.dev.jp.ChargeCast</code>",
     "faq6Q": "Apa bedanya dengan scrcpy atau DroidCam?",
-    "faq6A": "ChargeCast membungkus <code>scrcpy</code> dengan mixer audio 3 kanal dan GUI satu klik, jadi audio game dan mic-mu sampai ke OBS sebagai satu sumber yang bersih. <code>scrcpy</code> mentah tidak selalu bisa membawa audio game (hanya Android 11+, dengan syarat), dan DroidCam memperlakukan ponsel seperti webcam, bukan cermin layar. ChargeCast dirancang di sekitar alur streamer: kabel USB, isi daya, OBS Window Capture."
+    "faq6A": "ChargeCast membungkus <code>scrcpy</code> dengan mixer audio 3 kanal dan GUI satu klik, jadi audio game dan mic-mu sampai ke OBS sebagai satu sumber yang bersih. <code>scrcpy</code> mentah tidak selalu bisa membawa audio game (hanya Android 11+, dengan syarat), dan DroidCam memperlakukan ponsel seperti webcam, bukan cermin layar. ChargeCast dirancang di sekitar alur streamer: kabel USB, isi daya, OBS Window Capture.",
+    "blogLinkLabel": "Baca blog"
   },
   "ms": {
     "metaTitle": "ChargeCast — Pasang. Stream. Kekal dicas.",
@@ -2285,6 +2306,7 @@
     "finalCtaButton": "Dapatkan ChargeCast di Microsoft Store",
     "footer": "ChargeCast ialah aplikasi Windows oleh <a href=\"https://github.com/sakuradevjp\">sakura.dev.jp</a>. Product ID: <code>sakura.dev.jp.ChargeCast</code>",
     "faq6Q": "Apa bezanya dengan scrcpy atau DroidCam?",
-    "faq6A": "ChargeCast membungkus <code>scrcpy</code> dengan mixer audio 3 saluran dan GUI sekali klik, jadi audio permainan dan mikrofon anda tiba di OBS sebagai satu sumber bersih. <code>scrcpy</code> mentah tidak semestinya boleh membawa audio permainan (hanya Android 11+, dengan had), dan DroidCam menganggap telefon sebagai webcam, bukan cermin skrin. ChargeCast direka di sekeliling aliran streamer: kabel USB, mengecas, OBS Window Capture."
+    "faq6A": "ChargeCast membungkus <code>scrcpy</code> dengan mixer audio 3 saluran dan GUI sekali klik, jadi audio permainan dan mikrofon anda tiba di OBS sebagai satu sumber bersih. <code>scrcpy</code> mentah tidak semestinya boleh membawa audio permainan (hanya Android 11+, dengan had), dan DroidCam menganggap telefon sebagai webcam, bukan cermin skrin. ChargeCast direka di sekeliling aliran streamer: kabel USB, mengecas, OBS Window Capture.",
+    "blogLinkLabel": "Baca blog"
   }
 }
