@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="RPeFRbPtUKcboLMVO3Kq-iB7prdmXvIFXj_dpZLpyEc">
 <title>ChargeCast — Colokkan. Streaming. Tetap terisi.</title>
-<meta name="description" content="Mirror Android ke Windows lewat USB dengan mixer audio 3 kanal, preset streaming bawaan, dan uji coba gratis 7 hari di Microsoft Store.">
+<meta name="description" content="Streaming gameplay Android ke OBS lewat USB — tanpa capture card, tanpa Elgato. ChargeCast menggabungkan scrcpy dengan mixer audio 3 kanal dan mengisi daya ponselmu sambil kamu streaming. Uji coba gratis 7 hari di Microsoft Store.">
 <meta property="og:title" content="ChargeCast — Colokkan. Streaming. Tetap terisi.">
-<meta property="og:description" content="Mirror Android ke Windows lewat USB dengan mixer audio 3 kanal, preset streaming bawaan, dan uji coba gratis 7 hari di Microsoft Store.">
+<meta property="og:description" content="Streaming gameplay Android ke OBS lewat USB — tanpa capture card, tanpa Elgato. ChargeCast menggabungkan scrcpy dengan mixer audio 3 kanal dan mengisi daya ponselmu sambil kamu streaming. Uji coba gratis 7 hari di Microsoft Store.">
 <meta property="og:image" content="../assets/Thumbnail.png">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/id/">
@@ -141,9 +141,9 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <h2>Kedengarannya familiar?</h2>
 <div class="pain-points">
 <ul>
-  <li>Kamu mau streaming gameplay Android di OBS, tapi <strong>screen capture, audio game, dan mic kamu sendiri</strong> tidak pernah benar-benar pas.</li>
+  <li>Kamu ingin streaming gameplay Android di OBS <strong>tanpa harus beli capture card atau Elgato</strong>, tapi capture layar, audio game, dan mic-mu tidak pernah benar-benar selaras.</li>
   <li>Mirror lewat Wi-Fi itu mimpi buruk: <strong>latency</strong> melonjak dan <strong>baterai</strong> cepat habis.</li>
-  <li>Bahkan dengan <code>scrcpy</code> di CLI, ritualnya bikin bosan — <strong>setiap kali mau streaming</strong>.</li>
+  <li>Sudah coba <code>scrcpy</code> di CLI atau DroidCam — tapi <strong>suaranya tidak masuk</strong>, atau ritualnya bikin lelah setiap sesi.</li>
   <li>Di tengah streaming, HP tinggal 12% dan mulai panas. <strong>Keringat dingin.</strong></li>
 </ul>
 <p style="margin:1rem 0 0">ChargeCast menyelesaikan keempatnya dengan <strong>satu kabel USB dan GUI yang ramah</strong>. Khusus Windows, fokus streaming.</p>
@@ -250,6 +250,7 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <details><summary>Software streaming apa yang sebaiknya dipakai?</summary><p>OBS Studio adalah setup referensi (gunakan sumber Window Capture). XSplit dan tool serupa bekerja dengan cara yang sama.</p></details>
 <details><summary>Bagaimana dengan game orientasi portrait?</summary><p>Orientasi bisa dikunci ke Portrait, Landscape, atau Auto supaya tata letak OBS kamu tetap stabil.</p></details>
 <details><summary>Apakah app ini mengirim data ke luar?</summary><p>Seluruh capture dilakukan lokal lewat ADB. ChargeCast sendiri tidak mengirim info perangkat ke mana pun.</p></details>
+<details><summary>Apa bedanya dengan scrcpy atau DroidCam?</summary><p>ChargeCast membungkus <code>scrcpy</code> dengan mixer audio 3 kanal dan GUI satu klik, jadi audio game dan mic-mu sampai ke OBS sebagai satu sumber yang bersih. <code>scrcpy</code> mentah tidak selalu bisa membawa audio game (hanya Android 11+, dengan syarat), dan DroidCam memperlakukan ponsel seperti webcam, bukan cermin layar. ChargeCast dirancang di sekitar alur streamer: kabel USB, isi daya, OBS Window Capture.</p></details>
 
 <h2>Catatan soal integrasi OBS</h2>
 <p>ChargeCast <strong>bukan aplikasi streaming sendirian</strong>. Anggap saja panggung yang menyerahkan take bersih ke OBS.</p>

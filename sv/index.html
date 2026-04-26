@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="RPeFRbPtUKcboLMVO3Kq-iB7prdmXvIFXj_dpZLpyEc">
 <title>ChargeCast — Koppla in. Streama på. Håll laddningen.</title>
-<meta name="description" content="Spegla Android till Windows över USB med en 3-kanals ljudmixer, inbyggda streamingpresets och 7 dagars gratis provperiod på Microsoft Store.">
+<meta name="description" content="Streama Android-gameplay till OBS via USB — utan capture card, utan Elgato. ChargeCast paketerar scrcpy med en 3-kanals ljudmixer och laddar telefonen medan du streamar. 7 dagars gratis provperiod i Microsoft Store.">
 <meta property="og:title" content="ChargeCast — Koppla in. Streama på. Håll laddningen.">
-<meta property="og:description" content="Spegla Android till Windows över USB med en 3-kanals ljudmixer, inbyggda streamingpresets och 7 dagars gratis provperiod på Microsoft Store.">
+<meta property="og:description" content="Streama Android-gameplay till OBS via USB — utan capture card, utan Elgato. ChargeCast paketerar scrcpy med en 3-kanals ljudmixer och laddar telefonen medan du streamar. 7 dagars gratis provperiod i Microsoft Store.">
 <meta property="og:image" content="../assets/Thumbnail.png">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/sv/">
@@ -141,9 +141,9 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <h2>Känner du igen något av det här?</h2>
 <div class="pain-points">
 <ul>
-  <li>Du vill streama Android-spel i OBS, men <strong>skärmkapturen, spelljudet och din egen mikrofon</strong> sitter aldrig riktigt rätt.</li>
+  <li>Du vill streama Android-gameplay till OBS <strong>utan att behöva köpa ett capture card eller en Elgato</strong>, men skärminspelningen, spelljudet och din egen mikrofon hamnar aldrig riktigt i takt.</li>
   <li>Wi-Fi-speglingen är en plåga: <strong>latensryck</strong> och <strong>batteriet som rinner ut</strong>.</li>
-  <li>Även med <code>scrcpy</code> i terminalen blir ritualen tjatig — <strong>varje gång du ska streama</strong>.</li>
+  <li>Du har provat <code>scrcpy</code> i CLI eller DroidCam — men <strong>ljudet kommer inte fram</strong>, eller så blir ritualen tjatig varje session.</li>
   <li>Mitt i streamen är telefonen på 12 % och börjar bli varm. <strong>Kallsvettigt.</strong></li>
 </ul>
 <p style="margin:1rem 0 0">ChargeCast löser alla fyra med <strong>en USB-kabel och ett vänligt GUI</strong>. Bara Windows, byggt för streaming.</p>
@@ -250,6 +250,7 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <details><summary>Vilken streamingmjukvara bör jag använda?</summary><p>OBS Studio är referensuppsättningen (använd en Window Capture-källa). XSplit och liknande verktyg fungerar på samma sätt.</p></details>
 <details><summary>Vad gäller för spel i porträttläge?</summary><p>Orienteringen kan låsas till Porträtt, Landskap eller Auto så att din OBS-layout håller sig stabil.</p></details>
 <details><summary>Ringer den hem?</summary><p>All capture sker lokalt via ADB. ChargeCast själv skickar ingen enhetsinformation någonstans.</p></details>
+<details><summary>Hur skiljer det sig från scrcpy eller DroidCam?</summary><p>ChargeCast paketerar <code>scrcpy</code> med en 3-kanals ljudmixer och ett GUI med ett klick, så att spelljudet och din mikrofon når OBS som en ren källa. Rent <code>scrcpy</code> kan inte alltid skicka spelljudet (endast Android 11+, med begränsningar) och DroidCam behandlar telefonen som en webbkamera snarare än som en skärmspegel. ChargeCast är byggt runt streamerns flöde: USB-kabel, laddning, OBS-fönsterfångst.</p></details>
 
 <h2>En kommentar om OBS-integrationen</h2>
 <p>ChargeCast <strong>är ingen streamingapp i sig</strong>. Tänk på den som scenen som räcker över en ren tagning till OBS.</p>

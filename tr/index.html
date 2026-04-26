@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="RPeFRbPtUKcboLMVO3Kq-iB7prdmXvIFXj_dpZLpyEc">
 <title>ChargeCast — Tak. Yayına geç. Şarjda kal.</title>
-<meta name="description" content="Android ekranını USB üzerinden Windows'a yansıtın: 3 kanallı ses mikseri, hazır yayın presetleri ve Microsoft Store'da 7 günlük ücretsiz deneme.">
+<meta name="description" content="Android oyun yayınını USB üzerinden OBS'a aktar — capture card yok, Elgato yok. ChargeCast scrcpy'yi 3 kanallı bir ses mikseriyle paketler ve sen yayın yaparken telefonu şarj eder. Microsoft Store'da 7 günlük ücretsiz deneme.">
 <meta property="og:title" content="ChargeCast — Tak. Yayına geç. Şarjda kal.">
-<meta property="og:description" content="Android ekranını USB üzerinden Windows'a yansıtın: 3 kanallı ses mikseri, hazır yayın presetleri ve Microsoft Store'da 7 günlük ücretsiz deneme.">
+<meta property="og:description" content="Android oyun yayınını USB üzerinden OBS'a aktar — capture card yok, Elgato yok. ChargeCast scrcpy'yi 3 kanallı bir ses mikseriyle paketler ve sen yayın yaparken telefonu şarj eder. Microsoft Store'da 7 günlük ücretsiz deneme.">
 <meta property="og:image" content="../assets/Thumbnail.png">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/tr/">
@@ -141,9 +141,9 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <h2>Bunlar sana tanıdık geliyor mu?</h2>
 <div class="pain-points">
 <ul>
-  <li>Android oynanışını OBS'te yayınlamak istiyorsun ama <strong>ekran yakalama, oyun sesi ve kendi mikrofonun</strong> bir türlü denk gelmiyor.</li>
+  <li>Android oyununu OBS'ta yayınlamak istiyorsun ama <strong>capture card ya da Elgato satın almak zorunda kalmadan</strong>, ekran yakalama, oyun sesi ve kendi mikrofonun bir türlü tek bir akışta buluşmuyor.</li>
   <li>Wi-Fi yansıtma tam bir çile: <strong>gecikme</strong> zıplamaları ve <strong>eriyen batarya</strong>.</li>
-  <li>Komut satırındaki <code>scrcpy</code> ile bile bu tören sıkıcı hale geliyor — <strong>her seferinde</strong>.</li>
+  <li><code>scrcpy</code>'yi CLI'de ya da DroidCam'i denedin ama <strong>ses geçmiyor</strong> veya ritüel her yayın öncesi yıpratıyor.</li>
   <li>Yayının ortasında telefon %12'de ve ısınıyor. <strong>Soğuk ter.</strong></li>
 </ul>
 <p style="margin:1rem 0 0">ChargeCast dördünü birden <strong>tek USB kablosu ve sıcak bir arayüzle</strong> çözüyor. Sadece Windows, tamamen yayıncılığa odaklı.</p>
@@ -250,6 +250,7 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <details><summary>Hangi yayın yazılımını kullanmalıyım?</summary><p>Referans kurulum OBS Studio'dur (Window Capture kaynağı kullan). XSplit ve benzeri araçlar aynı şekilde çalışır.</p></details>
 <details><summary>Dikey yönelimdeki oyunlar ne olacak?</summary><p>Yön Portrait, Landscape veya Auto'ya kilitlenebilir; böylece OBS düzenin sabit kalır.</p></details>
 <details><summary>Bilgileri eve gönderiyor mu?</summary><p>Tüm yakalama ADB üzerinden yerel olarak yapılır. ChargeCast'in kendisi cihaz bilgisini hiçbir yere göndermez.</p></details>
+<details><summary>scrcpy veya DroidCam'den farkı nedir?</summary><p>ChargeCast, <code>scrcpy</code>'yi 3 kanallı bir ses mikseri ve tek tıklamalık bir GUI ile paketler; oyun sesi ve mikrofonun OBS'a tek temiz bir kaynak olarak ulaşır. Saf <code>scrcpy</code> oyun sesini her zaman taşıyamaz (yalnızca Android 11+, kısıtlamalı), DroidCam ise telefonu ekran yansıması olarak değil web kamerası gibi ele alır. ChargeCast, yayıncının akışı üzerine kurulu: USB kablosu, şarj, OBS Pencere Yakalama.</p></details>
 
 <h2>OBS entegrasyonu hakkında bir not</h2>
 <p>ChargeCast <strong>başlı başına bir yayın uygulaması değildir</strong>. OBS'e temiz bir çekim uzatan sahne gibi düşün.</p>

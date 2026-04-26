@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="RPeFRbPtUKcboLMVO3Kq-iB7prdmXvIFXj_dpZLpyEc">
 <title>ChargeCast — Conecta, transmite, sin quedarte sin batería.</title>
-<meta name="description" content="Duplica la pantalla de Android a Windows por USB con un mezclador de audio de 3 canales, presets de streaming integrados y 7 días de prueba gratis en Microsoft Store.">
+<meta name="description" content="Transmite gameplay de Android a OBS por USB — sin tarjeta de captura, sin Elgato. ChargeCast empaqueta scrcpy con un mezclador de audio de 3 canales y carga el móvil mientras transmites. 7 días de prueba gratis en Microsoft Store.">
 <meta property="og:title" content="ChargeCast — Conecta, transmite, sin quedarte sin batería.">
-<meta property="og:description" content="Duplica la pantalla de Android a Windows por USB con un mezclador de audio de 3 canales, presets de streaming integrados y 7 días de prueba gratis en Microsoft Store.">
+<meta property="og:description" content="Transmite gameplay de Android a OBS por USB — sin tarjeta de captura, sin Elgato. ChargeCast empaqueta scrcpy con un mezclador de audio de 3 canales y carga el móvil mientras transmites. 7 días de prueba gratis en Microsoft Store.">
 <meta property="og:image" content="../assets/Thumbnail.png">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/es/">
@@ -141,9 +141,9 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <h2>¿Te suena alguno de estos?</h2>
 <div class="pain-points">
 <ul>
-  <li>Quieres transmitir gameplay de Android en OBS, pero <strong>la captura de pantalla, el audio del juego y tu propio micro</strong> nunca terminan de encajar.</li>
+  <li>Quieres transmitir gameplay de Android en OBS <strong>sin tener que comprar una tarjeta de captura ni un Elgato</strong>, pero la captura de pantalla, el audio del juego y tu propio micro nunca terminan de encajar.</li>
   <li>El espejo por Wi-Fi es un infierno: <strong>latencia</strong> disparada y <strong>batería</strong> que se evapora.</li>
-  <li>Incluso con <code>scrcpy</code> desde la terminal, el ritual cansa — <strong>en cada sesión</strong>.</li>
+  <li>Probaste <code>scrcpy</code> en la terminal o DroidCam — pero <strong>el audio no pasa</strong>, o el ritual cansa en cada sesión.</li>
   <li>En plena transmisión, el móvil está al 12% y ardiendo. <strong>Sudor frío.</strong></li>
 </ul>
 <p style="margin:1rem 0 0">ChargeCast resuelve los cuatro con <strong>un cable USB y una GUI amable</strong>. Solo Windows, pensado para streaming.</p>
@@ -250,6 +250,7 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <details><summary>¿Qué software de streaming debería usar?</summary><p>OBS Studio es la referencia (usa una fuente de Captura de ventana). XSplit y herramientas similares funcionan igual.</p></details>
 <details><summary>¿Y los juegos en vertical?</summary><p>La orientación se puede fijar en vertical, horizontal o automática para que tu layout de OBS no se descoloque.</p></details>
 <details><summary>¿Se conecta a casa por su cuenta?</summary><p>Toda la captura es local vía ADB. ChargeCast en sí no envía información del dispositivo a ningún sitio.</p></details>
+<details><summary>¿En qué se diferencia de scrcpy o DroidCam?</summary><p>ChargeCast empaqueta <code>scrcpy</code> con un mezclador de audio de 3 canales y una GUI de un clic, así el audio del juego y tu micro llegan a OBS como una sola fuente limpia. El <code>scrcpy</code> a secas no siempre puede pasar el audio del juego (solo Android 11+, con condiciones) y DroidCam trata el móvil como una webcam, no como un espejo de pantalla. ChargeCast está pensado alrededor del flujo del streamer: cable USB, carga, Captura de ventana en OBS.</p></details>
 
 <h2>Una nota sobre la integración con OBS</h2>
 <p>ChargeCast <strong>no es una app de streaming por sí sola</strong>. Piénsalo como el escenario que le pasa una toma limpia a OBS.</p>

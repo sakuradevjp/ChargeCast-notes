@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="RPeFRbPtUKcboLMVO3Kq-iB7prdmXvIFXj_dpZLpyEc">
 <title>ChargeCast — प्लग इन करें। स्ट्रीम ऑन करें। चार्ज बना रहे।</title>
-<meta name="description" content="USB के ज़रिए Android को Windows पर मिरर करें — 3-चैनल ऑडियो मिक्सर, बिल्ट-इन स्ट्रीमिंग प्रीसेट और Microsoft Store पर 7-दिन का मुफ़्त ट्रायल।">
+<meta name="description" content="USB से Android गेमप्ले को सीधे OBS पर स्ट्रीम करें — बिना कैप्चर कार्ड के, बिना Elgato के। ChargeCast scrcpy को 3-चैनल ऑडियो मिक्सर के साथ बंडल करता है और स्ट्रीमिंग के दौरान फोन को चार्ज भी करता है। Microsoft Store पर 7 दिन का मुफ़्त ट्रायल।">
 <meta property="og:title" content="ChargeCast — प्लग इन करें। स्ट्रीम ऑन करें। चार्ज बना रहे।">
-<meta property="og:description" content="USB के ज़रिए Android को Windows पर मिरर करें — 3-चैनल ऑडियो मिक्सर, बिल्ट-इन स्ट्रीमिंग प्रीसेट और Microsoft Store पर 7-दिन का मुफ़्त ट्रायल।">
+<meta property="og:description" content="USB से Android गेमप्ले को सीधे OBS पर स्ट्रीम करें — बिना कैप्चर कार्ड के, बिना Elgato के। ChargeCast scrcpy को 3-चैनल ऑडियो मिक्सर के साथ बंडल करता है और स्ट्रीमिंग के दौरान फोन को चार्ज भी करता है। Microsoft Store पर 7 दिन का मुफ़्त ट्रायल।">
 <meta property="og:image" content="../assets/Thumbnail.png">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/hi/">
@@ -141,9 +141,9 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <h2>क्या यह सब जाना-पहचाना लगता है?</h2>
 <div class="pain-points">
 <ul>
-  <li>आप OBS पर Android गेमप्ले स्ट्रीम करना चाहते हैं, लेकिन <strong>स्क्रीन कैप्चर, गेम ऑडियो और आपका अपना माइक</strong> कभी भी ठीक से सिंक नहीं होते।</li>
+  <li>आप OBS पर Android गेमप्ले स्ट्रीम करना चाहते हैं <strong>बिना कैप्चर कार्ड या Elgato खरीदे</strong>, लेकिन स्क्रीन कैप्चर, गेम ऑडियो और अपना माइक — हर बार ठीक से मेल नहीं खाते।</li>
   <li>Wi-Fi मिरर करना एक सिरदर्द है: <strong>लेटेंसी</strong> बढ़ती है और <strong>बैटरी</strong> जल्दी ख़त्म होती है।</li>
-  <li>CLI पर <code>scrcpy</code> के साथ भी, वही पुरानी रस्म बोरिंग हो जाती है — <strong>हर एक सेशन में</strong>।</li>
+  <li><code>scrcpy</code> को CLI पर या DroidCam आज़माया — लेकिन <strong>आवाज़ ही नहीं आती</strong>, या हर सेशन में वही रिचुअल थका देता है।</li>
   <li>स्ट्रीम के बीच में, फ़ोन 12% पर है और गरम हो रहा है। <strong>पसीने छूट जाते हैं।</strong></li>
 </ul>
 <p style="margin:1rem 0 0">ChargeCast इन चारों को <strong>एक USB केबल और एक दोस्ताना GUI</strong> से हल करता है। सिर्फ़ Windows के लिए, स्ट्रीमिंग-फ़र्स्ट।</p>
@@ -250,6 +250,7 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <details><summary>मुझे कौन-सा स्ट्रीमिंग सॉफ़्टवेयर इस्तेमाल करना चाहिए?</summary><p>OBS Studio रेफ़रेंस सेटअप है (Window Capture सोर्स इस्तेमाल करें)। XSplit और ऐसे दूसरे टूल भी उसी तरह काम करते हैं।</p></details>
 <details><summary>पोर्ट्रेट ओरिएंटेशन वाले गेम का क्या?</summary><p>ओरिएंटेशन को Portrait, Landscape या Auto पर लॉक किया जा सकता है ताकि आपका OBS लेआउट स्थिर रहे।</p></details>
 <details><summary>क्या यह कहीं डेटा भेजता है?</summary><p>सारा कैप्चर ADB के ज़रिए लोकल है। ChargeCast ख़ुद डिवाइस की जानकारी कहीं नहीं भेजता।</p></details>
+<details><summary>scrcpy या DroidCam से यह कैसे अलग है?</summary><p>ChargeCast <code>scrcpy</code> को 3-चैनल ऑडियो मिक्सर और एक-क्लिक GUI के साथ बंडल करता है, इसलिए गेम ऑडियो और आपका माइक OBS में एक साफ सोर्स के रूप में पहुँचते हैं। सादा <code>scrcpy</code> गेम ऑडियो को हमेशा पास नहीं कर पाता (केवल Android 11+, शर्तों के साथ), और DroidCam फोन को वेबकैम की तरह मानता है, स्क्रीन मिरर की तरह नहीं। ChargeCast स्ट्रीमर के फ्लो को ध्यान में रखकर बनाया गया है: USB केबल, चार्जिंग, OBS विंडो कैप्चर।</p></details>
 
 <h2>OBS इंटीग्रेशन पर एक नोट</h2>
 <p>ChargeCast <strong>ख़ुद से कोई स्ट्रीमिंग ऐप नहीं है</strong>। इसे ऐसे मंच की तरह समझें जो OBS को एक साफ़ फ़ीड थमाता है।</p>

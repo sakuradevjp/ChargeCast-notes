@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="RPeFRbPtUKcboLMVO3Kq-iB7prdmXvIFXj_dpZLpyEc">
 <title>ChargeCast — Подключил. Стримь. Заряжен.</title>
-<meta name="description" content="Транслируйте экран Android на Windows по USB с 3-канальным аудиомикшером, встроенными стриминговыми пресетами и 7-дневной бесплатной пробной версией в Microsoft Store.">
+<meta name="description" content="Стримь геймплей Android в OBS по USB — без карты захвата, без Elgato. ChargeCast объединяет scrcpy с 3-канальным аудиомикшером и заряжает телефон во время стрима. 7-дневный бесплатный пробный период в Microsoft Store.">
 <meta property="og:title" content="ChargeCast — Подключил. Стримь. Заряжен.">
-<meta property="og:description" content="Транслируйте экран Android на Windows по USB с 3-канальным аудиомикшером, встроенными стриминговыми пресетами и 7-дневной бесплатной пробной версией в Microsoft Store.">
+<meta property="og:description" content="Стримь геймплей Android в OBS по USB — без карты захвата, без Elgato. ChargeCast объединяет scrcpy с 3-канальным аудиомикшером и заряжает телефон во время стрима. 7-дневный бесплатный пробный период в Microsoft Store.">
 <meta property="og:image" content="../assets/Thumbnail.png">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/ru/">
@@ -141,9 +141,9 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <h2>Знакомая история?</h2>
 <div class="pain-points">
 <ul>
-  <li>Хочется стримить Android-игры в OBS, но <strong>захват экрана, звук игры и собственный микрофон</strong> никак толком не складываются вместе.</li>
+  <li>Ты хочешь стримить Android-геймплей в OBS <strong>без покупки карты захвата или Elgato</strong>, но захват экрана, звук игры и собственный микрофон никогда нормально не сходятся.</li>
   <li>Трансляция по Wi-Fi — это боль: скачки <strong>задержки</strong> и <strong>улетающая батарея</strong>.</li>
-  <li>Даже с <code>scrcpy</code> в командной строке ритуал надоедает — <strong>каждый раз перед стримом</strong>.</li>
+  <li><code>scrcpy</code> в командной строке или DroidCam — <strong>звук не идёт</strong>, или ритуал утомляет каждую сессию.</li>
   <li>В разгар эфира на телефоне 12 %, и он греется. <strong>Холодный пот.</strong></li>
 </ul>
 <p style="margin:1rem 0 0">ChargeCast закрывает все четыре проблемы <strong>одним USB-кабелем и дружелюбным GUI</strong>. Только Windows, заточено под стрим.</p>
@@ -250,6 +250,7 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <details><summary>Какое ПО для стриминга выбрать?</summary><p>Эталонная связка — OBS Studio (используйте источник Window Capture). XSplit и похожие программы работают так же.</p></details>
 <details><summary>А что с играми в портретной ориентации?</summary><p>Ориентацию можно зафиксировать в Portrait, Landscape или Auto, чтобы ваш макет OBS оставался стабильным.</p></details>
 <details><summary>Не лезет ли программа в сеть?</summary><p>Весь захват идёт локально через ADB. Сам ChargeCast не отправляет информацию об устройстве никуда.</p></details>
+<details><summary>Чем это отличается от scrcpy или DroidCam?</summary><p>ChargeCast объединяет <code>scrcpy</code> с 3-канальным аудиомикшером и GUI в один клик — звук игры и микрофон попадают в OBS как один чистый источник. Голый <code>scrcpy</code> не всегда умеет передавать звук игры (только Android 11+ и с оговорками), а DroidCam рассматривает телефон как веб-камеру, а не как зеркало экрана. ChargeCast построен вокруг потока стримера: USB-кабель, зарядка, захват окна в OBS.</p></details>
 
 <h2>Пара слов об интеграции с OBS</h2>
 <p>ChargeCast <strong>не является самостоятельным стриминговым приложением</strong>. Считайте его сценой, которая отдаёт OBS уже чистый кадр.</p>

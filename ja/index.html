@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="RPeFRbPtUKcboLMVO3Kq-iB7prdmXvIFXj_dpZLpyEc">
 <title>ChargeCast — USBでつなぐだけ、Android 配信がこんなに軽い</title>
-<meta name="description" content="Plug in. Stream on. Stay charged. USBケーブル1本で、Android の画面も音もマイクも Windows にまるごと流し込む。Microsoft Store の7日間無料トライアルつき。">
+<meta name="description" content="Android ゲームを USB 経由で OBS へ — キャプチャボードも Elgato も不要。ChargeCast は scrcpy に 3 チャンネル・オーディオミキサーを乗せ、配信中はずっと充電。Microsoft Store の7日間無料トライアルつき。">
 <meta property="og:title" content="ChargeCast — USBでつなぐだけ、Android 配信がこんなに軽い">
-<meta property="og:description" content="Plug in. Stream on. Stay charged. USBケーブル1本で、Android の画面も音もマイクも Windows にまるごと流し込む。Microsoft Store の7日間無料トライアルつき。">
+<meta property="og:description" content="Android ゲームを USB 経由で OBS へ — キャプチャボードも Elgato も不要。ChargeCast は scrcpy に 3 チャンネル・オーディオミキサーを乗せ、配信中はずっと充電。Microsoft Store の7日間無料トライアルつき。">
 <meta property="og:image" content="../assets/Thumbnail.png">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/ja/">
@@ -141,9 +141,9 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <h2>こんなことで詰まっていませんか</h2>
 <div class="pain-points">
 <ul>
-  <li>Android ゲームを OBS で配信したい。でも <strong>画面のキャプチャ・ゲーム音・自分のマイク</strong> を全部きれいに混ぜるのが毎回大仕事</li>
+  <li>Android ゲームを OBS で配信したい。でも <strong>キャプチャボードや Elgato を買い足さずに</strong>、画面のキャプチャ・ゲーム音・自分のマイクを全部きれいに揃えるのが毎回大仕事</li>
   <li>Wi-Fi ミラーリングは <strong>遅延</strong> と <strong>バッテリー</strong> がつらい</li>
-  <li><code>scrcpy</code> を CLI で叩くのは慣れても <strong>毎回ちょっと面倒</strong></li>
+  <li><code>scrcpy</code> や DroidCam を試したけど、<strong>音が乗らない</strong>か、毎回コマンドを打つルーチンがしんどい</li>
   <li>配信中にスマホの電池が切れそうで <strong>冷や汗</strong></li>
 </ul>
 <p style="margin:1rem 0 0">ChargeCast は、この4つを <strong>USB1本＋GUI</strong> で丸ごと片付ける Windows アプリです。</p>
@@ -250,6 +250,7 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <details><summary>配信ソフトは何を使えばいい？</summary><p>OBS Studio を想定しています（Window Capture ソースで掴んでください）。XSplit など他のソフトでも同様の仕組みで動きます。</p></details>
 <details><summary>画面が縦向きのゲームでも大丈夫？</summary><p>Orientation を Portrait / Landscape / Auto から選べます。配信レイアウトを崩さず固定できます。</p></details>
 <details><summary>ネットに勝手に繋ぎますか？</summary><p>キャプチャはすべてローカルの ADB 経由です。ChargeCast 自体は端末情報を外部へ送りません。</p></details>
+<details><summary>scrcpy や DroidCam と何が違いますか？</summary><p>ChargeCast は <code>scrcpy</code> に 3 チャンネル・オーディオミキサーとワンクリック GUI を乗せて、ゲーム音とマイクを「1本のきれいなソース」として OBS に渡します。素の <code>scrcpy</code> はゲーム音を必ずしも拾えず（Android 11 以降のみ・条件付き）、DroidCam はスマホをウェブカメラ扱いにする発想で、画面ミラーリング向けではありません。ChargeCast は「USB を挿す → 充電される → OBS の Window Capture で取る」という配信者の動線を前提に作られています。</p></details>
 
 <h2>OBS との連携について</h2>
 <p>ChargeCast は <strong>単体で配信するアプリではありません</strong>。立ち位置としては「OBS にきれいに渡すための前段」です。</p>

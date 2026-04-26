@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="RPeFRbPtUKcboLMVO3Kq-iB7prdmXvIFXj_dpZLpyEc">
 <title>ChargeCast — وصّل الكابل. ابدأ البث. ابقَ مشحوناً.</title>
-<meta name="description" content="انسخ شاشة Android إلى Windows عبر USB مع مازج صوت بثلاث قنوات، إعدادات بث جاهزة، وتجربة مجانية لمدة 7 أيام على Microsoft Store.">
+<meta name="description" content="ابثّ ألعاب الأندرويد إلى OBS عبر USB — بدون كرت كابتشر، بدون Elgato. يجمع ChargeCast بين scrcpy ومازج صوت ثلاثي القنوات، ويشحن هاتفك أثناء البث. تجربة مجانية لمدة 7 أيام على Microsoft Store.">
 <meta property="og:title" content="ChargeCast — وصّل الكابل. ابدأ البث. ابقَ مشحوناً.">
-<meta property="og:description" content="انسخ شاشة Android إلى Windows عبر USB مع مازج صوت بثلاث قنوات، إعدادات بث جاهزة، وتجربة مجانية لمدة 7 أيام على Microsoft Store.">
+<meta property="og:description" content="ابثّ ألعاب الأندرويد إلى OBS عبر USB — بدون كرت كابتشر، بدون Elgato. يجمع ChargeCast بين scrcpy ومازج صوت ثلاثي القنوات، ويشحن هاتفك أثناء البث. تجربة مجانية لمدة 7 أيام على Microsoft Store.">
 <meta property="og:image" content="../assets/Thumbnail.png">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/ar/">
@@ -141,9 +141,9 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <h2>هل يبدو أي من هذا مألوفاً؟</h2>
 <div class="pain-points">
 <ul>
-  <li>تريد بث ألعاب Android على OBS، لكن <strong>التقاط الشاشة وصوت اللعبة وميكروفونك</strong> لا تنسجم تماماً أبداً.</li>
+  <li>تريد بث ألعاب الأندرويد على OBS <strong>دون شراء كرت كابتشر أو Elgato</strong>، لكن التقاط الشاشة وصوت اللعبة والميكروفون لا يلتقون أبدًا في مسار نظيف واحد.</li>
   <li>النسخ عبر Wi-Fi معاناة حقيقية: ارتفاعات <strong>زمن الاستجابة</strong> و<strong>استنزاف البطارية</strong>.</li>
-  <li>حتى مع <code>scrcpy</code> في سطر الأوامر، تصبح الطقوس مملة — <strong>في كل جلسة</strong>.</li>
+  <li>جربت <code>scrcpy</code> من سطر الأوامر أو DroidCam — لكن <strong>الصوت لا يمر</strong>، أو الطقوس تتعب في كل جلسة.</li>
   <li>في منتصف البث، هاتفك على 12٪ ويبدأ بالسخونة. <strong>عرق بارد.</strong></li>
 </ul>
 <p style="margin:1rem 0 0">ChargeCast يحل الأربعة معاً بـ <strong>كابل USB واحد وواجهة ودودة</strong>. لنظام Windows فقط، ومصمّم للبث أولاً.</p>
@@ -250,6 +250,7 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <details><summary>أي برنامج بث ينبغي أن أستخدم؟</summary><p>OBS Studio هو الإعداد المرجعي (استخدم مصدر Window Capture). XSplit والأدوات المشابهة تعمل بالطريقة نفسها.</p></details>
 <details><summary>ماذا عن الألعاب ذات الاتجاه العمودي؟</summary><p>يمكن تثبيت الاتجاه على Portrait أو Landscape أو Auto حتى يبقى ترتيب OBS ثابتاً.</p></details>
 <details><summary>هل يتصل التطبيق بالإنترنت خلسةً؟</summary><p>كل الالتقاط يجري محلياً عبر ADB. ChargeCast نفسه لا يرسل معلومات الجهاز إلى أي مكان.</p></details>
+<details><summary>ما الفرق بينه وبين scrcpy أو DroidCam؟</summary><p>يجمع ChargeCast بين <code>scrcpy</code> ومازج صوت ثلاثي القنوات وواجهة مستخدم بنقرة واحدة، فيصل صوت اللعبة وميكروفونك إلى OBS كمصدر نظيف واحد. <code>scrcpy</code> العادي لا يستطيع دائمًا تمرير صوت اللعبة (فقط Android 11+، وبقيود)، وDroidCam يتعامل مع الهاتف ككاميرا ويب لا كمرآة شاشة. ChargeCast مبني حول تدفق البث: كابل USB، شحن، التقاط نافذة في OBS.</p></details>
 
 <h2>ملاحظة عن التكامل مع OBS</h2>
 <p>ChargeCast <strong>ليس تطبيق بث قائماً بذاته</strong>. اعتبره المسرح الذي يسلّم OBS لقطة نظيفة.</p>

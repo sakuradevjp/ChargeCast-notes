@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="RPeFRbPtUKcboLMVO3Kq-iB7prdmXvIFXj_dpZLpyEc">
 <title>ChargeCast — Plugue. Transmita. Fique carregado.</title>
-<meta name="description" content="Espelhe Android no Windows via USB com mixer de áudio de 3 canais, presets de streaming e 7 dias grátis na Microsoft Store.">
+<meta name="description" content="Faça streaming de gameplay Android para OBS via USB — sem placa de captura, sem Elgato. ChargeCast junta scrcpy a um mixer de áudio de 3 canais e carrega o celular enquanto você transmite. 7 dias de teste grátis na Microsoft Store.">
 <meta property="og:title" content="ChargeCast — Plugue. Transmita. Fique carregado.">
-<meta property="og:description" content="Espelhe Android no Windows via USB com mixer de áudio de 3 canais, presets de streaming e 7 dias grátis na Microsoft Store.">
+<meta property="og:description" content="Faça streaming de gameplay Android para OBS via USB — sem placa de captura, sem Elgato. ChargeCast junta scrcpy a um mixer de áudio de 3 canais e carrega o celular enquanto você transmite. 7 dias de teste grátis na Microsoft Store.">
 <meta property="og:image" content="../assets/Thumbnail.png">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/pt/">
@@ -141,9 +141,9 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <h2>Alguma dessas situações soa familiar?</h2>
 <div class="pain-points">
 <ul>
-  <li>Você quer transmitir gameplay de Android no OBS, mas <strong>captura de tela, áudio do jogo e o seu microfone</strong> nunca se encaixam direito.</li>
+  <li>Você quer transmitir gameplay Android no OBS <strong>sem precisar comprar uma placa de captura ou um Elgato</strong>, mas a captura de tela, o áudio do jogo e seu próprio microfone nunca se alinham direito.</li>
   <li>Espelhamento por Wi-Fi é um sofrimento: picos de <strong>latência</strong> e <strong>bateria caindo</strong>.</li>
-  <li>Mesmo com <code>scrcpy</code> na CLI, o ritual cansa — <strong>toda santa sessão</strong>.</li>
+  <li>Tentou <code>scrcpy</code> no terminal ou DroidCam — mas <strong>o áudio não passa</strong>, ou o ritual cansa a cada sessão.</li>
   <li>No meio da live, o celular a 12 % e esquentando. <strong>Suor frio.</strong></li>
 </ul>
 <p style="margin:1rem 0 0">O ChargeCast resolve os quatro com <strong>um cabo USB e uma GUI amigável</strong>. Só para Windows, focado em streaming.</p>
@@ -250,6 +250,7 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <details><summary>Qual software de streaming devo usar?</summary><p>O OBS Studio é o setup de referência (use uma fonte de Captura de janela). XSplit e ferramentas parecidas funcionam do mesmo jeito.</p></details>
 <details><summary>E os jogos em retrato?</summary><p>A orientação pode ser travada em Portrait, Landscape ou Auto, pra manter seu layout do OBS estável.</p></details>
 <details><summary>Ele manda dados pra fora?</summary><p>Toda a captura é local via ADB. O ChargeCast em si não envia informações do aparelho pra lugar nenhum.</p></details>
+<details><summary>Qual a diferença para scrcpy ou DroidCam?</summary><p>ChargeCast empacota <code>scrcpy</code> com um mixer de áudio de 3 canais e uma GUI de um clique, de modo que o áudio do jogo e o seu microfone chegam ao OBS como uma única fonte limpa. O <code>scrcpy</code> puro nem sempre consegue passar o áudio do jogo (só Android 11+, com restrições) e o DroidCam trata o celular como webcam, não como espelhamento de tela. O ChargeCast foi pensado em torno do fluxo do streamer: cabo USB, carga, Captura de Janela no OBS.</p></details>
 
 <h2>Uma nota sobre a integração com o OBS</h2>
 <p>O ChargeCast <strong>não é um app de streaming por si só</strong>. Pense nele como o palco que entrega uma tomada limpa pro OBS.</p>

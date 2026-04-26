@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="RPeFRbPtUKcboLMVO3Kq-iB7prdmXvIFXj_dpZLpyEc">
 <title>ChargeCast — 插上就播，邊播邊充。</title>
-<meta name="description" content="透過 USB 把 Android 畫面鏡像到 Windows，內建 3 聲道音訊混音器與直播預設，Microsoft Store 提供 7 天免費試用。">
+<meta name="description" content="透過 USB 把 Android 遊戲畫面送進 OBS —— 不用擷取卡，不用 Elgato。ChargeCast 把 scrcpy 與 3 聲道音訊混音器整合在一起，直播全程同時充電。Microsoft Store 提供 7 天免費試用。">
 <meta property="og:title" content="ChargeCast — 插上就播，邊播邊充。">
-<meta property="og:description" content="透過 USB 把 Android 畫面鏡像到 Windows，內建 3 聲道音訊混音器與直播預設，Microsoft Store 提供 7 天免費試用。">
+<meta property="og:description" content="透過 USB 把 Android 遊戲畫面送進 OBS —— 不用擷取卡，不用 Elgato。ChargeCast 把 scrcpy 與 3 聲道音訊混音器整合在一起，直播全程同時充電。Microsoft Store 提供 7 天免費試用。">
 <meta property="og:image" content="../assets/Thumbnail.png">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/zh-Hant/">
@@ -141,9 +141,9 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <h2>這些狀況是不是很熟？</h2>
 <div class="pain-points">
 <ul>
-  <li>想在 OBS 上直播 Android 遊戲，但 <strong>畫面擷取、遊戲音和自己的麥克風</strong> 每次都兜不攏。</li>
+  <li>想在 OBS 上直播 Android 遊戲，<strong>又不想為此再買一張擷取卡或 Elgato</strong>，但畫面擷取、遊戲音和自己的麥克風每次都兜不攏。</li>
   <li>Wi-Fi 鏡像根本是惡夢：<strong>延遲</strong> 飆高，<strong>電池</strong> 狂掉。</li>
-  <li>就算用命令列跑 <code>scrcpy</code>，那套流程 <strong>每一場直播</strong> 都要重來一次，早就膩了。</li>
+  <li>試過命令列的 <code>scrcpy</code> 或 DroidCam —— 結果不是 <strong>聲音傳不過來</strong>，就是每場直播都要重來那一套流程。</li>
   <li>直播到一半，手機只剩 12%，還燙得要命。<strong>冷汗直流。</strong></li>
 </ul>
 <p style="margin:1rem 0 0">ChargeCast 用 <strong>一條 USB 線加一個順手的 GUI</strong> 一次解決這四件事。僅限 Windows，專為直播打造。</p>
@@ -250,6 +250,7 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <details><summary>該搭配哪款直播軟體？</summary><p>OBS Studio 是預設搭配（請用「視窗擷取」來源）。XSplit 等軟體用法相同。</p></details>
 <details><summary>直式畫面的遊戲呢？</summary><p>方向可以鎖定為直式、橫式或自動，這樣 OBS 配置就能保持穩定。</p></details>
 <details><summary>它會偷偷連網嗎？</summary><p>所有擷取都走本機 ADB。ChargeCast 本身不會把裝置資訊送到任何地方。</p></details>
+<details><summary>和 scrcpy 或 DroidCam 有什麼差別？</summary><p>ChargeCast 把 <code>scrcpy</code> 加上 3 聲道音訊混音器和一鍵 GUI 打包在一起，讓遊戲音和麥克風以一路乾淨的來源進入 OBS。原生 <code>scrcpy</code> 不一定能傳遊戲音（僅 Android 11+ 且有限制），而 DroidCam 把手機當成網路攝影機，並不是針對螢幕鏡像而設計。ChargeCast 是圍繞直播主的實際流程做的：插 USB、邊充電、OBS 視窗擷取。</p></details>
 
 <h2>關於與 OBS 整合的說明</h2>
 <p>ChargeCast <strong>本身不是直播軟體</strong>。可以把它想成一個舞台，把乾淨的畫面交給 OBS。</p>
