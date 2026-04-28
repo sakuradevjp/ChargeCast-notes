@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>scrcpy GUI alternatives compared (2026): QtScrcpy, Guiscrcpy, ChargeCast | ChargeCast</title>
+<meta name="description" content="An honest 2026 comparison of GUI front-ends for scrcpy. QtScrcpy is the open-source workhorse. Guiscrcpy is Python-friendly. ChargeCast is built for streamers. Where each one fits.">
+<meta property="og:title" content="scrcpy GUI alternatives compared (2026)">
+<meta property="og:description" content="QtScrcpy vs Guiscrcpy vs ChargeCast — which scrcpy front-end fits which job. Honest trade-offs, no fanboy takes.">
+<meta property="og:image" content="../../assets/Thumbnail.png">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/blog/scrcpy-gui-alternatives/">
+<link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/ChargeCast-notes/blog/scrcpy-gui-alternatives/">
+<link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/ChargeCast-notes/blog/scrcpy-gui-alternatives/">
+<style>
+:root{--bg:#ffffff;--fg:#1a1a2e;--fg-soft:#4a4a5e;--accent:#ff4757;--accent-soft:#ffe8ea;--card:#f7f7fb;--border:#e6e6ee;--shadow:0 8px 24px rgba(26,26,46,.06);}
+@media (prefers-color-scheme: dark){:root{--bg:#14141c;--fg:#f2f2f5;--fg-soft:#b0b0c0;--accent:#ff6b7a;--accent-soft:#3a1d22;--card:#1d1d28;--border:#2a2a38;--shadow:0 8px 24px rgba(0,0,0,.4);}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;background:var(--bg);color:var(--fg);line-height:1.75;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:2rem 1.25rem 4rem}
+.crumbs{font-size:.9rem;color:var(--fg-soft);margin-bottom:2rem}
+.crumbs a{color:var(--fg-soft);text-decoration:none;border-bottom:1px solid transparent}
+.crumbs a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+article h1{font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.25;margin:0 0 1rem;letter-spacing:-.01em}
+article .meta{color:var(--fg-soft);font-size:.95rem;margin-bottom:2.5rem}
+article .meta time{margin-right:1rem}
+h2{font-size:1.45rem;margin:3rem 0 1rem;letter-spacing:-.005em;position:relative;padding-left:1rem}
+h2::before{content:"";position:absolute;left:0;top:.3em;bottom:.3em;width:4px;border-radius:2px;background:var(--accent)}
+h3{font-size:1.15rem;margin:2rem 0 .5rem}
+p{margin:.75rem 0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
+a:hover{border-bottom-color:var(--accent)}
+ul,ol{padding-left:1.5rem}
+li{margin:.4rem 0}
+code{background:var(--accent-soft);color:var(--accent);padding:.1rem .4rem;border-radius:4px;font-size:.92em}
+pre{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;overflow-x:auto;font-size:.92rem;line-height:1.6}
+pre code{background:transparent;color:var(--fg);padding:0}
+blockquote{border-left:3px solid var(--accent);background:var(--accent-soft);padding:.75rem 1.25rem;margin:1.5rem 0;border-radius:0 8px 8px 0}
+blockquote p{margin:.25rem 0}
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.95rem}
+th,td{border:1px solid var(--border);padding:.55rem .75rem;text-align:left;vertical-align:top}
+th{background:var(--card);font-weight:600}
+.tldr{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;margin:1.5rem 0}
+.tldr strong{display:block;color:var(--accent);margin-bottom:.5rem;font-size:.95rem;letter-spacing:.05em;text-transform:uppercase}
+.cta-box{background:var(--accent-soft);border-radius:14px;padding:1.5rem;margin:2.5rem 0;text-align:center}
+.cta{display:inline-block;background:var(--accent);color:#fff;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;margin-top:.5rem;box-shadow:0 4px 12px rgba(255,71,87,.25)}
+.cta:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(255,71,87,.35);border-bottom:none}
+hr{border:none;border-top:1px solid var(--border);margin:3rem 0}
+.disclosure{font-size:.85rem;color:var(--fg-soft);font-style:italic;border-top:1px dashed var(--border);padding-top:.75rem;margin-top:1.5rem}
+footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+footer a{color:var(--fg-soft)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="crumbs"><a href="../../">ChargeCast</a> · <a href="../">Blog</a> · scrcpy GUI alternatives</nav>
+<article>
+<h1>scrcpy GUI alternatives compared (2026): QtScrcpy, Guiscrcpy, ChargeCast</h1>
+<p class="meta"><time datetime="2026-04-29">April 29, 2026</time> · ~10 min read</p>
+
+<p class="disclosure">Disclosure: ChargeCast is one of the tools in this comparison and we make it. We've tried to give the others a fair shake — none of them is a bad tool, they just optimize for different jobs.</p>
+
+<div class="tldr">
+<strong>TL;DR</strong>
+<p><strong>QtScrcpy</strong> is the open-source workhorse: free, cross-platform, feature-rich, and the closest thing to a default. <strong>Guiscrcpy</strong> is the Python-friendly option for Linux users. <strong>ChargeCast</strong> is purpose-built for streamers and skips the audio-routing puzzle. If you stream weekly, ChargeCast saves time. If you don't, QtScrcpy is excellent for free.</p>
+</div>
+
+<h2>Why a scrcpy GUI exists at all</h2>
+
+<p><a href="https://github.com/Genymobile/scrcpy">scrcpy</a> itself is a command-line tool. It's fast, low-latency, and free. The flags work — but there are dozens of them, and remembering which combination produces "no audio, 30fps, 1080p, save to file" five minutes before a stream starts is its own little tax.</p>
+
+<p>The goal of any scrcpy GUI is the same: turn that tax into a button. They differ in how thick they layer on top, what extra problems they solve, and which platforms they target.</p>
+
+<h2>The contenders</h2>
+
+<h3>QtScrcpy</h3>
+<p><strong>Open source · cross-platform · free</strong></p>
+<p>The most-starred scrcpy GUI on GitHub, written in C++/Qt by <a href="https://github.com/barry-ran/QtScrcpy">barry-ran</a>. It mirrors most scrcpy flags into a clean settings panel, supports multi-device control (one keyboard mapped across many phones — the killer feature for emulator-style gaming), and has localization in a handful of languages.</p>
+
+<p><strong>Best for</strong>: developers, testers, anyone who needs to drive multiple Android devices at once, and users who'd rather audit C++ than trust a closed-source tool.</p>
+
+<p><strong>Friction points</strong>: audio routing is still your problem. The GUI exposes the flag, but plumbing the output into OBS or a virtual cable is on you. Updates are GitHub-release-driven, so you maintain it yourself.</p>
+
+<h3>Guiscrcpy</h3>
+<p><strong>Open source · Python · Linux-leaning</strong></p>
+<p>A PyQt5 front-end by <a href="https://srevinsaju.me/">Srevin Saju</a>. Smaller surface than QtScrcpy, focuses on quick-launch profiles. Side panel of common shortcuts (volume, screen-off, app switcher) is its standout feature.</p>
+
+<p><strong>Best for</strong>: Linux users, Python tinkerers, people who want a simple "click to launch" without exposing every flag.</p>
+
+<p><strong>Friction points</strong>: smaller community, less frequently updated than QtScrcpy. The Python install path can be rough on Windows. No audio routing — same as QtScrcpy.</p>
+
+<h3>ChargeCast</h3>
+<p><strong>Closed source · Windows · paid (free trial)</strong></p>
+<p>Wraps scrcpy in a Microsoft Store app focused on streaming. The pitch is the things scrcpy itself doesn't do: 3-channel audio mixing inside the app, charging-aware presets, one-click OBS-friendly defaults.</p>
+
+<p><strong>Best for</strong>: Windows-based streamers who don't want to plumb virtual audio cables, and creators who'd rather pay $5/month than spend three evenings debugging <code>scrcpy --audio-source</code> flag combinations.</p>
+
+<p><strong>Friction points</strong>: Windows-only, closed source, paid (after the trial). If you're already comfortable on the command line and your audio setup is simple, you're paying for time you don't need to save.</p>
+
+<h2>Side-by-side</h2>
+
+<table>
+<thead><tr><th></th><th>QtScrcpy</th><th>Guiscrcpy</th><th>ChargeCast</th></tr></thead>
+<tbody>
+<tr><td><strong>Price</strong></td><td>Free (GPL-3)</td><td>Free (GPL-3)</td><td>$4.99/mo, $49.99/yr, lifetime</td></tr>
+<tr><td><strong>Platforms</strong></td><td>Win / macOS / Linux</td><td>Linux (best), Win / macOS</td><td>Windows only</td></tr>
+<tr><td><strong>Open source</strong></td><td>Yes (C++/Qt)</td><td>Yes (Python)</td><td>No</td></tr>
+<tr><td><strong>Multi-device</strong></td><td>Yes — flagship feature</td><td>One device at a time</td><td>One device at a time</td></tr>
+<tr><td><strong>Audio handling</strong></td><td>Pass-through (your problem)</td><td>Pass-through (your problem)</td><td>3-channel mixer in-app</td></tr>
+<tr><td><strong>Charging awareness</strong></td><td>Manual (you set flags)</td><td>Manual</td><td>Built-in presets</td></tr>
+<tr><td><strong>OBS integration</strong></td><td>Window Capture (manual)</td><td>Window Capture (manual)</td><td>Window Capture, branded window title</td></tr>
+<tr><td><strong>Auto-update</strong></td><td>GitHub releases</td><td>pip / GitHub</td><td>Microsoft Store</td></tr>
+<tr><td><strong>Language coverage</strong></td><td>~5 languages</td><td>English-only</td><td>22 languages</td></tr>
+<tr><td><strong>Code-signed installer</strong></td><td>No (SmartScreen warning)</td><td>No</td><td>Yes (Store-distributed)</td></tr>
+<tr><td><strong>Customer support</strong></td><td>GitHub issues</td><td>GitHub issues</td><td>Email + Store reviews</td></tr>
+</tbody>
+</table>
+
+<h2>Where each one wins</h2>
+
+<h3>QtScrcpy wins for: developers and power users</h3>
+<p>If your daily workflow includes "test the same input on three Android devices simultaneously," QtScrcpy's keyboard-mapping-across-devices feature is genuinely irreplaceable. The fact that it's free, open source, and battle-tested by Android automation engineers means you get a tool with seven years of edge-case fixes baked in.</p>
+
+<p>The downside is the same as scrcpy's: audio is a separate problem you solve with VB-Cable, OBS Application Audio Capture, or some other plumbing. For dev work that's fine — you're not always streaming the audio anyway.</p>
+
+<h3>Guiscrcpy wins for: minimalists and Linux users</h3>
+<p>The Python install on Linux is two commands and you have a clean GUI. The side-panel shortcuts (volume rocker, screen lock, recent apps) are the ergonomic win — you're not fighting the on-screen keyboard for system-level actions. For one-off "look at my phone on a bigger screen" use cases, it's the lightest weight option.</p>
+
+<p>It's not the best Windows experience, and the project is less frequently updated than QtScrcpy or scrcpy itself. If you're Linux-first, this is fine. If you're Windows-first, the install path will frustrate.</p>
+
+<h3>ChargeCast wins for: weekly streamers on Windows</h3>
+<p>The single biggest reason streamers pay for a scrcpy front-end is audio. Raw scrcpy or QtScrcpy gives you the encoder; you still need to route the device audio to OBS, mix it with your mic, ducking the PC-output audio underneath, and not break it when you reboot. The first time you set this up takes an evening. The second time, after a Windows update changes audio device IDs, takes another.</p>
+
+<p>ChargeCast bakes the mixer into the app. Three sliders, three sources. That's the pitch. If you stream once a month, this isn't worth $5/mo. If you stream every weekend, it pays for itself in the first session.</p>
+
+<p>The other quiet win: the streaming presets are <a href="../charge-android-while-streaming/">picked to net-positive on USB-C charging</a> instead of draining the phone mid-stream. QtScrcpy can do the same thing — you just have to know which flags. ChargeCast picks them for you.</p>
+
+<h2>What about scrcpy itself, no GUI?</h2>
+
+<p>Honest answer: if you're comfortable on the command line and your audio needs are simple, raw <code>scrcpy</code> is excellent and free. A typical streaming session looks like:</p>
+
+<pre><code>scrcpy --max-fps=30 --video-bit-rate=4M \
+       --audio-source=playback \
+       --window-title="Stream Source"</code></pre>
+
+<p>OBS captures the named window, your mic comes from a separate OBS source, and you're done. No third-party tool, no subscription, no closed-source code in your stream pipeline. The trade is: when something breaks (which it will, eventually), you debug it yourself.</p>
+
+<blockquote><p>Every scrcpy GUI in this list is a wrapper around the same binary. None of them is doing magic the CLI can't do — they're packaging the magic differently. The pricing reflects how much packaging you want.</p></blockquote>
+
+<h2>Decision tree</h2>
+
+<ul>
+<li><strong>You stream Android weekly+ on Windows and don't enjoy debugging audio routing</strong> &rarr; ChargeCast</li>
+<li><strong>You're a developer or QA engineer testing across multiple Android devices</strong> &rarr; QtScrcpy</li>
+<li><strong>You're on Linux and want a simple GUI for occasional mirroring</strong> &rarr; Guiscrcpy</li>
+<li><strong>You're a hobbyist streamer comfortable with the command line</strong> &rarr; raw scrcpy + OBS</li>
+<li><strong>You stream from iPhone, not Android</strong> &rarr; none of these — try QuickTime + macOS, or AirPlay receivers</li>
+</ul>
+
+<h2>"Can I switch later?"</h2>
+
+<p>Yes, painlessly. All three of these tools share the same underlying scrcpy server binary on the phone side, and OBS doesn't care which one is feeding it the window. You can start with raw scrcpy, switch to QtScrcpy, then to ChargeCast, and back — your phone settings, your OBS scenes, and your USB cable don't need to change.</p>
+
+<p>The lock-in is zero. The only thing you carry forward is the muscle memory of which flag combos work, and that's transferable.</p>
+
+<div class="cta-box">
+  <p style="margin:0 0 .5rem"><strong>Streaming on Windows and tired of the audio plumbing?</strong></p>
+  <p style="margin:0;color:var(--fg-soft);font-size:.95rem">ChargeCast bundles the scrcpy binary with a 3-channel audio mixer and streaming-friendly presets. Free trial, no card up front.</p>
+  <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Try ChargeCast on Microsoft Store</a>
+</div>
+
+</article>
+<footer>
+<p><a href="../">← All posts</a> · <a href="../../">ChargeCast home</a></p>
+</footer>
+</div>
+</body>
+</html>

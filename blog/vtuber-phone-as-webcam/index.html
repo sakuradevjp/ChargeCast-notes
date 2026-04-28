@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VTuber setup with phone-as-webcam: budget face tracking that actually works (2026) | ChargeCast</title>
+<meta name="description" content="Why your phone's front camera tracks better than most $50 webcams for VTube Studio and VSeeFace. The DroidCam + ChargeCast setup mobile-gaming VTubers use, with honest trade-offs.">
+<meta property="og:title" content="VTuber setup with phone-as-webcam (2026 guide)">
+<meta property="og:description" content="Phone cameras outperform budget webcams for face tracking. Here's the setup individual VTubers actually use, including for mobile-game streams.">
+<meta property="og:image" content="../../assets/Thumbnail.png">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/blog/vtuber-phone-as-webcam/">
+<link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/ChargeCast-notes/blog/vtuber-phone-as-webcam/">
+<link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/ChargeCast-notes/blog/vtuber-phone-as-webcam/">
+<style>
+:root{--bg:#ffffff;--fg:#1a1a2e;--fg-soft:#4a4a5e;--accent:#ff4757;--accent-soft:#ffe8ea;--card:#f7f7fb;--border:#e6e6ee;--shadow:0 8px 24px rgba(26,26,46,.06);}
+@media (prefers-color-scheme: dark){:root{--bg:#14141c;--fg:#f2f2f5;--fg-soft:#b0b0c0;--accent:#ff6b7a;--accent-soft:#3a1d22;--card:#1d1d28;--border:#2a2a38;--shadow:0 8px 24px rgba(0,0,0,.4);}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;background:var(--bg);color:var(--fg);line-height:1.75;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:2rem 1.25rem 4rem}
+.crumbs{font-size:.9rem;color:var(--fg-soft);margin-bottom:2rem}
+.crumbs a{color:var(--fg-soft);text-decoration:none;border-bottom:1px solid transparent}
+.crumbs a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+article h1{font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.25;margin:0 0 1rem;letter-spacing:-.01em}
+article .meta{color:var(--fg-soft);font-size:.95rem;margin-bottom:2.5rem}
+article .meta time{margin-right:1rem}
+h2{font-size:1.45rem;margin:3rem 0 1rem;letter-spacing:-.005em;position:relative;padding-left:1rem}
+h2::before{content:"";position:absolute;left:0;top:.3em;bottom:.3em;width:4px;border-radius:2px;background:var(--accent)}
+h3{font-size:1.15rem;margin:2rem 0 .5rem}
+p{margin:.75rem 0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
+a:hover{border-bottom-color:var(--accent)}
+ul,ol{padding-left:1.5rem}
+li{margin:.4rem 0}
+code{background:var(--accent-soft);color:var(--accent);padding:.1rem .4rem;border-radius:4px;font-size:.92em}
+pre{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;overflow-x:auto;font-size:.92rem;line-height:1.6}
+pre code{background:transparent;color:var(--fg);padding:0}
+blockquote{border-left:3px solid var(--accent);background:var(--accent-soft);padding:.75rem 1.25rem;margin:1.5rem 0;border-radius:0 8px 8px 0}
+blockquote p{margin:.25rem 0}
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.95rem}
+th,td{border:1px solid var(--border);padding:.55rem .75rem;text-align:left;vertical-align:top}
+th{background:var(--card);font-weight:600}
+.tldr{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;margin:1.5rem 0}
+.tldr strong{display:block;color:var(--accent);margin-bottom:.5rem;font-size:.95rem;letter-spacing:.05em;text-transform:uppercase}
+.cta-box{background:var(--accent-soft);border-radius:14px;padding:1.5rem;margin:2.5rem 0;text-align:center}
+.cta{display:inline-block;background:var(--accent);color:#fff;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;margin-top:.5rem;box-shadow:0 4px 12px rgba(255,71,87,.25)}
+.cta:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(255,71,87,.35);border-bottom:none}
+hr{border:none;border-top:1px solid var(--border);margin:3rem 0}
+.disclosure{font-size:.85rem;color:var(--fg-soft);font-style:italic;border-top:1px dashed var(--border);padding-top:.75rem;margin-top:1.5rem}
+footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+footer a{color:var(--fg-soft)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="crumbs"><a href="../../">ChargeCast</a> · <a href="../">Blog</a> · VTuber phone-as-webcam</nav>
+<article>
+<h1>VTuber setup with phone-as-webcam: budget face tracking that actually works (2026)</h1>
+<p class="meta"><time datetime="2026-04-29">April 29, 2026</time> · ~10 min read</p>
+
+<p class="disclosure">Disclosure: ChargeCast (Android-screen-to-OBS) is one of the tools mentioned in this guide and we make it. The face-tracking part of the setup is solved by other people's tools, which we'll credit honestly.</p>
+
+<div class="tldr">
+<strong>TL;DR</strong>
+<p>Your phone's front camera is almost always better than a $30–50 webcam for VTube Studio or VSeeFace face tracking — better optics, better low-light, and on iPhone, dedicated depth hardware (ARKit). DroidCam is the bridge that turns the phone into a webcam input. If you also play mobile games on stream, pair it with a screen-mirroring tool so the avatar and the gameplay land in OBS together.</p>
+</div>
+
+<h2>Why face tracking quality depends on the camera</h2>
+
+<p>VTube Studio, VSeeFace, and other VTuber tools all do roughly the same thing: take a video frame, find facial landmarks (eyebrows, eye corners, mouth, jaw), and translate movement into avatar bones. The avatar's expressiveness — whether a small smirk reads as a smile or as nothing — is bounded by how cleanly the software can see your face.</p>
+
+<p>That means three things matter:</p>
+
+<ol>
+<li><strong>Sensor quality.</strong> A 720p budget webcam in dim lighting feeds a noisy frame. The tracker fights noise instead of tracking your face.</li>
+<li><strong>Frame rate.</strong> A camera that delivers a steady 30fps is better than one that drops to 15fps under low light. VTube Studio interpolates, but interpolation can't recover what wasn't captured.</li>
+<li><strong>Depth or stereo info (bonus).</strong> iPhone's TrueDepth gives ARKit real depth maps, which lets it pick up subtle blendshapes that 2D landmark detection misses.</li>
+</ol>
+
+<h2>Why phones beat budget webcams</h2>
+
+<p>The phone in your pocket has more camera engineering in it than the entire budget-webcam market combined.</p>
+
+<table>
+<thead><tr><th></th><th>$30 webcam</th><th>$50 webcam</th><th>Mid-range Android</th><th>iPhone (recent)</th></tr></thead>
+<tbody>
+<tr><td>Sensor size</td><td>1/4" or smaller</td><td>1/4"–1/3"</td><td>~1/3"</td><td>1/2.7"–1/2"</td></tr>
+<tr><td>Low-light handling</td><td>Poor</td><td>Mediocre</td><td>Good</td><td>Excellent</td></tr>
+<tr><td>Stable 30fps</td><td>Sometimes</td><td>Yes</td><td>Yes</td><td>Yes (often 60fps)</td></tr>
+<tr><td>Auto-focus</td><td>Fixed or slow</td><td>Slow</td><td>Fast</td><td>Fast (with depth)</td></tr>
+<tr><td>Depth data</td><td>None</td><td>None</td><td>Some flagships</td><td>TrueDepth (ARKit)</td></tr>
+<tr><td>Cost beyond what you own</td><td>$30</td><td>$50</td><td>$0</td><td>$0</td></tr>
+</tbody>
+</table>
+
+<p>The "$0" column is the killer. If you're a starting VTuber on a budget, the gear you already have outperforms the gear you'd add.</p>
+
+<h2>The basic setup: phone as webcam</h2>
+
+<p>The bridge between "my phone's camera" and "my VTuber software" is a webcam-emulation app. Two main choices:</p>
+
+<h3>DroidCam (Android + iPhone, paid Pro tier)</h3>
+<p><a href="../droidcam-vs-chargecast/">Detailed comparison here</a>. The free tier caps at 480p, the Pro tier ($14.99 lifetime) unlocks 1080p and removes the watermark. Connects via USB or Wi-Fi. Reliable, well-supported, plenty of community guides for VTube Studio configs.</p>
+
+<h3>iPhone Continuity Camera (macOS only, free)</h3>
+<p>If you're on a Mac with a recent iPhone, macOS treats the iPhone as a system-level webcam with no third-party app needed. ARKit data isn't exposed to most VTuber software through this path, but the raw video quality is excellent. For the dedicated ARKit pipeline, look at face-tracking apps that run <em>on the iPhone</em> and stream blendshape data over the network (iFacialMocap, MeowFace).</p>
+
+<h3>Iriun Webcam, EpocCam, etc.</h3>
+<p>Several alternatives exist. They mostly differ in pricing model and platform support. DroidCam tends to be the recommended default in VTuber Discord servers for Windows users.</p>
+
+<h2>VTube Studio + DroidCam: the actual config</h2>
+
+<p>Once DroidCam is feeding a webcam input to your PC, VTube Studio sees it as a regular webcam. Setup is straightforward, but there are two settings that matter:</p>
+
+<ol>
+<li><strong>Video resolution.</strong> 720p at 30fps is plenty for face tracking. Going to 1080p doesn't improve tracking — it just costs CPU on both ends.</li>
+<li><strong>Camera input selection.</strong> In VTube Studio, the dropdown will list "DroidCam Source 3" (or similar). Pick that, not your built-in laptop webcam.</li>
+</ol>
+
+<p>One gotcha: if you also have a built-in laptop webcam, OBS or VTube Studio may default to it on every launch. Save the camera selection in your VTube Studio profile so it doesn't switch back.</p>
+
+<h2>Where ChargeCast fits — for mobile-gaming VTubers</h2>
+
+<p>If your stream is "VTuber avatar reacting to me playing FFXIV" — i.e. PC games — you don't need ChargeCast. Your face → DroidCam → VTube Studio → OBS, and your gameplay is captured natively from the PC.</p>
+
+<p>If your stream is "VTuber avatar reacting to me playing Genshin Impact / Honkai / a Pokémon game on Switch through Android emulator / a Korean mobile gacha" — i.e. mobile games — you need a way to get the phone's screen into OBS too. That's where <a href="../../">ChargeCast</a> comes in.</p>
+
+<p>The full setup looks like:</p>
+
+<pre><code>Phone #1 (camera-pointed-at-you)
+  ↓ DroidCam (USB or Wi-Fi)
+  ↓
+PC ← VTube Studio (webcam input → avatar)
+       ↓
+       OBS scene:
+         Avatar layer (VTube Studio Spout/Syphon)
+         Game layer (ChargeCast Window Capture)
+         Mic + game audio (ChargeCast 3-channel mixer)
+
+Phone #2 (running the mobile game)
+  ↓ ChargeCast (USB)
+  ↓
+PC ← OBS Window Capture</code></pre>
+
+<p>Two phones, two cables. One is the camera, one is the game source. They don't conflict because they're different USB sessions claiming different things.</p>
+
+<blockquote><p>If you only have one phone and want to do this: use the phone as the camera, and a Switch / iPad / second device as the game source via a capture card. Or stream the same phone's screen with a tool like ChargeCast and use a separate USB or built-in webcam for your face. The "two phones" pattern is just the cleanest decoupling.</p></blockquote>
+
+<h2>Honest trade-offs of the phone-as-webcam approach</h2>
+
+<h3>Pros</h3>
+<ul>
+<li>Camera quality you'd otherwise pay $150+ for.</li>
+<li>Auto-focus and exposure that adapt to your lighting changes.</li>
+<li>Phone can be re-positioned freely — angle, distance, height.</li>
+<li>Free if you already own the phone.</li>
+</ul>
+
+<h3>Cons</h3>
+<ul>
+<li><strong>The phone is occupied.</strong> You can't take messages, scroll Discord, or check notifications without disrupting your stream.</li>
+<li><strong>Battery drain.</strong> Wi-Fi mode burns battery fast. USB mode mostly charges, depending on the cable and PC port (the same physics <a href="../charge-android-while-streaming/">we covered for ChargeCast</a> applies here).</li>
+<li><strong>Heat.</strong> A phone running its front camera at 30fps for 4 hours warms up. The image quality slowly degrades and the frame rate may stutter when thermal limits hit.</li>
+<li><strong>USB port budget.</strong> Two phones + mic + capture device may exhaust your laptop's port count. A powered USB-C dock fixes this but is another $40–80.</li>
+</ul>
+
+<h2>Pure-mobile VTuber setups (no PC)</h2>
+
+<p>A growing pattern, especially among Japanese individual VTubers: stream entirely from the phone. Apps like REALITY, IRIAM, and 17LIVE include avatar rendering and face tracking on-device. No PC, no webcam, no OBS.</p>
+
+<p>This is a different niche. The trade-off is platform lock-in (you stream <em>to</em> the platform, not to Twitch/YouTube), and customization is bounded by what the platform allows. If you want full control of the stream, the PC-based setup we described is the way. If you want zero setup and don't care about platform diversity, mobile-only is fine.</p>
+
+<h2>Quick decision tree</h2>
+
+<ul>
+<li><strong>Starting VTuber, PC games, no webcam yet?</strong> → DroidCam Pro + your phone. $14.99 one-time, beats most $50 webcams.</li>
+<li><strong>Mobile-game VTuber on Windows?</strong> → DroidCam (face) + ChargeCast (gameplay). Two phones, one PC, full OBS control.</li>
+<li><strong>Mac user with a recent iPhone?</strong> → Continuity Camera for free, plus iFacialMocap for ARKit blendshapes if you want premium tracking.</li>
+<li><strong>Just want to try VTubing with zero setup?</strong> → REALITY or VRoid Mobile, no PC at all.</li>
+</ul>
+
+<div class="cta-box">
+  <p style="margin:0 0 .5rem"><strong>Streaming a mobile game as a VTuber?</strong></p>
+  <p style="margin:0;color:var(--fg-soft);font-size:.95rem">ChargeCast handles the phone-screen-to-OBS half of the setup, with audio mixing built in. Free trial, Microsoft Store distribution.</p>
+  <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Try ChargeCast on Microsoft Store</a>
+</div>
+
+</article>
+<footer>
+<p><a href="../">← All posts</a> · <a href="../../">ChargeCast home</a></p>
+</footer>
+</div>
+</body>
+</html>

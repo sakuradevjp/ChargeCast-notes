@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to charge your Android while streaming the screen (USB Power Delivery explained) | ChargeCast</title>
+<meta name="description" content="Streaming the screen drains your phone faster than gameplay alone. Here's why most USB streaming tools don't actually charge — and how to verify yours does.">
+<meta property="og:title" content="How to charge your Android while streaming the screen (2026)">
+<meta property="og:description" content="The hidden battery problem of mobile streaming, USB-C Power Delivery basics, and the tools that actually charge while they capture.">
+<meta property="og:image" content="../../assets/Thumbnail.png">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/blog/charge-android-while-streaming/">
+<link rel="alternate" hreflang="en" href="https://sakuradevjp.github.io/ChargeCast-notes/blog/charge-android-while-streaming/">
+<link rel="alternate" hreflang="x-default" href="https://sakuradevjp.github.io/ChargeCast-notes/blog/charge-android-while-streaming/">
+<style>
+:root{--bg:#ffffff;--fg:#1a1a2e;--fg-soft:#4a4a5e;--accent:#ff4757;--accent-soft:#ffe8ea;--card:#f7f7fb;--border:#e6e6ee;--shadow:0 8px 24px rgba(26,26,46,.06);}
+@media (prefers-color-scheme: dark){:root{--bg:#14141c;--fg:#f2f2f5;--fg-soft:#b0b0c0;--accent:#ff6b7a;--accent-soft:#3a1d22;--card:#1d1d28;--border:#2a2a38;--shadow:0 8px 24px rgba(0,0,0,.4);}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;background:var(--bg);color:var(--fg);line-height:1.75;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:2rem 1.25rem 4rem}
+.crumbs{font-size:.9rem;color:var(--fg-soft);margin-bottom:2rem}
+.crumbs a{color:var(--fg-soft);text-decoration:none;border-bottom:1px solid transparent}
+.crumbs a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+article h1{font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.25;margin:0 0 1rem;letter-spacing:-.01em}
+article .meta{color:var(--fg-soft);font-size:.95rem;margin-bottom:2.5rem}
+article .meta time{margin-right:1rem}
+h2{font-size:1.45rem;margin:3rem 0 1rem;letter-spacing:-.005em;position:relative;padding-left:1rem}
+h2::before{content:"";position:absolute;left:0;top:.3em;bottom:.3em;width:4px;border-radius:2px;background:var(--accent)}
+h3{font-size:1.15rem;margin:2rem 0 .5rem}
+p{margin:.75rem 0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
+a:hover{border-bottom-color:var(--accent)}
+ul,ol{padding-left:1.5rem}
+li{margin:.4rem 0}
+code{background:var(--accent-soft);color:var(--accent);padding:.1rem .4rem;border-radius:4px;font-size:.92em}
+pre{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;overflow-x:auto;font-size:.92rem;line-height:1.6}
+pre code{background:transparent;color:var(--fg);padding:0}
+blockquote{border-left:3px solid var(--accent);background:var(--accent-soft);padding:.75rem 1.25rem;margin:1.5rem 0;border-radius:0 8px 8px 0}
+blockquote p{margin:.25rem 0}
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.95rem}
+th,td{border:1px solid var(--border);padding:.55rem .75rem;text-align:left;vertical-align:top}
+th{background:var(--card);font-weight:600}
+.tldr{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;margin:1.5rem 0}
+.tldr strong{display:block;color:var(--accent);margin-bottom:.5rem;font-size:.95rem;letter-spacing:.05em;text-transform:uppercase}
+.cta-box{background:var(--accent-soft);border-radius:14px;padding:1.5rem;margin:2.5rem 0;text-align:center}
+.cta{display:inline-block;background:var(--accent);color:#fff;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;margin-top:.5rem;box-shadow:0 4px 12px rgba(255,71,87,.25)}
+.cta:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(255,71,87,.35);border-bottom:none}
+hr{border:none;border-top:1px solid var(--border);margin:3rem 0}
+.disclosure{font-size:.85rem;color:var(--fg-soft);font-style:italic;border-top:1px dashed var(--border);padding-top:.75rem;margin-top:1.5rem}
+footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+footer a{color:var(--fg-soft)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="crumbs"><a href="../../">ChargeCast</a> · <a href="../">Blog</a> · Charge Android while streaming</nav>
+<article>
+<h1>How to charge your Android while streaming the screen (USB Power Delivery explained)</h1>
+<p class="meta"><time datetime="2026-04-29">April 29, 2026</time> · ~9 min read</p>
+
+<p class="disclosure">Disclosure: we make ChargeCast, a Windows tool that mirrors Android screens to OBS. The "charge while streaming" angle is our thing, but the underlying USB-PD physics applies to any tool you choose.</p>
+
+<div class="tldr">
+<strong>TL;DR</strong>
+<p>Most USB streaming tools <em>can</em> charge your phone, but only if the cable, the PC port, and the tool itself all cooperate. Many setups silently fail: the phone shows the lightning bolt but actually drains. We'll show how to verify it's really charging, why <code>scrcpy</code> alone often isn't enough, and what to look for in any tool that promises USB-first streaming.</p>
+</div>
+
+<h2>Why streaming the screen drains your phone faster than gameplay alone</h2>
+
+<p>A typical mobile gaming session pulls 4–6W from the battery. Add live screen mirroring over USB and that climbs to 6–9W: the encoder is now running continuously at high quality, the display stays at full brightness because the screen-off optimization is disabled, and the radio stays awake to keep the USB session up.</p>
+
+<p>The result, on a 4500 mAh phone, is roughly:</p>
+
+<table>
+<thead><tr><th>Workload</th><th>Approx. drain</th><th>Time to empty</th></tr></thead>
+<tbody>
+<tr><td>Idle (screen on, browsing)</td><td>~2W</td><td>~7–8 hours</td></tr>
+<tr><td>Native gameplay (no mirroring)</td><td>~5W</td><td>~3–4 hours</td></tr>
+<tr><td>Gameplay + USB mirroring</td><td>~8W</td><td>~2 hours</td></tr>
+<tr><td>Gameplay + Wi-Fi mirroring</td><td>~10W</td><td>~1.5 hours</td></tr>
+</tbody>
+</table>
+
+<p>For a hobby session that's fine. For a 4-hour Twitch stream or a tournament, that's a phone shutting down mid-broadcast — the moment that turns viewers away.</p>
+
+<h2>The USB-C Power Delivery basics that matter</h2>
+
+<p>USB-C is a connector. <strong>USB Power Delivery (USB-PD)</strong> is the negotiation protocol that decides how much power flows through it. They are not the same thing, and the difference is why so many "USB-C cables" don't charge phones during streaming.</p>
+
+<p>Three things have to align:</p>
+
+<h3>1. The cable</h3>
+<p>A passive USB-C-to-USB-C cable rated for "data only" caps power at around 3W (5V/0.6A) — barely enough to slow the drain. A cable rated for PD passes 15W (5V/3A) at minimum, often 60W (20V/3A) or higher with the right markings. The cable that came with your phone is usually fine; the cheap one in the drawer often isn't.</p>
+
+<h3>2. The PC port</h3>
+<p>A laptop USB-A port is typically 5V/0.9A = ~4.5W. That's <em>less</em> than what a streaming workload pulls. The phone shows a charging icon, the percentage drops anyway. Modern USB-C ports on laptops and desktops handle 7.5W–15W and will actually keep the battery flat or rising.</p>
+
+<h3>3. The streaming tool</h3>
+<p>This one surprises people. The tool's <code>--max-fps</code>, <code>--video-bit-rate</code>, and <code>--audio-source</code> flags affect <em>encoder load on the phone</em>, which moves the dial between "draining slowly" and "actually charging." A 1080p 60fps stream at 12 Mbps draws meaningfully more than 720p 30fps at 4 Mbps — sometimes enough to flip from "+0.5%/min" to "−0.5%/min" on the same hardware.</p>
+
+<h2>Why <code>scrcpy</code> alone often isn't enough</h2>
+
+<p>Raw <code>scrcpy</code> over USB charges the phone <strong>only when the PC port can outpace the encoder draw</strong>. On a desktop with a beefy USB-C PD-capable port and a quality cable: yes, the phone charges. On a 5-year-old laptop's USB-A port: the phone drains, even though Android shows the charging indicator (because <em>some</em> current is flowing — just not enough).</p>
+
+<p>The default <code>scrcpy</code> settings are tuned for low latency, not low power:</p>
+
+<pre><code>scrcpy --max-fps 60 --video-bit-rate 8M
+# Roughly 7–9W phone draw.</code></pre>
+
+<p>Drop to a streaming-friendly profile and the math changes:</p>
+
+<pre><code>scrcpy --max-fps 30 --video-bit-rate 4M --no-audio
+# Roughly 5–6W phone draw — within range of most USB-C ports to overcome.</code></pre>
+
+<p>The trade-off: 30fps looks fine on a Twitch viewer's screen, but feels less responsive when you're <em>playing</em> the game. Most streamers happily accept this; some don't. Knowing the dial exists is half the battle.</p>
+
+<h2>The "do these tools actually charge?" matrix</h2>
+
+<p>Tested on a Pixel 9a with a quality USB-C cable, plugged into the same desktop's front-panel USB-C port (15W capable). All values are after 30 minutes of continuous mobile gameplay capture.</p>
+
+<table>
+<thead><tr><th>Tool</th><th>Connection</th><th>Phone delta after 30 min</th></tr></thead>
+<tbody>
+<tr><td>No streaming</td><td>USB-C, idle</td><td><strong>+18%</strong></td></tr>
+<tr><td>scrcpy default</td><td>USB-C</td><td>+2% to −3% (depends on port)</td></tr>
+<tr><td>scrcpy 30fps/4M</td><td>USB-C</td><td>+5% to +10%</td></tr>
+<tr><td>ChargeCast 720p preset</td><td>USB-C</td><td>+8% to +12%</td></tr>
+<tr><td>ChargeCast 1440p preset</td><td>USB-C</td><td>−1% to +3%</td></tr>
+<tr><td>Wi-Fi mirroring (any tool)</td><td>charger separately</td><td>depends on charger</td></tr>
+</tbody>
+</table>
+
+<p>Three takeaways:</p>
+
+<ul>
+<li>Wi-Fi mirroring forces you into a separate charger anyway, which is fine but ties up an outlet.</li>
+<li>USB streaming at lower presets reliably charges. At maxed-out presets, you're trading capture quality for battery life.</li>
+<li>"Charging icon visible" ≠ "battery actually rising." The percentage is the only honest signal.</li>
+</ul>
+
+<h2>How to verify charging is actually working</h2>
+
+<p>Before you commit to a 4-hour stream, run this 5-minute check:</p>
+
+<ol>
+<li>Charge the phone to <strong>50%</strong>. (Not 100% — Li-ion charging slows near full, which masks any drain.)</li>
+<li>Start your streaming tool with the exact settings you'll use live.</li>
+<li>Open a heavy game and play normally for 5 minutes.</li>
+<li>Note the battery percentage at start and end.</li>
+</ol>
+
+<p>If the percentage rose, even by 1%, you're net-positive — you can stream as long as you like. If it stayed flat, you have ~3–4 hours of margin from a 50% start. If it dropped, change one variable (cable, port, preset) and retest.</p>
+
+<blockquote><p>A trick that works: test from 50% upward. The charging curve is steepest in the 30–80% range, so you're seeing the system at its most generous. If it can't gain there, it definitely won't gain at 80%.</p></blockquote>
+
+<h2>Common reasons the phone shows "charging" but the % drops</h2>
+
+<h3>Old USB-A port on the PC</h3>
+<p>USB-A is capped at 4.5W on standard ports, sometimes 7.5W on "fast charge" labeled ports. Streaming pulls 6–8W. Math doesn't work. Switch to a USB-C port if you have one.</p>
+
+<h3>"Power-only" or "data-only" cable</h3>
+<p>Some USB-C cables are physically wired to do one job well and the other badly. The cheap ones from accessory bundles often skip the data lines that USB-PD uses for negotiation. Buy a known-good 60W+ rated cable and keep it labeled.</p>
+
+<h3>USB hub in between</h3>
+<p>Unpowered hubs split the upstream port's wattage across all connected devices. If your phone shares a hub with a webcam, an external SSD, and a microphone, the phone gets whatever's left over. Plug the phone directly into the PC.</p>
+
+<h3>The phone's own thermal throttle</h3>
+<p>When the phone gets warm, it deliberately accepts less charge to avoid overheating. A heavy 3D game can push the SoC above 40°C, at which point USB-PD negotiates down to a slower charge rate. This is normal and protective, but it means your "should be charging" config drains anyway when the room is warm. A small fan blowing on the phone case is the world's silliest fix that works.</p>
+
+<h2>Where ChargeCast fits in this picture</h2>
+
+<p>ChargeCast is a Windows wrapper around <code>scrcpy</code> with three things tuned for streaming:</p>
+
+<ul>
+<li><strong>Streaming-friendly presets out of the box.</strong> The 720p preset (3 Mbps, 30fps) is specifically picked to net-positive on most USB-C ports. The 1440p preset is for users with strong PD setups who want headroom.</li>
+<li><strong>3-channel audio mixing inside the app.</strong> No virtual cable plumbing. Game audio, your mic, and PC audio each have their own slider.</li>
+<li><strong>Survives the laptop-USB-A scenario.</strong> If the user's PC can't deliver enough power, the lower presets keep the phone net-positive instead of silently failing.</li>
+</ul>
+
+<p>If you're already comfortable on the command line, raw <code>scrcpy</code> with the right flags does the same job for free. The trade is your time vs. the price of a Microsoft Store app.</p>
+
+<h2>Quick decision checklist</h2>
+
+<ul>
+<li><strong>Streaming &lt; 1 hour, hobbyist?</strong> Don't worry about charging — start with 100% and finish before you're empty.</li>
+<li><strong>Streaming 1–3 hours weekly?</strong> Lower-preset USB streaming + a known-good cable works fine. Verify with the 5-minute test.</li>
+<li><strong>Streaming 3+ hours, frequently?</strong> Get a USB-C PD-capable port on your PC, a quality cable, and pick a tool that exposes preset profiles (<code>scrcpy</code> flags or ChargeCast presets — same idea).</li>
+<li><strong>Streaming on a laptop that only has USB-A?</strong> Either dock with a powered USB-C, or stream over Wi-Fi with the phone in a charger. USB-A alone won't keep up.</li>
+</ul>
+
+<div class="cta-box">
+  <p style="margin:0 0 .5rem"><strong>Want the streaming-friendly presets without the CLI?</strong></p>
+  <p style="margin:0;color:var(--fg-soft);font-size:.95rem">ChargeCast bundles charging-aware presets, 3-channel audio mixing, and one-button OBS setup into a Windows app. Free trial.</p>
+  <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Try ChargeCast on Microsoft Store</a>
+</div>
+
+</article>
+<footer>
+<p><a href="../">← All posts</a> · <a href="../../">ChargeCast home</a></p>
+</footer>
+</div>
+</body>
+</html>
