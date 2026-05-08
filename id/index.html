@@ -144,8 +144,8 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
   <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Dapatkan di Microsoft Store</a>
   <span class="trial-note">Termasuk uji coba gratis 7 hari</span>
   <p style="margin:.75rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-    {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
-    {{dlUnsignedNotePrefix}}<a href="#install-direct">{{dlUnsignedNoteLink}}</a>{{dlUnsignedNoteSuffix}}
+    atau <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">unduh .exe secara langsung</a>
+    (tanpa tanda tangan, lihat <a href="#install-direct">catatan instalasi</a>)
   </p>
 </header>
 
@@ -234,8 +234,8 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <p style="text-align:center;color:var(--fg-soft)">Harga ditampilkan dalam USD sebagai referensi. Microsoft Store mengonversi ke mata uang lokal Anda saat pembayaran. Semua pembayaran dan pembatalan dilakukan melalui akun Microsoft Anda.</p>
 <p style="text-align:center"><a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Mulai uji coba 7 hari</a></p>
 <p style="text-align:center;margin:.5rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-  {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
-  {{dlUnsignedNotePrefix}}<a href="#install-direct">{{dlUnsignedNoteLink}}</a>{{dlUnsignedNoteSuffix}}
+  atau <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">unduh .exe secara langsung</a>
+  (tanpa tanda tangan, lihat <a href="#install-direct">catatan instalasi</a>)
 </p>
 
 <h2>Cocok untuk siapa</h2>
@@ -299,22 +299,22 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
   <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Dapatkan ChargeCast di Microsoft Store</a>
 </p>
 <p style="text-align:center;margin:.5rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-  {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
+  atau <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">unduh .exe secara langsung</a>
 </p>
 
-<h2 id="install-direct">{{installHeading}}</h2>
-<p>{{installIntro}}</p>
-<p>{{installSmartScreenLine}}</p>
+<h2 id="install-direct">Instalasi .exe langsung</h2>
+<p>Unduhan langsung adalah ChargeCast yang sama dengan dari Microsoft Store, dikemas sebagai installer Inno Setup mandiri alih-alih MSIX. Diinstal ke <code>%LOCALAPPDATA%\Programs\ChargeCast</code> per-pengguna (tanpa prompt admin).</p>
+<p>Installer ini <strong>tidak ditandatangani</strong>, sehingga Windows SmartScreen memperingatkan saat pertama kali dijalankan:</p>
 <ol>
-  <li>{{installStep1}}</li>
-  <li>{{installStep2}}</li>
+  <li>Pada dialog biru <em>«Windows melindungi PC Anda»</em>, klik <strong>«Info lainnya»</strong></li>
+  <li>Klik <strong>«Tetap jalankan»</strong></li>
 </ol>
 <p>
-  {{installVerifyLine}}
-  <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{installReleasesPageLabel}}</a>{{installVerifyLineSuffix}}
+  Untuk memastikan installer cocok dengan rilis resmi, periksa hash SHA256 yang tercantum di
+  <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">halaman Releases</a>:
 </p>
 <pre><code>Get-FileHash -Algorithm SHA256 .\ChargeCast-1.7.1-Setup.exe</code></pre>
-<p style="color:var(--fg-soft);font-size:.95rem">{{installProNote}}</p>
+<p style="color:var(--fg-soft);font-size:.95rem">Fitur Pro (1080p / 1440p, 60fps, mixer audio 3 kanal dengan mikrofon) terbuka dengan lisensi Microsoft Store aktif. Kanal pembelian kunci lisensi langsung sedang dalam pengerjaan.</p>
 
 <p style="text-align:center;color:var(--fg-soft);font-size:.95rem;margin:1.5rem 0"><a href="../blog/">Baca blog →</a></p>
 

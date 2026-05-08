@@ -144,8 +144,8 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
   <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Consíguelo en Microsoft Store</a>
   <span class="trial-note">Incluye 7 días de prueba gratis</span>
   <p style="margin:.75rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-    {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
-    {{dlUnsignedNotePrefix}}<a href="#install-direct">{{dlUnsignedNoteLink}}</a>{{dlUnsignedNoteSuffix}}
+    o <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">descarga directa del .exe</a>
+    (sin firmar, consulta las <a href="#install-direct">notas de instalación</a>)
   </p>
 </header>
 
@@ -234,8 +234,8 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <p style="text-align:center;color:var(--fg-soft)">Los precios se muestran en USD como referencia. Microsoft Store los convierte a tu moneda local en el momento de la compra. Todos los cobros y cancelaciones se gestionan a través de tu cuenta de Microsoft.</p>
 <p style="text-align:center"><a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Empezar la prueba de 7 días</a></p>
 <p style="text-align:center;margin:.5rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-  {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
-  {{dlUnsignedNotePrefix}}<a href="#install-direct">{{dlUnsignedNoteLink}}</a>{{dlUnsignedNoteSuffix}}
+  o <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">descarga directa del .exe</a>
+  (sin firmar, consulta las <a href="#install-direct">notas de instalación</a>)
 </p>
 
 <h2>Para quién es</h2>
@@ -299,22 +299,22 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
   <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Consigue ChargeCast en Microsoft Store</a>
 </p>
 <p style="text-align:center;margin:.5rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-  {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
+  o <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">descarga directa del .exe</a>
 </p>
 
-<h2 id="install-direct">{{installHeading}}</h2>
-<p>{{installIntro}}</p>
-<p>{{installSmartScreenLine}}</p>
+<h2 id="install-direct">Instalación directa del .exe</h2>
+<p>La descarga directa es el mismo ChargeCast que se obtiene de Microsoft Store, empaquetado como un instalador Inno Setup independiente en lugar de MSIX. Se instala en <code>%LOCALAPPDATA%\Programs\ChargeCast</code> por usuario (sin solicitar permisos de administrador).</p>
+<p>El instalador <strong>no está firmado</strong>, por lo que Windows SmartScreen muestra una advertencia la primera vez que lo ejecutas:</p>
 <ol>
-  <li>{{installStep1}}</li>
-  <li>{{installStep2}}</li>
+  <li>En el cuadro de diálogo azul <em>«Windows protegió tu PC»</em>, haz clic en <strong>«Más información»</strong></li>
+  <li>Haz clic en <strong>«Ejecutar de todos modos»</strong></li>
 </ol>
 <p>
-  {{installVerifyLine}}
-  <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{installReleasesPageLabel}}</a>{{installVerifyLineSuffix}}
+  Para confirmar que el instalador coincide con la versión oficial, verifica el hash SHA256 indicado en la
+  <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">página de Releases</a>:
 </p>
 <pre><code>Get-FileHash -Algorithm SHA256 .\ChargeCast-1.7.1-Setup.exe</code></pre>
-<p style="color:var(--fg-soft);font-size:.95rem">{{installProNote}}</p>
+<p style="color:var(--fg-soft);font-size:.95rem">Las funciones Pro (1080p / 1440p, 60fps, mezclador de audio de 3 canales con micrófono) se desbloquean con una licencia activa de Microsoft Store. Próximamente habrá un canal de compra directa con clave de licencia.</p>
 
 <p style="text-align:center;color:var(--fg-soft);font-size:.95rem;margin:1.5rem 0"><a href="../blog/">Lee el blog →</a></p>
 

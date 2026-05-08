@@ -144,8 +144,8 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
   <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ احصل عليه من Microsoft Store</a>
   <span class="trial-note">تجربة مجانية لمدة 7 أيام مضمّنة</span>
   <p style="margin:.75rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-    {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
-    {{dlUnsignedNotePrefix}}<a href="#install-direct">{{dlUnsignedNoteLink}}</a>{{dlUnsignedNoteSuffix}}
+    أو <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">تنزيل ملف .exe مباشرة</a>
+    (بدون توقيع، راجع <a href="#install-direct">ملاحظات التثبيت</a>)
   </p>
 </header>
 
@@ -234,8 +234,8 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <p style="text-align:center;color:var(--fg-soft)">تظهر الأسعار بالدولار الأمريكي كمرجع. يُحوّل Microsoft Store إلى عملتك المحلية عند الشراء. تتم جميع المدفوعات وعمليات الإلغاء عبر حساب Microsoft الخاص بك.</p>
 <p style="text-align:center"><a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ ابدأ تجربة الـ 7 أيام</a></p>
 <p style="text-align:center;margin:.5rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-  {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
-  {{dlUnsignedNotePrefix}}<a href="#install-direct">{{dlUnsignedNoteLink}}</a>{{dlUnsignedNoteSuffix}}
+  أو <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">تنزيل ملف .exe مباشرة</a>
+  (بدون توقيع، راجع <a href="#install-direct">ملاحظات التثبيت</a>)
 </p>
 
 <h2>لمن هذا البرنامج</h2>
@@ -299,22 +299,22 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
   <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ احصل على ChargeCast من Microsoft Store</a>
 </p>
 <p style="text-align:center;margin:.5rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-  {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
+  أو <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">تنزيل ملف .exe مباشرة</a>
 </p>
 
-<h2 id="install-direct">{{installHeading}}</h2>
-<p>{{installIntro}}</p>
-<p>{{installSmartScreenLine}}</p>
+<h2 id="install-direct">تثبيت مباشر لملف .exe</h2>
+<p>التنزيل المباشر هو نفس ChargeCast الذي تحصل عليه من Microsoft Store، معبأ كمثبت Inno Setup مستقل بدلاً من MSIX. يتم التثبيت في <code>%LOCALAPPDATA%\Programs\ChargeCast</code> لكل مستخدم (دون طلب صلاحيات المسؤول).</p>
+<p>المثبت <strong>غير موقع</strong>، لذلك يحذرك Windows SmartScreen عند التشغيل لأول مرة:</p>
 <ol>
-  <li>{{installStep1}}</li>
-  <li>{{installStep2}}</li>
+  <li>في مربع الحوار الأزرق <em>«قام Windows بحماية جهاز الكمبيوتر»</em>، انقر فوق <strong>«مزيد من المعلومات»</strong></li>
+  <li>انقر فوق <strong>«تشغيل على أي حال»</strong></li>
 </ol>
 <p>
-  {{installVerifyLine}}
-  <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{installReleasesPageLabel}}</a>{{installVerifyLineSuffix}}
+  للتأكد من تطابق المثبت مع الإصدار الرسمي، تحقق من قيمة SHA256 المدرجة في
+  <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">صفحة Releases</a>:
 </p>
 <pre><code>Get-FileHash -Algorithm SHA256 .\ChargeCast-1.7.1-Setup.exe</code></pre>
-<p style="color:var(--fg-soft);font-size:.95rem">{{installProNote}}</p>
+<p style="color:var(--fg-soft);font-size:.95rem">ميزات Pro (1080p / 1440p، 60fps، خلاط صوتي ثلاثي القنوات مع ميكروفون) يتم فتحها بترخيص Microsoft Store نشط. قناة شراء مفتاح الترخيص المباشر قيد الإعداد.</p>
 
 <p style="text-align:center;color:var(--fg-soft);font-size:.95rem;margin:1.5rem 0"><a href="../blog/">اقرأ المدونة →</a></p>
 

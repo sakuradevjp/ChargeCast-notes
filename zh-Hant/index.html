@@ -144,8 +144,8 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
   <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ 在 Microsoft Store 取得</a>
   <span class="trial-note">含 7 天免費試用</span>
   <p style="margin:.75rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-    {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
-    {{dlUnsignedNotePrefix}}<a href="#install-direct">{{dlUnsignedNoteLink}}</a>{{dlUnsignedNoteSuffix}}
+    或者<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">直接下載 .exe</a>
+    （未簽署,請參閱<a href="#install-direct">安裝說明</a>）
   </p>
 </header>
 
@@ -234,8 +234,8 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <p style="text-align:center;color:var(--fg-soft)">價格以美元作為參考。購買時 Microsoft Store 會自動換算為您所在地區的當地貨幣。所有付款與取消都透過您的 Microsoft 帳戶完成。</p>
 <p style="text-align:center"><a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ 開始 7 天試用</a></p>
 <p style="text-align:center;margin:.5rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-  {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
-  {{dlUnsignedNotePrefix}}<a href="#install-direct">{{dlUnsignedNoteLink}}</a>{{dlUnsignedNoteSuffix}}
+  或者<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">直接下載 .exe</a>
+  （未簽署,請參閱<a href="#install-direct">安裝說明</a>）
 </p>
 
 <h2>這款適合誰用</h2>
@@ -299,22 +299,22 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
   <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ 在 Microsoft Store 取得 ChargeCast</a>
 </p>
 <p style="text-align:center;margin:.5rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-  {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
+  或者<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">直接下載 .exe</a>
 </p>
 
-<h2 id="install-direct">{{installHeading}}</h2>
-<p>{{installIntro}}</p>
-<p>{{installSmartScreenLine}}</p>
+<h2 id="install-direct">直接 .exe 安裝</h2>
+<p>直接下載版與 Microsoft Store 版本是同一款 ChargeCast,只是打包為獨立的 Inno Setup 安裝程式而非 MSIX。安裝到 <code>%LOCALAPPDATA%\Programs\ChargeCast</code>(每使用者,無管理員提示)。</p>
+<p>安裝程式<strong>未簽署</strong>,因此首次執行時 Windows SmartScreen 會發出警告:</p>
 <ol>
-  <li>{{installStep1}}</li>
-  <li>{{installStep2}}</li>
+  <li>在藍色的<em>「Windows 已保護您的電腦」</em>對話框中,點擊<strong>「其他資訊」</strong></li>
+  <li>點擊<strong>「仍要執行」</strong></li>
 </ol>
 <p>
-  {{installVerifyLine}}
-  <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{installReleasesPageLabel}}</a>{{installVerifyLineSuffix}}
+  要確認安裝程式與官方發行版一致,請檢查
+  <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">Releases 頁面</a>中列出的 SHA256 雜湊值:
 </p>
 <pre><code>Get-FileHash -Algorithm SHA256 .\ChargeCast-1.7.1-Setup.exe</code></pre>
-<p style="color:var(--fg-soft);font-size:.95rem">{{installProNote}}</p>
+<p style="color:var(--fg-soft);font-size:.95rem">Pro 功能(1080p / 1440p、60fps、含麥克風的 3 聲道音訊混音器)需要有效的 Microsoft Store 授權才能解鎖。直接授權金鑰購買管道正在開發中。</p>
 
 <p style="text-align:center;color:var(--fg-soft);font-size:.95rem;margin:1.5rem 0"><a href="../blog/">閱讀部落格 →</a></p>
 

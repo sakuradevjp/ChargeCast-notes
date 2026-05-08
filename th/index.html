@@ -144,8 +144,8 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
   <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ ดาวน์โหลดบน Microsoft Store</a>
   <span class="trial-note">รวมทดลองใช้ฟรี 7 วัน</span>
   <p style="margin:.75rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-    {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
-    {{dlUnsignedNotePrefix}}<a href="#install-direct">{{dlUnsignedNoteLink}}</a>{{dlUnsignedNoteSuffix}}
+    หรือ <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">ดาวน์โหลด .exe โดยตรง</a>
+    (ไม่มีลายเซ็น ดู<a href="#install-direct">หมายเหตุการติดตั้ง</a>)
   </p>
 </header>
 
@@ -234,8 +234,8 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <p style="text-align:center;color:var(--fg-soft)">แสดงราคาเป็น USD เพื่ออ้างอิง Microsoft Store จะแปลงเป็นสกุลเงินท้องถิ่นของคุณตอนชำระเงิน การชำระและยกเลิกทั้งหมดผ่านบัญชี Microsoft ของคุณ</p>
 <p style="text-align:center"><a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ เริ่มทดลองใช้ 7 วัน</a></p>
 <p style="text-align:center;margin:.5rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-  {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
-  {{dlUnsignedNotePrefix}}<a href="#install-direct">{{dlUnsignedNoteLink}}</a>{{dlUnsignedNoteSuffix}}
+  หรือ <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">ดาวน์โหลด .exe โดยตรง</a>
+  (ไม่มีลายเซ็น ดู<a href="#install-direct">หมายเหตุการติดตั้ง</a>)
 </p>
 
 <h2>เหมาะกับใคร</h2>
@@ -299,22 +299,22 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
   <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ ดาวน์โหลด ChargeCast บน Microsoft Store</a>
 </p>
 <p style="text-align:center;margin:.5rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-  {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
+  หรือ <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">ดาวน์โหลด .exe โดยตรง</a>
 </p>
 
-<h2 id="install-direct">{{installHeading}}</h2>
-<p>{{installIntro}}</p>
-<p>{{installSmartScreenLine}}</p>
+<h2 id="install-direct">ติดตั้ง .exe โดยตรง</h2>
+<p>การดาวน์โหลดโดยตรงคือ ChargeCast ตัวเดียวกับที่ได้จาก Microsoft Store แต่บรรจุเป็นตัวติดตั้ง Inno Setup แบบสแตนด์อโลนแทนที่จะเป็น MSIX ติดตั้งใน <code>%LOCALAPPDATA%\Programs\ChargeCast</code> ต่อผู้ใช้ (ไม่ขอสิทธิ์ผู้ดูแลระบบ)</p>
+<p>ตัวติดตั้ง<strong>ไม่ได้ลงนาม</strong> ดังนั้น Windows SmartScreen จะแจ้งเตือนเมื่อเรียกใช้ครั้งแรก:</p>
 <ol>
-  <li>{{installStep1}}</li>
-  <li>{{installStep2}}</li>
+  <li>ในกล่องโต้ตอบสีน้ำเงิน <em>«Windows ปกป้องพีซีของคุณ»</em> คลิก <strong>«ข้อมูลเพิ่มเติม»</strong></li>
+  <li>คลิก <strong>«เรียกใช้ต่อไป»</strong></li>
 </ol>
 <p>
-  {{installVerifyLine}}
-  <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{installReleasesPageLabel}}</a>{{installVerifyLineSuffix}}
+  เพื่อยืนยันว่าตัวติดตั้งตรงกับรุ่นทางการ ให้ตรวจสอบค่าแฮช SHA256 ที่ระบุใน
+  <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">หน้า Releases</a>:
 </p>
 <pre><code>Get-FileHash -Algorithm SHA256 .\ChargeCast-1.7.1-Setup.exe</code></pre>
-<p style="color:var(--fg-soft);font-size:.95rem">{{installProNote}}</p>
+<p style="color:var(--fg-soft);font-size:.95rem">ฟีเจอร์ Pro (1080p / 1440p, 60fps, มิกเซอร์เสียง 3 ช่องพร้อมไมค์) ปลดล็อกด้วยใบอนุญาต Microsoft Store ที่ใช้งานอยู่ ช่องทางซื้อคีย์ใบอนุญาตโดยตรงกำลังอยู่ระหว่างการพัฒนา</p>
 
 <p style="text-align:center;color:var(--fg-soft);font-size:.95rem;margin:1.5rem 0"><a href="../blog/">อ่านบล็อก →</a></p>
 
