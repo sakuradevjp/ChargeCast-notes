@@ -144,8 +144,8 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
   <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Microsoft Store से प्राप्त करें</a>
   <span class="trial-note">7-दिन का मुफ़्त ट्रायल शामिल</span>
   <p style="margin:.75rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-    or <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">download the .exe directly</a>
-    (unsigned, see <a href="#install-direct">install notes</a>)
+    {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
+    {{dlUnsignedNotePrefix}}<a href="#install-direct">{{dlUnsignedNoteLink}}</a>{{dlUnsignedNoteSuffix}}
   </p>
 </header>
 
@@ -234,8 +234,8 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <p style="text-align:center;color:var(--fg-soft)">कीमतें संदर्भ के लिए USD में दिखाई गई हैं। खरीदारी के समय Microsoft Store आपकी स्थानीय मुद्रा में स्वतः बदल देता है। सभी भुगतान और रद्दीकरण आपके Microsoft खाते के माध्यम से होते हैं।</p>
 <p style="text-align:center"><a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ 7-दिन का ट्रायल शुरू करें</a></p>
 <p style="text-align:center;margin:.5rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-  or <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">download the .exe directly</a>
-  (unsigned, see <a href="#install-direct">install notes</a>)
+  {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
+  {{dlUnsignedNotePrefix}}<a href="#install-direct">{{dlUnsignedNoteLink}}</a>{{dlUnsignedNoteSuffix}}
 </p>
 
 <h2>यह किसके लिए है</h2>
@@ -279,6 +279,7 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <h2>चेंजलॉग</h2>
 <div class="changelog">
 <ul>
+  <li><code>v1.7.1</code> ऑडियो गेन स्लाइडर 101–200% फिक्स</li>
   <li><code>v1.7.0</code> Lifetime प्लान, Output/Mic स्लाइडर पर 0–200% गेन, Android 16 डिवाइस वॉल्यूम फिक्स, सीधा .exe डाउनलोड चैनल</li>
   <li><code>v1.6.1</code> स्थिरता रिलीज़</li>
   <li><code>v1.6.0</code> Custom प्रीसेट पॉलिश, scrcpy विंडो मैनेजमेंट, Microsoft Store 7-दिन ट्रायल पर स्विच</li>
@@ -298,28 +299,22 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
   <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Microsoft Store पर ChargeCast पाएँ</a>
 </p>
 <p style="text-align:center;margin:.5rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-  or <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">download the .exe directly</a>
+  {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
 </p>
 
-<h2 id="install-direct">Direct .exe install</h2>
-<p>
-  The direct download is the same ChargeCast you get from the Microsoft Store, packaged as a standalone Inno Setup installer instead of an MSIX. It installs to <code>%LOCALAPPDATA%\Programs\ChargeCast</code> per-user (no admin prompt).
-</p>
-<p>
-  The installer is <strong>unsigned</strong>, so Windows SmartScreen warns the first time you run it:
-</p>
+<h2 id="install-direct">{{installHeading}}</h2>
+<p>{{installIntro}}</p>
+<p>{{installSmartScreenLine}}</p>
 <ol>
-  <li>On the blue <em>Windows protected your PC</em> dialog, click <strong>More info</strong></li>
-  <li>Click <strong>Run anyway</strong></li>
+  <li>{{installStep1}}</li>
+  <li>{{installStep2}}</li>
 </ol>
 <p>
-  To confirm the installer matches the official release, check the SHA256 hash listed on the
-  <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">Releases page</a>:
+  {{installVerifyLine}}
+  <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{installReleasesPageLabel}}</a>{{installVerifyLineSuffix}}
 </p>
 <pre><code>Get-FileHash -Algorithm SHA256 .\ChargeCast-1.7.0-Setup.exe</code></pre>
-<p style="color:var(--fg-soft);font-size:.95rem">
-  Pro features (1080p / 1440p, 60fps, 3-channel audio mixer with mic) are unlocked by an active Microsoft Store license. A direct license-key purchase channel is in the works.
-</p>
+<p style="color:var(--fg-soft);font-size:.95rem">{{installProNote}}</p>
 
 <p style="text-align:center;color:var(--fg-soft);font-size:.95rem;margin:1.5rem 0"><a href="../blog/">ब्लॉग पढ़ें →</a></p>
 

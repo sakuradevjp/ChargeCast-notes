@@ -144,8 +144,8 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
   <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Microsoft Store'dan indir</a>
   <span class="trial-note">7 günlük ücretsiz deneme dahil</span>
   <p style="margin:.75rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-    or <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">download the .exe directly</a>
-    (unsigned, see <a href="#install-direct">install notes</a>)
+    {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
+    {{dlUnsignedNotePrefix}}<a href="#install-direct">{{dlUnsignedNoteLink}}</a>{{dlUnsignedNoteSuffix}}
   </p>
 </header>
 
@@ -234,8 +234,8 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <p style="text-align:center;color:var(--fg-soft)">Fiyatlar referans olarak USD cinsinden gösterilmiştir. Microsoft Store satın alma sırasında yerel para birimine otomatik dönüştürür. Tüm ödemeler ve iptaller Microsoft hesabınız üzerinden gerçekleşir.</p>
 <p style="text-align:center"><a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ 7 günlük denemeyi başlat</a></p>
 <p style="text-align:center;margin:.5rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-  or <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">download the .exe directly</a>
-  (unsigned, see <a href="#install-direct">install notes</a>)
+  {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
+  {{dlUnsignedNotePrefix}}<a href="#install-direct">{{dlUnsignedNoteLink}}</a>{{dlUnsignedNoteSuffix}}
 </p>
 
 <h2>Bu kimler için</h2>
@@ -279,6 +279,7 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <h2>Değişiklik günlüğü</h2>
 <div class="changelog">
 <ul>
+  <li><code>v1.7.1</code> Ses kazanç kaydıracı 101–200% düzeltmesi</li>
   <li><code>v1.7.0</code> Lifetime planı, Output/Mic kaydıraçlarında 0–200% kazanç, Android 16 cihaz ses kontrolü düzeltmesi, doğrudan .exe indirme</li>
   <li><code>v1.6.1</code> Kararlılık sürümü</li>
   <li><code>v1.6.0</code> Custom preset rötuşları, scrcpy pencere yönetimi, Microsoft Store 7 günlük denemeye geçiş</li>
@@ -298,28 +299,22 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
   <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ ChargeCast'i Microsoft Store'dan al</a>
 </p>
 <p style="text-align:center;margin:.5rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-  or <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">download the .exe directly</a>
+  {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
 </p>
 
-<h2 id="install-direct">Direct .exe install</h2>
-<p>
-  The direct download is the same ChargeCast you get from the Microsoft Store, packaged as a standalone Inno Setup installer instead of an MSIX. It installs to <code>%LOCALAPPDATA%\Programs\ChargeCast</code> per-user (no admin prompt).
-</p>
-<p>
-  The installer is <strong>unsigned</strong>, so Windows SmartScreen warns the first time you run it:
-</p>
+<h2 id="install-direct">{{installHeading}}</h2>
+<p>{{installIntro}}</p>
+<p>{{installSmartScreenLine}}</p>
 <ol>
-  <li>On the blue <em>Windows protected your PC</em> dialog, click <strong>More info</strong></li>
-  <li>Click <strong>Run anyway</strong></li>
+  <li>{{installStep1}}</li>
+  <li>{{installStep2}}</li>
 </ol>
 <p>
-  To confirm the installer matches the official release, check the SHA256 hash listed on the
-  <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">Releases page</a>:
+  {{installVerifyLine}}
+  <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{installReleasesPageLabel}}</a>{{installVerifyLineSuffix}}
 </p>
 <pre><code>Get-FileHash -Algorithm SHA256 .\ChargeCast-1.7.0-Setup.exe</code></pre>
-<p style="color:var(--fg-soft);font-size:.95rem">
-  Pro features (1080p / 1440p, 60fps, 3-channel audio mixer with mic) are unlocked by an active Microsoft Store license. A direct license-key purchase channel is in the works.
-</p>
+<p style="color:var(--fg-soft);font-size:.95rem">{{installProNote}}</p>
 
 <p style="text-align:center;color:var(--fg-soft);font-size:.95rem;margin:1.5rem 0"><a href="../blog/">Blog'u oku →</a></p>
 

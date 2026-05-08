@@ -144,8 +144,8 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
   <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Scaricalo sul Microsoft Store</a>
   <span class="trial-note">7 giorni di prova gratuita inclusi</span>
   <p style="margin:.75rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-    or <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">download the .exe directly</a>
-    (unsigned, see <a href="#install-direct">install notes</a>)
+    {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
+    {{dlUnsignedNotePrefix}}<a href="#install-direct">{{dlUnsignedNoteLink}}</a>{{dlUnsignedNoteSuffix}}
   </p>
 </header>
 
@@ -234,8 +234,8 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <p style="text-align:center;color:var(--fg-soft)">I prezzi sono mostrati in USD come riferimento. Microsoft Store li converte nella tua valuta locale al momento dell'acquisto. Tutti i pagamenti e le cancellazioni passano dal tuo account Microsoft.</p>
 <p style="text-align:center"><a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Inizia la prova di 7 giorni</a></p>
 <p style="text-align:center;margin:.5rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-  or <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">download the .exe directly</a>
-  (unsigned, see <a href="#install-direct">install notes</a>)
+  {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
+  {{dlUnsignedNotePrefix}}<a href="#install-direct">{{dlUnsignedNoteLink}}</a>{{dlUnsignedNoteSuffix}}
 </p>
 
 <h2>Per chi è</h2>
@@ -279,6 +279,7 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
 <h2>Changelog</h2>
 <div class="changelog">
 <ul>
+  <li><code>v1.7.1</code> Correzione cursore di gain 101–200%</li>
   <li><code>v1.7.0</code> Piano Lifetime, gain 0–200% sui cursori Output/Mic, correzione volume dispositivo Android 16, download .exe diretto</li>
   <li><code>v1.6.1</code> Release di stabilità</li>
   <li><code>v1.6.0</code> Rifinitura del preset Custom, gestione della finestra scrcpy, passaggio alla prova di 7 giorni del Microsoft Store</li>
@@ -298,28 +299,22 @@ footer{text-align:center;color:var(--fg-soft);font-size:.9rem;margin-top:3rem;pa
   <a class="cta" href="https://apps.microsoft.com/detail/9N87X47V634V">▶ Prendi ChargeCast sul Microsoft Store</a>
 </p>
 <p style="text-align:center;margin:.5rem 0 0;font-size:.95rem;color:var(--fg-soft)">
-  or <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">download the .exe directly</a>
+  {{dlOrPrefix}}<a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{dlLinkLabel}}</a>
 </p>
 
-<h2 id="install-direct">Direct .exe install</h2>
-<p>
-  The direct download is the same ChargeCast you get from the Microsoft Store, packaged as a standalone Inno Setup installer instead of an MSIX. It installs to <code>%LOCALAPPDATA%\Programs\ChargeCast</code> per-user (no admin prompt).
-</p>
-<p>
-  The installer is <strong>unsigned</strong>, so Windows SmartScreen warns the first time you run it:
-</p>
+<h2 id="install-direct">{{installHeading}}</h2>
+<p>{{installIntro}}</p>
+<p>{{installSmartScreenLine}}</p>
 <ol>
-  <li>On the blue <em>Windows protected your PC</em> dialog, click <strong>More info</strong></li>
-  <li>Click <strong>Run anyway</strong></li>
+  <li>{{installStep1}}</li>
+  <li>{{installStep2}}</li>
 </ol>
 <p>
-  To confirm the installer matches the official release, check the SHA256 hash listed on the
-  <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">Releases page</a>:
+  {{installVerifyLine}}
+  <a href="https://github.com/sakuradevjp/ChargeCast-releases/releases/latest">{{installReleasesPageLabel}}</a>{{installVerifyLineSuffix}}
 </p>
 <pre><code>Get-FileHash -Algorithm SHA256 .\ChargeCast-1.7.0-Setup.exe</code></pre>
-<p style="color:var(--fg-soft);font-size:.95rem">
-  Pro features (1080p / 1440p, 60fps, 3-channel audio mixer with mic) are unlocked by an active Microsoft Store license. A direct license-key purchase channel is in the works.
-</p>
+<p style="color:var(--fg-soft);font-size:.95rem">{{installProNote}}</p>
 
 <p style="text-align:center;color:var(--fg-soft);font-size:.95rem;margin:1.5rem 0"><a href="../blog/">Leggi il blog →</a></p>
 
