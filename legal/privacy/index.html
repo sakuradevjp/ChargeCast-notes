@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — ChargeCast</title>
+<meta name="description" content="ChargeCast privacy policy. What data the app collects, what it does not, and how license validation works.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://sakuradevjp.github.io/ChargeCast-notes/legal/privacy/">
+<link rel="icon" type="image/x-icon" href="../../favicon.ico">
+<style>
+:root{
+  --bg:#ffffff;
+  --fg:#1a1a2e;
+  --fg-soft:#4a4a5e;
+  --accent:#ff4757;
+  --accent-soft:#ffe8ea;
+  --card:#f7f7fb;
+  --border:#e6e6ee;
+  --shadow:0 8px 24px rgba(26,26,46,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14141c;
+    --fg:#f2f2f5;
+    --fg-soft:#b0b0c0;
+    --accent:#ff6b7a;
+    --accent-soft:#3a1d22;
+    --card:#1d1d28;
+    --border:#2a2a38;
+    --shadow:0 8px 24px rgba(0,0,0,.4);
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;background:var(--bg);color:var(--fg);line-height:1.75;-webkit-font-smoothing:antialiased}
+.wrap{max-width:780px;margin:0 auto;padding:2rem 1.25rem 4rem}
+h1{font-size:clamp(1.6rem,4vw,2.2rem);margin:0 0 .5rem;letter-spacing:-.01em}
+.meta{color:var(--fg-soft);font-size:.95rem;margin:0 0 2rem}
+h2{font-size:1.3rem;margin:2.5rem 0 .75rem;letter-spacing:-.005em;position:relative;padding-left:.85rem}
+h2::before{content:"";position:absolute;left:0;top:.3em;bottom:.3em;width:3px;border-radius:2px;background:var(--accent)}
+h3{font-size:1.05rem;margin:1.5rem 0 .5rem}
+p{margin:.75rem 0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
+a:hover{border-bottom-color:var(--accent)}
+ul{padding-left:1.25rem}
+li{margin:.35rem 0}
+.callout{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;margin:1rem 0}
+.callout strong{color:var(--accent)}
+code{background:var(--accent-soft);color:var(--accent);padding:.1rem .4rem;border-radius:4px;font-size:.92em}
+hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0}
+footer{color:var(--fg-soft);font-size:.9rem;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+nav.breadcrumb{font-size:.9rem;color:var(--fg-soft);margin-bottom:1.5rem}
+nav.breadcrumb a{color:var(--fg-soft)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="breadcrumb"><a href="../../">ChargeCast</a> &rsaquo; Privacy Policy</nav>
+
+<h1>Privacy Policy</h1>
+<p class="meta">ChargeCast — published by sakuradev. Last updated: 2026-05-12.</p>
+
+<div class="callout">
+<p><strong>Short version:</strong> ChargeCast does not collect analytics, telemetry, or user accounts. The app talks to one external service — the Lemon Squeezy license API — and only when a customer who bought a direct-download license activates or validates their key. Microsoft Store customers have their purchase handled by Microsoft and the app makes no outbound requests on their behalf.</p>
+</div>
+
+<h2>Who we are</h2>
+<p>ChargeCast is a Windows desktop application developed and distributed by <strong>sakuradev</strong> (sole developer, operating as an indie publisher based in Japan). For privacy questions, contact <a href="mailto:sakura.dev.jp@gmail.com">sakura.dev.jp@gmail.com</a>.</p>
+
+<h2>What data ChargeCast does <em>not</em> collect</h2>
+<ul>
+  <li>No analytics SDKs (no Google Analytics, Mixpanel, Amplitude, Segment, etc.).</li>
+  <li>No crash reporting service (no Sentry, AppCenter, Firebase Crashlytics).</li>
+  <li>No user accounts, no sign-up, no email collection inside the app.</li>
+  <li>No usage telemetry, no &ldquo;phone home&rdquo; on launch, no background reporting.</li>
+  <li>No content from your phone screen ever leaves your computer. The mirrored video stream is rendered locally inside a window and is never uploaded.</li>
+  <li>No audio you mix (device audio, PC audio, your microphone) ever leaves your computer. The audio routing is local-only.</li>
+</ul>
+
+<h2>What data ChargeCast stores locally on your computer</h2>
+<p>ChargeCast saves a small settings file at <code>%APPDATA%\ChargeCast\settings.json</code> containing:</p>
+<ul>
+  <li>Your chosen streaming preset, orientation, custom resolution, bitrate, and frame rate.</li>
+  <li>The window position of the mirrored phone screen (so the window opens in the same place next time).</li>
+  <li>Whether the welcome screen and trial-end screen have been shown.</li>
+  <li>A flag indicating whether the app is currently activated as Pro.</li>
+  <li>If you activate a direct-purchase license: the license key, the instance ID returned by the activation, and the date of the most recent successful validation.</li>
+</ul>
+<p>This file never leaves your computer unless you copy it yourself. Uninstalling ChargeCast removes the app; you can delete <code>%APPDATA%\ChargeCast\</code> manually if you want to remove the settings file as well.</p>
+
+<h2>What data ChargeCast transmits over the network</h2>
+
+<h3>Microsoft Store customers</h3>
+<p>If you bought ChargeCast through the Microsoft Store, the entitlement check is performed by the Windows Store runtime on your device. ChargeCast does not make outbound network requests for license validation in this configuration. Microsoft's privacy practices apply to that purchase &mdash; see Microsoft's privacy statement at <a href="https://privacy.microsoft.com/privacystatement">privacy.microsoft.com</a>.</p>
+
+<h3>Direct-download Pro Lifetime customers (via Lemon Squeezy)</h3>
+<p>If you purchase a Pro Lifetime license through our Lemon Squeezy storefront, ChargeCast communicates with the Lemon Squeezy license API at <code>https://api.lemonsqueezy.com/v1/licenses</code> to:</p>
+<ul>
+  <li><strong>Activate</strong> your license key on this computer (sends: the license key you entered, and an instance name identifying the install).</li>
+  <li><strong>Validate</strong> the activation periodically (sends: the license key and the instance ID returned at activation).</li>
+  <li><strong>Deactivate</strong> the license if you remove it from this computer (sends: the license key and the instance ID).</li>
+</ul>
+<p>No additional data &mdash; no IP address logging by us, no device fingerprint, no email &mdash; is transmitted from ChargeCast itself. Lemon Squeezy receives the network request and applies its own privacy policy to it; see <a href="https://www.lemonsqueezy.com/privacy">lemonsqueezy.com/privacy</a>.</p>
+<p>If the validation endpoint is unreachable (offline, network failure), ChargeCast continues to honor the license for a short grace period based on the date of the last successful validation, then prompts you to reconnect.</p>
+
+<h3>Purchase and payment data</h3>
+<p>If you purchase a license through Lemon Squeezy, you provide your email address and payment information directly to Lemon Squeezy, which processes the transaction and emails you the license key. We receive the order metadata (name, email, country, order amount) from Lemon Squeezy for tax and customer-support purposes only. We do not see your card number; payments are handled by Lemon Squeezy's payment processors (Stripe / PayPal).</p>
+
+<h2>What third-party components ChargeCast bundles</h2>
+<p>ChargeCast bundles open-source components (<a href="https://github.com/Genymobile/scrcpy">scrcpy</a>, Android ADB, SDL2, FFmpeg, NAudio, CommunityToolkit.Mvvm). These components run locally on your computer and do not make their own outbound network requests as configured in ChargeCast. The ADB binary may briefly probe USB devices on localhost to detect connected phones; this is local-only.</p>
+
+<h2>Children</h2>
+<p>ChargeCast is not directed at children under 13. We do not knowingly collect data from children. The product is a developer tool for streamers and content creators.</p>
+
+<h2>Your rights (GDPR / CCPA)</h2>
+<p>Because ChargeCast does not collect personal data inside the app and only receives order metadata via Lemon Squeezy, the data we hold about a direct-download customer is limited to their order record. If you would like a copy of that record, or want it deleted, email <a href="mailto:sakura.dev.jp@gmail.com">sakura.dev.jp@gmail.com</a> from the address associated with your purchase. We will respond within 30 days.</p>
+
+<h2>Changes to this policy</h2>
+<p>If we change this policy materially (for example, if we ever add analytics), we will update the &ldquo;Last updated&rdquo; date at the top and post a notice on the ChargeCast landing page. Continued use of the app after a material change constitutes acceptance.</p>
+
+<hr>
+
+<p><a href="../terms/">&rarr; Terms of Service</a> &middot; <a href="../../">Back to ChargeCast</a></p>
+
+<footer>
+  &copy; sakuradev &middot; <a href="mailto:sakura.dev.jp@gmail.com">sakura.dev.jp@gmail.com</a>
+</footer>
+
+</div>
+</body>
+</html>
