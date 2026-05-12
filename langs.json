@@ -363,7 +363,7 @@
     "installReleasesPageLabel": "Releases 页面",
     "installVerifyLineSuffix": "中列出的 SHA256 哈希值:",
     "installProNote": "Pro 功能（1080p / 1440p、60fps、含麦克风的 3 通道音频混音器）需要有效的 Microsoft Store 许可证或 Lemon Squeezy 终身（Lifetime）许可证才能解锁。",
-    "lsBuyLinkLabel": "直接购买终身（Lifetime）许可证（$14.99）"
+    "lsBuyLinkLabel": "直接购买 Lifetime 许可证（$14.99）"
   },
   "zh-Hant": {
     "metaTitle": "ChargeCast — 插上就播，邊播邊充。",
@@ -485,7 +485,7 @@
     "installReleasesPageLabel": "Releases 頁面",
     "installVerifyLineSuffix": "中列出的 SHA256 雜湊值:",
     "installProNote": "Pro 功能（1080p / 1440p、60fps、含麥克風的 3 聲道音訊混音器）需要有效的 Microsoft Store 授權或 Lemon Squeezy 終身（Lifetime）授權才能解鎖。",
-    "lsBuyLinkLabel": "直接購買終身（Lifetime）授權（$14.99）"
+    "lsBuyLinkLabel": "直接購買 Lifetime 授權（$14.99）"
   },
   "ko": {
     "metaTitle": "ChargeCast — 꽂고, 방송하고, 충전까지.",
@@ -851,7 +851,7 @@
     "installReleasesPageLabel": "page Releases",
     "installVerifyLineSuffix": ":",
     "installProNote": "Les fonctionnalités Pro (1080p / 1440p, 60 ips, mixeur audio 3 canaux avec micro) sont déverrouillées par une licence Microsoft Store active ou une licence Lifetime Lemon Squeezy.",
-    "lsBuyLinkLabel": "achetez une licence Lifetime en direct ($14.99)"
+    "lsBuyLinkLabel": "achetez une licence Lifetime directement ($14.99)"
   },
   "de": {
     "metaTitle": "ChargeCast — Einstecken. Streamen. Aufgeladen bleiben.",
@@ -1217,7 +1217,7 @@
     "installReleasesPageLabel": "página Releases",
     "installVerifyLineSuffix": ":",
     "installProNote": "Os recursos Pro (1080p / 1440p, 60fps, mixer de áudio de 3 canais com microfone) são desbloqueados por uma licença ativa da Microsoft Store ou uma licença Lifetime da Lemon Squeezy.",
-    "lsBuyLinkLabel": "compre uma licença Lifetime direto ($14.99)"
+    "lsBuyLinkLabel": "compre uma licença Lifetime diretamente ($14.99)"
   },
   "nl": {
     "metaTitle": "ChargeCast — Insteken. Streamen. Opgeladen blijven.",
