@@ -118,7 +118,8 @@
     "installVerifyLine": "To confirm the installer matches the official release, check the SHA256 hash listed on the",
     "installReleasesPageLabel": "Releases page",
     "installVerifyLineSuffix": ":",
-    "installProNote": "Pro features (1080p / 1440p, 60fps, 3-channel audio mixer with mic) are unlocked by an active Microsoft Store license. A direct license-key purchase channel is in the works."
+    "installProNote": "Pro features (1080p / 1440p, 60fps, 3-channel audio mixer with mic) are unlocked by an active Microsoft Store license or a Lemon Squeezy Lifetime license.",
+    "lsBuyLinkLabel": "buy a Lifetime license direct ($14.99)"
   },
   "ja": {
     "metaTitle": "ChargeCast — USBでつなぐだけ、Android 配信がこんなに軽い",
@@ -239,7 +240,8 @@
     "installVerifyLine": "ダウンロードしたファイルが公式リリースと一致するか確認するには、",
     "installReleasesPageLabel": "Releases ページ",
     "installVerifyLineSuffix": " に記載の SHA256 ハッシュ値をチェックしてください:",
-    "installProNote": "Pro 機能（1080p / 1440p、60fps、マイク付き 3 チャンネル オーディオミキサー）は有効な Microsoft Store ライセンスで解禁されます。ライセンスキーによる直販チャネルも準備中です。"
+    "installProNote": "Pro 機能（1080p / 1440p、60fps、マイク付き 3 チャンネル オーディオミキサー）は有効な Microsoft Store ライセンスまたは Lemon Squeezy の Lifetime ライセンスで解禁されます。",
+    "lsBuyLinkLabel": "Lifetime ライセンスを直販で購入（$14.99）"
   },
   "zh-Hans": {
     "metaTitle": "ChargeCast — 插上就播，边播边充。",
@@ -360,7 +362,8 @@
     "installVerifyLine": "要确认安装程序与官方发布一致,请检查",
     "installReleasesPageLabel": "Releases 页面",
     "installVerifyLineSuffix": "中列出的 SHA256 哈希值:",
-    "installProNote": "Pro 功能(1080p / 1440p、60fps、含麦克风的 3 通道音频混音器)需要有效的 Microsoft Store 许可证才能解锁。直接许可证密钥购买渠道正在开发中。"
+    "installProNote": "Pro 功能（1080p / 1440p、60fps、含麦克风的 3 通道音频混音器）需要有效的 Microsoft Store 许可证或 Lemon Squeezy 终身（Lifetime）许可证才能解锁。",
+    "lsBuyLinkLabel": "直接购买终身（Lifetime）许可证（$14.99）"
   },
   "zh-Hant": {
     "metaTitle": "ChargeCast — 插上就播，邊播邊充。",
@@ -481,7 +484,8 @@
     "installVerifyLine": "要確認安裝程式與官方發行版一致,請檢查",
     "installReleasesPageLabel": "Releases 頁面",
     "installVerifyLineSuffix": "中列出的 SHA256 雜湊值:",
-    "installProNote": "Pro 功能(1080p / 1440p、60fps、含麥克風的 3 聲道音訊混音器)需要有效的 Microsoft Store 授權才能解鎖。直接授權金鑰購買管道正在開發中。"
+    "installProNote": "Pro 功能（1080p / 1440p、60fps、含麥克風的 3 聲道音訊混音器）需要有效的 Microsoft Store 授權或 Lemon Squeezy 終身（Lifetime）授權才能解鎖。",
+    "lsBuyLinkLabel": "直接購買終身（Lifetime）授權（$14.99）"
   },
   "ko": {
     "metaTitle": "ChargeCast — 꽂고, 방송하고, 충전까지.",
@@ -602,7 +606,8 @@
     "installVerifyLine": "다운로드한 파일이 공식 릴리스와 일치하는지 확인하려면",
     "installReleasesPageLabel": "Releases 페이지",
     "installVerifyLineSuffix": "에 기재된 SHA256 해시 값을 확인하세요:",
-    "installProNote": "Pro 기능(1080p / 1440p, 60fps, 마이크 포함 3채널 오디오 믹서)은 활성 Microsoft Store 라이선스로 잠금 해제됩니다. 라이선스 키 직접 구매 채널도 준비 중입니다."
+    "installProNote": "Pro 기능(1080p / 1440p, 60fps, 마이크 포함 3채널 오디오 믹서)은 유효한 Microsoft Store 라이선스 또는 Lemon Squeezy Lifetime 라이선스로 잠금 해제됩니다.",
+    "lsBuyLinkLabel": "Lifetime 라이선스 직접 구매 ($14.99)"
   },
   "es": {
     "metaTitle": "ChargeCast — Conecta, transmite, sin quedarte sin batería.",
@@ -723,7 +728,8 @@
     "installVerifyLine": "Para confirmar que el instalador coincide con la versión oficial, verifica el hash SHA256 indicado en la",
     "installReleasesPageLabel": "página de Releases",
     "installVerifyLineSuffix": ":",
-    "installProNote": "Las funciones Pro (1080p / 1440p, 60fps, mezclador de audio de 3 canales con micrófono) se desbloquean con una licencia activa de Microsoft Store. Próximamente habrá un canal de compra directa con clave de licencia."
+    "installProNote": "Las funciones Pro (1080p / 1440p, 60fps, mezclador de audio de 3 canales con micrófono) se desbloquean con una licencia activa de Microsoft Store o una licencia Lifetime de Lemon Squeezy.",
+    "lsBuyLinkLabel": "compra una licencia Lifetime directamente ($14.99)"
   },
   "fr": {
     "metaTitle": "ChargeCast — Branche, diffuse, batterie toujours au top.",
@@ -844,7 +850,8 @@
     "installVerifyLine": "Pour confirmer que l'installateur correspond à la version officielle, vérifiez l'empreinte SHA256 indiquée sur la",
     "installReleasesPageLabel": "page Releases",
     "installVerifyLineSuffix": ":",
-    "installProNote": "Les fonctions Pro (1080p / 1440p, 60fps, mélangeur audio 3 canaux avec micro) sont déverrouillées par une licence Microsoft Store active. Un canal d'achat direct avec clé de licence est en préparation."
+    "installProNote": "Les fonctionnalités Pro (1080p / 1440p, 60 ips, mixeur audio 3 canaux avec micro) sont déverrouillées par une licence Microsoft Store active ou une licence Lifetime Lemon Squeezy.",
+    "lsBuyLinkLabel": "achetez une licence Lifetime en direct ($14.99)"
   },
   "de": {
     "metaTitle": "ChargeCast — Einstecken. Streamen. Aufgeladen bleiben.",
@@ -965,7 +972,8 @@
     "installVerifyLine": "Um zu prüfen, ob der Installer mit der offiziellen Version übereinstimmt, vergleiche den SHA256-Hash auf der",
     "installReleasesPageLabel": "Releases-Seite",
     "installVerifyLineSuffix": ":",
-    "installProNote": "Pro-Funktionen (1080p / 1440p, 60fps, 3-Kanal-Audio-Mixer mit Mikrofon) werden durch eine aktive Microsoft-Store-Lizenz freigeschaltet. Ein direkter Lizenzschlüssel-Kaufkanal ist in Arbeit."
+    "installProNote": "Pro-Funktionen (1080p / 1440p, 60fps, 3-Kanal-Audiomischer mit Mikrofon) werden durch eine aktive Microsoft-Store-Lizenz oder eine Lemon-Squeezy-Lifetime-Lizenz freigeschaltet.",
+    "lsBuyLinkLabel": "Lifetime-Lizenz direkt kaufen ($14.99)"
   },
   "it": {
     "metaTitle": "ChargeCast — Collega. Stream on. Stai carico.",
@@ -1086,7 +1094,8 @@
     "installVerifyLine": "Per verificare che l'installer corrisponda alla versione ufficiale, controlla l'hash SHA256 indicato nella",
     "installReleasesPageLabel": "pagina Releases",
     "installVerifyLineSuffix": ":",
-    "installProNote": "Le funzioni Pro (1080p / 1440p, 60fps, mixer audio a 3 canali con microfono) si sbloccano tramite una licenza Microsoft Store attiva. Un canale di acquisto diretto con chiave di licenza è in fase di sviluppo."
+    "installProNote": "Le funzionalità Pro (1080p / 1440p, 60fps, mixer audio a 3 canali con microfono) sono sbloccate da una licenza Microsoft Store attiva o da una licenza Lifetime Lemon Squeezy.",
+    "lsBuyLinkLabel": "acquista una licenza Lifetime direttamente ($14.99)"
   },
   "pt": {
     "metaTitle": "ChargeCast — Plugue. Transmita. Fique carregado.",
@@ -1207,7 +1216,8 @@
     "installVerifyLine": "Para confirmar que o instalador corresponde à versão oficial, verifique o hash SHA256 listado na",
     "installReleasesPageLabel": "página Releases",
     "installVerifyLineSuffix": ":",
-    "installProNote": "Os recursos Pro (1080p / 1440p, 60fps, mixer de áudio de 3 canais com microfone) são desbloqueados por uma licença ativa da Microsoft Store. Um canal de compra direta de chave de licença está em desenvolvimento."
+    "installProNote": "Os recursos Pro (1080p / 1440p, 60fps, mixer de áudio de 3 canais com microfone) são desbloqueados por uma licença ativa da Microsoft Store ou uma licença Lifetime da Lemon Squeezy.",
+    "lsBuyLinkLabel": "compre uma licença Lifetime direto ($14.99)"
   },
   "nl": {
     "metaTitle": "ChargeCast — Insteken. Streamen. Opgeladen blijven.",
@@ -1328,7 +1338,8 @@
     "installVerifyLine": "Om te bevestigen dat het installatieprogramma overeenkomt met de officiële versie, controleer de SHA256-hash op de",
     "installReleasesPageLabel": "Releases-pagina",
     "installVerifyLineSuffix": ":",
-    "installProNote": "Pro-functies (1080p / 1440p, 60fps, 3-kanaals audiomixer met microfoon) worden ontgrendeld met een actieve Microsoft Store-licentie. Een directe licentiesleutel-verkoopkanaal is in ontwikkeling."
+    "installProNote": "Pro-functies (1080p / 1440p, 60fps, 3-kanaals audiomixer met microfoon) worden ontgrendeld door een actieve Microsoft Store-licentie of een Lemon Squeezy Lifetime-licentie.",
+    "lsBuyLinkLabel": "koop een Lifetime-licentie rechtstreeks ($14.99)"
   },
   "pl": {
     "metaTitle": "ChargeCast — Podłącz. Streamuj. Zostań naładowany.",
@@ -1449,7 +1460,8 @@
     "installVerifyLine": "Aby potwierdzić zgodność instalatora z oficjalnym wydaniem, sprawdź skrót SHA256 podany na",
     "installReleasesPageLabel": "stronie Releases",
     "installVerifyLineSuffix": ":",
-    "installProNote": "Funkcje Pro (1080p / 1440p, 60fps, 3-kanałowy mikser audio z mikrofonem) są odblokowane przez aktywną licencję Microsoft Store. Kanał bezpośredniej sprzedaży kluczy licencyjnych jest w przygotowaniu."
+    "installProNote": "Funkcje Pro (1080p / 1440p, 60fps, 3-kanałowy mikser audio z mikrofonem) są odblokowywane aktywną licencją Microsoft Store lub licencją Lifetime Lemon Squeezy.",
+    "lsBuyLinkLabel": "kup licencję Lifetime bezpośrednio ($14.99)"
   },
   "sv": {
     "metaTitle": "ChargeCast — Koppla in. Streama på. Håll laddningen.",
@@ -1570,7 +1582,8 @@
     "installVerifyLine": "För att bekräfta att installationsprogrammet stämmer med den officiella versionen, kontrollera SHA256-hashen på",
     "installReleasesPageLabel": "Releases-sidan",
     "installVerifyLineSuffix": ":",
-    "installProNote": "Pro-funktioner (1080p / 1440p, 60fps, 3-kanals ljudmixer med mikrofon) låses upp med en aktiv Microsoft Store-licens. En direkt licensnyckel-köpkanal är på gång."
+    "installProNote": "Pro-funktioner (1080p / 1440p, 60fps, 3-kanals ljudmixer med mikrofon) låses upp av en aktiv Microsoft Store-licens eller en Lemon Squeezy Lifetime-licens.",
+    "lsBuyLinkLabel": "köp en Lifetime-licens direkt ($14.99)"
   },
   "ru": {
     "metaTitle": "ChargeCast — Подключил. Стримь. Заряжен.",
@@ -1691,7 +1704,8 @@
     "installVerifyLine": "Чтобы убедиться, что установщик соответствует официальному выпуску, проверьте хэш SHA256, указанный на",
     "installReleasesPageLabel": "странице Releases",
     "installVerifyLineSuffix": ":",
-    "installProNote": "Функции Pro (1080p / 1440p, 60fps, 3-канальный аудиомикшер с микрофоном) разблокируются активной лицензией Microsoft Store. Канал прямой покупки лицензионного ключа находится в разработке."
+    "installProNote": "Функции Pro (1080p / 1440p, 60 кадров/с, 3-канальный аудиомикшер с микрофоном) активируются действующей лицензией Microsoft Store или Lifetime-лицензией Lemon Squeezy.",
+    "lsBuyLinkLabel": "купить лицензию Lifetime напрямую ($14.99)"
   },
   "uk": {
     "metaTitle": "ChargeCast — Підключив. Стрім. Заряджений.",
@@ -1812,7 +1826,8 @@
     "installVerifyLine": "Щоб переконатися, що інсталятор відповідає офіційному випуску, перевірте хеш SHA256, зазначений на",
     "installReleasesPageLabel": "сторінці Releases",
     "installVerifyLineSuffix": ":",
-    "installProNote": "Функції Pro (1080p / 1440p, 60fps, 3-канальний аудіомікшер з мікрофоном) розблоковуються активною ліцензією Microsoft Store. Канал прямої купівлі ключа ліцензії перебуває у розробці."
+    "installProNote": "Функції Pro (1080p / 1440p, 60 кадрів/с, 3-канальний аудіомікшер з мікрофоном) активуються чинною ліцензією Microsoft Store або Lifetime-ліцензією Lemon Squeezy.",
+    "lsBuyLinkLabel": "купити ліцензію Lifetime напряму ($14.99)"
   },
   "tr": {
     "metaTitle": "ChargeCast — Tak. Yayına geç. Şarjda kal.",
@@ -1933,7 +1948,8 @@
     "installVerifyLine": "Yükleyicinin resmi sürümle eşleştiğini doğrulamak için",
     "installReleasesPageLabel": "Releases sayfasında",
     "installVerifyLineSuffix": " listelenen SHA256 karma değerini kontrol edin:",
-    "installProNote": "Pro özellikler (1080p / 1440p, 60fps, mikrofonlu 3 kanallı ses karıştırıcı) etkin bir Microsoft Store lisansı ile açılır. Doğrudan lisans anahtarı satın alma kanalı geliştirilmektedir."
+    "installProNote": "Pro özellikleri (1080p / 1440p, 60fps, mikrofonlu 3 kanallı ses karıştırıcı) etkin bir Microsoft Store lisansı veya Lemon Squeezy Lifetime lisansı ile açılır.",
+    "lsBuyLinkLabel": "Lifetime lisansı doğrudan satın al ($14.99)"
   },
   "ar": {
     "metaTitle": "ChargeCast — وصّل الكابل. ابدأ البث. ابقَ مشحوناً.",
@@ -2054,7 +2070,8 @@
     "installVerifyLine": "للتأكد من تطابق المثبت مع الإصدار الرسمي، تحقق من قيمة SHA256 المدرجة في",
     "installReleasesPageLabel": "صفحة Releases",
     "installVerifyLineSuffix": ":",
-    "installProNote": "ميزات Pro (1080p / 1440p، 60fps، خلاط صوتي ثلاثي القنوات مع ميكروفون) يتم فتحها بترخيص Microsoft Store نشط. قناة شراء مفتاح الترخيص المباشر قيد الإعداد."
+    "installProNote": "يتم فتح ميزات Pro (1080p / 1440p، 60fps، مازج صوت ثلاثي القنوات مع ميكروفون) بواسطة ترخيص Microsoft Store نشط أو ترخيص Lifetime من Lemon Squeezy.",
+    "lsBuyLinkLabel": "اشترِ ترخيص Lifetime مباشرةً ($14.99)"
   },
   "hi": {
     "metaTitle": "ChargeCast — प्लग इन करें। स्ट्रीम ऑन करें। चार्ज बना रहे।",
@@ -2175,7 +2192,8 @@
     "installVerifyLine": "यह पुष्टि करने के लिए कि इंस्टॉलर आधिकारिक रिलीज़ से मेल खाता है,",
     "installReleasesPageLabel": "Releases पृष्ठ",
     "installVerifyLineSuffix": " पर सूचीबद्ध SHA256 हैश की जाँच करें:",
-    "installProNote": "Pro सुविधाएँ (1080p / 1440p, 60fps, माइक के साथ 3-चैनल ऑडियो मिक्सर) सक्रिय Microsoft Store लाइसेंस से अनलॉक होती हैं। सीधा लाइसेंस-कुंजी खरीद चैनल विकास में है।"
+    "installProNote": "Pro सुविधाएं (1080p / 1440p, 60fps, माइक के साथ 3-चैनल ऑडियो मिक्सर) सक्रिय Microsoft Store लाइसेंस या Lemon Squeezy Lifetime लाइसेंस से अनलॉक होती हैं।",
+    "lsBuyLinkLabel": "Lifetime लाइसेंस सीधे खरीदें ($14.99)"
   },
   "th": {
     "metaTitle": "ChargeCast — เสียบสาย. สตรีมเลย. ชาร์จไปด้วย.",
@@ -2296,7 +2314,8 @@
     "installVerifyLine": "เพื่อยืนยันว่าตัวติดตั้งตรงกับรุ่นทางการ ให้ตรวจสอบค่าแฮช SHA256 ที่ระบุใน",
     "installReleasesPageLabel": "หน้า Releases",
     "installVerifyLineSuffix": ":",
-    "installProNote": "ฟีเจอร์ Pro (1080p / 1440p, 60fps, มิกเซอร์เสียง 3 ช่องพร้อมไมค์) ปลดล็อกด้วยใบอนุญาต Microsoft Store ที่ใช้งานอยู่ ช่องทางซื้อคีย์ใบอนุญาตโดยตรงกำลังอยู่ระหว่างการพัฒนา"
+    "installProNote": "ฟีเจอร์ Pro (1080p / 1440p, 60fps, มิกเซอร์เสียง 3 ช่องพร้อมไมโครโฟน) ปลดล็อกด้วย Microsoft Store license ที่ใช้งานอยู่ หรือ Lemon Squeezy Lifetime license",
+    "lsBuyLinkLabel": "ซื้อ Lifetime license โดยตรง ($14.99)"
   },
   "vi": {
     "metaTitle": "ChargeCast — Cắm vào. Stream đi. Luôn đầy pin.",
@@ -2417,7 +2436,8 @@
     "installVerifyLine": "Để xác nhận trình cài đặt khớp với bản phát hành chính thức, hãy kiểm tra mã băm SHA256 được liệt kê trên",
     "installReleasesPageLabel": "trang Releases",
     "installVerifyLineSuffix": ":",
-    "installProNote": "Tính năng Pro (1080p / 1440p, 60fps, mixer âm thanh 3 kênh kèm mic) được mở khoá bằng giấy phép Microsoft Store đang hoạt động. Kênh mua khoá giấy phép trực tiếp đang được chuẩn bị."
+    "installProNote": "Các tính năng Pro (1080p / 1440p, 60fps, bộ trộn âm thanh 3 kênh có micrô) được mở khóa bằng giấy phép Microsoft Store đang hoạt động hoặc giấy phép Lifetime của Lemon Squeezy.",
+    "lsBuyLinkLabel": "mua giấy phép Lifetime trực tiếp ($14.99)"
   },
   "id": {
     "metaTitle": "ChargeCast — Colokkan. Streaming. Tetap terisi.",
@@ -2538,7 +2558,8 @@
     "installVerifyLine": "Untuk memastikan installer cocok dengan rilis resmi, periksa hash SHA256 yang tercantum di",
     "installReleasesPageLabel": "halaman Releases",
     "installVerifyLineSuffix": ":",
-    "installProNote": "Fitur Pro (1080p / 1440p, 60fps, mixer audio 3 kanal dengan mikrofon) terbuka dengan lisensi Microsoft Store aktif. Kanal pembelian kunci lisensi langsung sedang dalam pengerjaan."
+    "installProNote": "Fitur Pro (1080p / 1440p, 60fps, mixer audio 3 saluran dengan mikrofon) dibuka dengan lisensi Microsoft Store aktif atau lisensi Lifetime Lemon Squeezy.",
+    "lsBuyLinkLabel": "beli lisensi Lifetime langsung ($14.99)"
   },
   "ms": {
     "metaTitle": "ChargeCast — Pasang. Stream. Kekal dicas.",
@@ -2659,6 +2680,7 @@
     "installVerifyLine": "Untuk mengesahkan pemasang sepadan dengan keluaran rasmi, semak cincangan SHA256 yang disenaraikan pada",
     "installReleasesPageLabel": "halaman Releases",
     "installVerifyLineSuffix": ":",
-    "installProNote": "Ciri Pro (1080p / 1440p, 60fps, pencampur audio 3-saluran dengan mikrofon) dibuka dengan lesen Microsoft Store yang aktif. Saluran pembelian kunci lesen secara terus sedang dibangunkan."
+    "installProNote": "Ciri Pro (1080p / 1440p, 60fps, pencampur audio 3 saluran dengan mikrofon) dibuka kunci dengan lesen Microsoft Store yang aktif atau lesen Lifetime Lemon Squeezy.",
+    "lsBuyLinkLabel": "beli lesen Lifetime terus ($14.99)"
   }
 }
